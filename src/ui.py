@@ -604,8 +604,8 @@ def run():
 					raise SystemExit(_("Cannot load ui file"))
 		mainwin = gui.get_object("top_win")
 		mainwin.set_icon_from_file(misc.getPixmapPath("gnoduino.png"))
-		mw = int(p.getSafeValue("default.window.width", 400))
-		mh = int(p.getSafeValue("default.window.height", 400))
+		mw = int(p.getSafeValue("default.window.width", 640))
+		mh = int(p.getSafeValue("default.window.height", 480))
 		if (mw and mh):
 			mainwin.set_default_size(mw, mh)
 		mainwin.connect("configure-event", cb_configure_event)
