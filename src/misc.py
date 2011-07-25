@@ -182,8 +182,8 @@ def runProgOutput(console, cmdline):
 		while True:
 			o = p.stdout.readline()
 			if o == '' and p.poll() != None: break
-			if p.getValue("build.verbose"): printMessageLn(console, o)
 			pr = prefs.preferences()
+			if pr.getBoolValue("build.verbose"): printMessageLn(console, o)
 			if pr.getBoolValue("build.verbose"): sys.stderr.write(o)
 			sout += o
 		if p.poll()==1: raise
