@@ -182,7 +182,7 @@ def runProgOutput(console, cmdline):
 		while True:
 			o = p.stdout.readline()
 			if o == '' and p.poll() != None: break
-			printMessageLn(console, o)
+			if p.getValue("build.verbose"): printMessageLn(console, o)
 			pr = prefs.preferences()
 			if pr.getBoolValue("build.verbose"): sys.stderr.write(o)
 			sout += o

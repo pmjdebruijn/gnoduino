@@ -127,10 +127,12 @@ def upload(obj, serial, output, notify):
 	except:
 		notify.pop(context)
 		notify.push(context, _("Flashing error."))
+		misc.printMessageLn(output, \
+			"Flash ERROR.");
 		return
 	notify.pop(context)
 	notify.push(context, _("Flashing complete."))
-	misc.printMessage(output, \
+	misc.printMessageLn(output, \
 		"Flash OK.");
 
 def findBootLoader():

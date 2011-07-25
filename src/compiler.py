@@ -242,7 +242,7 @@ def compile(tw, id, output, notify):
 		misc.printLogMessageLn("compile done.")
 
 		misc.printMessage(output, \
-			_("Binary sketch size: %s bytes (of a %s bytes maximum)") % (size, b.getBoardMemory(b.getBoard())))
+			_("Binary sketch size: %s bytes (of a %s bytes maximum)\n") % (size, b.getBoardMemory(b.getBoard())))
 	except StandardError as e:
 		print "Error: %s" % e
 		return -1
