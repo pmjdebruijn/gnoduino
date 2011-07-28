@@ -48,7 +48,7 @@ class Board(object):
 			c = c + 1
 		self.p = prefs.preferences()
 		if config.cur_board == -1:
-			config.cur_board = self.getBoardIdByName(self.p.getSafeValue("board", "atmega168")) - 1
+			config.cur_board = self.getBoardIdByName(self.p.getSafeValue("board", "uno")) - 1
 
 	def getBoards(self):
 		return self.boards
