@@ -42,11 +42,13 @@ avr = [
 avr_bl = [
 	"avrdude",
 #	"-Chardware/tools/avrdude.conf",
-	"-v",
+#	"-v",
 ]
 
 
 def burnBootloader(serial, output, notify, id):
+	p = prefs.preferences()
+	misc.clearConsole(output)
 	context = notify.get_context_id("main")
 	notify.pop(context)
 	notify.push(context, _("Burning bootloader..."))
@@ -66,10 +68,9 @@ def burnBootloader(serial, output, notify, id):
 	compline.append("-Uefuse:w:" + b.getFuseExtended(b.getBoard()) + ":m")
 	compline.append("-Uhfuse:w:" + b.getFuseHigh(b.getBoard()) + ":m")
 	compline.append("-Ulfuse:w:" + b.getFuseLow(b.getBoard()) + ":m")
-	print compline
+	if p.getBoolValue("build.verbose"): print compline
 	try:
-		(run, sout) = misc.runProg(compline)
-		print sout
+		run = misc.runProgOutput(output, compline)
 		if run == False:
 			misc.printError(notify, output, sout)
 			raise
@@ -86,19 +87,22 @@ def burnBootloader(serial, output, notify, id):
 		compline.append("-F")
 	compline.append("-Uflash:w:" + findBootLoader() + ":i")
 	compline.append("-Ulock:w:" + b.getFuseLock(b.getBoard()) + ":m")
-	print compline
+	if p.getBoolValue("build.verbose"): print compline
 	try:
-		(run, sout) = misc.runProgOutput(output, compline)
-		print sout
+		run = misc.runProgOutput(output, compline)
 		if run == False:
 			misc.printError(notify, output, sout)
 			raise
 	except:
 		notify.pop(context)
 		notify.push(context, _("Burn error."))
+		misc.printMessageLn(output, \
+			"Burn ERROR.");
 		return
 	notify.pop(context)
 	notify.push(context, _("Burn complete."))
+	misc.printMessageLn(output, \
+		"Burn OK.");
 
 def upload(obj, serial, output, notify):
 	p = prefs.preferences()
@@ -122,7 +126,7 @@ def upload(obj, serial, output, notify):
 	compline.append("-p" + b.getBoardMCU(b.getBoard()))
 	compline.append("-Uflash:w:"+obj+".hex:i")
 	try:
-		if p.getValue("build.verbose"): sys.stderr.write(' '.join(compline)+"\n")
+		if p.getBoolValue("build.verbose"): sys.stderr.write(' '.join(compline)+"\n")
 		run = misc.runProgOutput(output, compline)
 		if run == False: raise
 	except:
