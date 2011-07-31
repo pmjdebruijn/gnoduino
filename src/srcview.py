@@ -188,6 +188,7 @@ def createsrcview(status, f=None):
 	sbuffer.set_style_scheme(scheme);
 	sv.set_size_request(300, 100)
 	sv.set_editable(True)
+	sv.set_auto_indent(True)
 	if config.show_numbers == 'true':
 		sv.set_show_line_numbers(True)
 	sv.set_cursor_visible(True)
