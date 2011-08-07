@@ -200,6 +200,13 @@ def merge_font_name(widget, font):
 	font_desc.merge(cur_font, True)
 	return font_desc.to_string()
 
+def getFontCharSize(widget):
+	if widget == None: return
+	context = widget.get_pango_context()
+	font_desc = context.get_font_description()
+	meter = context.get_metrics(font_desc)
+	return meter.get_approximate_char_width()/1024
+
 def set_widget_font(widget, font):
 	if widget == None: return
 	context = widget.get_pango_context()
@@ -207,6 +214,17 @@ def set_widget_font(widget, font):
 	cur_font = pango.FontDescription(font)
 	font_desc.merge(cur_font, True)
 	widget.modify_font(font_desc)
+
+def setConsoleTags(console):
+	b = console.get_buffer()
+	tag = gtk.TextTag("red_foreground")
+	tag.set_property("foreground", "red")
+	table = b.get_tag_table()
+	table.add(tag)
+	tag = gtk.TextTag("white_foreground")
+	tag.set_property("foreground", "white")
+	table = b.get_tag_table()
+	table.add(tag)
 
 def clearConsole(console):
 	b = console.get_buffer()
@@ -222,19 +240,40 @@ def printError(notify, console, message):
 	b.delete(b.get_start_iter(), b.get_end_iter())
 	b.set_text(message)
 
+def printErrorLn(notify, console, error, message):
+	b = console.get_buffer()
+	context = notify.get_context_id("main")
+	notify.pop(context)
+	notify.push(context, error)
+	b.insert_with_tags_by_name(b.get_end_iter(), message, "red_foreground")
+	b.place_cursor(b.get_end_iter())
+	mark = b.get_insert()
+	console.scroll_mark_onscreen(mark)
+
 def printMessage(console, message):
 	console.modify_text(gtk.STATE_NORMAL, gtk.gdk.Color("#ffffff"))
 	b = console.get_buffer()
 	b.delete(b.get_start_iter(), b.get_end_iter())
 	b.set_text(message)
 
-def printMessageLn(console, message):
-	console.modify_text(gtk.STATE_NORMAL, gtk.gdk.Color("#ffffff"))
-	b = console.get_buffer()
-	b.insert(b.get_end_iter(), message)
-	b.place_cursor(b.get_end_iter())
-	mark = b.get_insert()
-	console.scroll_mark_onscreen(mark)
+def printMessageLn(console, message, verbose='false', wrap='true'):
+	if message == '': return
+	if wrap == 'true':
+		rect =  console.get_allocation()
+		width = rect.width/getFontCharSize(console)
+		i=0
+		m=''
+		while i < len(message):
+			m=m+message[i:i+width-3]+'\n'
+			i+=width-3
+	else: m=message
+	if config.build_verbose == 'true' or verbose == 'true':
+		console.modify_text(gtk.STATE_NORMAL, gtk.gdk.Color("#ffffff"))
+		b = console.get_buffer()
+		b.insert(b.get_end_iter(), m)
+		b.place_cursor(b.get_end_iter())
+		mark = b.get_insert()
+		console.scroll_mark_onscreen(mark)
 
 def printLogMessageLn(message):
 	if config.build_verbose == 'true': sys.stderr.write(message+"\n")

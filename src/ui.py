@@ -468,6 +468,7 @@ def createScon():
 	sw.set_shadow_type(gtk.SHADOW_IN)
 	tmp = gtk.TextView()
 	tmp.set_editable(False)
+	tmp.set_wrap_mode(gtk.WRAP_WORD)
 	twbuf = gtk.TextBuffer()
 	tmp.set_buffer(twbuf)
 	tmp.modify_base(gtk.STATE_NORMAL, gtk.gdk.Color(0,0,0))
@@ -630,6 +631,7 @@ def run():
 			sub.append(menuItem)
 		gui.get_object("board").set_submenu(sub)
 		(con, tw) = createCon()
+		misc.setConsoleTags(tw)
 
 		"""setup default serial port"""
 		sub = gtk.Menu()
@@ -682,7 +684,7 @@ def run():
 		sv = createPage(nb)
 		vbox.pack1(nb, shrink=True, resize=True)
 		(scon,sctw) = createScon()
-		vbox.pack2(con, shrink=False, resize= False)
+		vbox.pack2(con, shrink=False, resize=False)
 		vbox.connect("notify::position", vbox_move_handle)
 		cpos = int(p.getSafeValue("console.height", -1))
 		vbox.set_position(cpos)

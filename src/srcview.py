@@ -180,8 +180,6 @@ def createsrcview(status, f=None):
 	p = prefs.preferences()
 	misc.set_widget_font(sv, config.cur_editor_font)
 	manager = gtksourceview2.StyleSchemeManager()
-#	for i in gtksourceview2.StyleSchemeManager.get_scheme_ids(manager):
-#		print i
 	manager.append_search_path(misc.getArduinoUiPath())
 	manager.force_rescan()
 	scheme =  manager.get_scheme("arduino")
@@ -192,7 +190,6 @@ def createsrcview(status, f=None):
 	if config.show_numbers == 'true':
 		sv.set_show_line_numbers(True)
 	sv.set_cursor_visible(True)
-#	sv.set_show_line_numbers(True)
 	sv.set_wrap_mode(gtk.WRAP_CHAR)
 	sv.set_right_margin_position(80)
 	updatePos(sbuffer, status)

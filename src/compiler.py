@@ -123,6 +123,7 @@ def compile(tw, id, output, notify):
 	context = notify.get_context_id("main")
 	notify.pop(context)
 	notify.push(context, _("Compiling..."))
+	misc.printMessageLn(output, 'Compile start')
 	misc.printLogMessageLn('Compile start')
 	misc.clearConsole(output)
 	tmpdir = id
@@ -143,12 +144,15 @@ def compile(tw, id, output, notify):
 			compline.append("-I"+misc.getArduinoPath())
 			compline.append(os.path.join(misc.getArduinoPath(), i))
 			compline.append("-o"+id+"/"+i+".o")
+			misc.printMessageLn(output, ' '.join(compline))
 			misc.printLogMessageLn(' '.join(compline))
 			(run, sout) = misc.runProg(compline)
 			misc.printLogMessageLn(sout)
 			if run == False:
-				misc.printError(notify, output, stripOut(sout, pre_file))
+				misc.printErrorLn(notify, output, _("Compile Error"), stripOut(sout, pre_file))
 				raise NameError("compile error")
+			else:
+				misc.printMessageLn(output, sout)
 		"""compile C++ targets"""
 		misc.printLogMessageLn('processing C++ targets')
 		for i in cppobj:
@@ -158,24 +162,30 @@ def compile(tw, id, output, notify):
 			compline.append("-I" + misc.getArduinoPath())
 			compline.append(os.path.join(misc.getArduinoPath(), i))
 			compline.append("-o"+id+"/"+i+".o")
+			misc.printMessageLn(output, ' '.join(compline))
 			misc.printLogMessageLn(' '.join(compline))
 			(run, sout) = misc.runProg(compline)
 			misc.printLogMessageLn(sout)
 			if run == False:
-				misc.printError(notify, output, sout)
+				misc.printErrorLn(notify, output, _("Compile Error"), sout)
 				raise NameError("compile error")
+			else:
+				misc.printMessageLn(output, sout)
 		"""generate archive objects"""
 		misc.printLogMessageLn('generating ar objects')
 		for i in cobj+cppobj:
 			compline = [j for j in defar]
 			compline.append(id+"/core.a")
 			compline.append(id+"/"+i+".o")
+			misc.printMessageLn(output, ' '.join(compline)+"\n")
 			misc.printLogMessageLn(' '.join(compline))
 			(run, sout) = misc.runProg(compline)
 			misc.printLogMessageLn(sout)
 			if run == False:
-				misc.printError(notify, output, stripOut(sout, pre_file))
+				misc.printErrorLn(notify, output, _("Compile Error"), stripOut(sout, pre_file))
 				raise NameError("compile error")
+			else:
+				misc.printMessageLn(output, sout)
 		"""precompile pde"""
 		misc.printLogMessageLn('pde compile')
 		misc.printLogMessageLn('-----------')
@@ -189,13 +199,16 @@ def compile(tw, id, output, notify):
 		compline.extend(["-I" + os.path.join(i, "utility") for i in preproc.generateLibs(id, buf)])
 		compline.append(pre_file)
 		compline.append("-o"+pre_file+".o")
+		misc.printMessageLn(output, ' '.join(compline)+"\n")
 		misc.printLogMessageLn(' '.join(compline))
 		(run, sout) = misc.runProg(compline)
 		misc.printLogMessageLn(sout)
 		if run == False:
-			misc.printError(notify, output, stripOut(sout, pre_file))
+			misc.printErrorLn(notify, output, _("Compile Error"), stripOut(sout, pre_file))
 			moveCursor(tw, int(getErrorLine(sout, lines)))
 			raise NameError('compile-error')
+		else:
+			misc.printMessageLn(output, sout)
 
 		"""compile all objects"""
 		misc.printLogMessageLn('compile objects')
@@ -212,37 +225,47 @@ def compile(tw, id, output, notify):
 		compline.append(id+"/core.a")
 		compline.append("-L"+id)
 		compline.append("-lm")
+		misc.printMessageLn(output, ' '.join(compline)+"\n")
 		misc.printLogMessageLn(' '.join(compline))
 		(run, sout) = misc.runProg(compline)
 		misc.printLogMessageLn(sout)
 		if run == False:
-			misc.printError(notify, output, stripOut(sout, pre_file))
+			misc.printErrorLn(notify, output, _("Linking error"), stripOut(sout, pre_file))
 			raise NameError('linking-error')
+		else:
+			misc.printMessageLn(output, sout)
 		compline=[i for i in eep]
 		compline.append(tempobj+".elf")
 		compline.append(tempobj+".eep")
+		misc.printMessageLn(output, ' '.join(compline)+"\n")
 		misc.printLogMessageLn(' '.join(compline))
 		(run, sout) = misc.runProg(compline)
 		misc.printLogMessageLn(sout)
 		if run == False:
-			misc.printError(notify, output, stripOut(sout, pre_file))
+			misc.printErrorLn(notify, output, _("Object error"), stripOut(sout, pre_file))
 			raise NameError('obj-copy')
+		else:
+			misc.printMessageLn(output, sout)
 		compline=[i for i in hex]
 		compline.append(tempobj+".elf")
 		compline.append(tempobj+".hex")
+		misc.printMessageLn(output, ' '.join(compline)+"\n")
 		misc.printLogMessageLn(' '.join(compline))
 		(run, sout) = misc.runProg(compline)
+		misc.printMessageLn(output, sout)
 		misc.printLogMessageLn(sout)
 		if run == False:
-			misc.printError(notify, output, stripOut(sout, pre_file))
+			misc.printErrorLn(notify, output, _("Object error"), stripOut(sout, pre_file))
 			raise NameError('obj-copy')
+		else:
+			misc.printMessageLn(output, sout)
 		size = computeSize(tempobj+".hex")
 		notify.pop(context)
 		notify.push(context, _("Done compilling."))
 		misc.printLogMessageLn("compile done.")
 
-		misc.printMessage(output, \
-			_("Binary sketch size: %s bytes (of a %s bytes maximum)\n") % (size, b.getBoardMemory(b.getBoard())))
+		misc.printMessageLn(output, \
+			_("Binary sketch size: %s bytes (of a %s bytes maximum)\n") % (size, b.getBoardMemory(b.getBoard())), 'true')
 	except StandardError as e:
 		print "Error: %s" % e
 		return -1
@@ -296,7 +319,7 @@ def validateLib(library, tempobj, flags, output, notify):
 						(run, sout) = misc.runProg(compline)
 						misc.printLogMessageLn(sout)
 						if run == False:
-							misc.printError(notify, output, sout)
+							misc.printError(notify, output, _("Library Error"), sout)
 							raise NameError('libs compile error')
 						res.append(os.path.join(os.path.dirname(tempobj), \
 							os.path.basename(i.replace(".c", ".o"))))
@@ -319,7 +342,7 @@ def validateLib(library, tempobj, flags, output, notify):
 						(run, sout) = misc.runProg(compline)
 						misc.printLogMessageLn(sout)
 						if run == False:
-							misc.printError(notify, output, sout)
+							misc.printError(notify, output, _("Library Error"), sout)
 							raise NameError('libs compile error')
 						res.append(os.path.join(os.path.dirname(tempobj), \
 							os.path.basename(i.replace(".cpp", ".o"))))

@@ -68,16 +68,16 @@ def burnBootloader(serial, output, notify, id):
 	compline.append("-Uefuse:w:" + b.getFuseExtended(b.getBoard()) + ":m")
 	compline.append("-Uhfuse:w:" + b.getFuseHigh(b.getBoard()) + ":m")
 	compline.append("-Ulfuse:w:" + b.getFuseLow(b.getBoard()) + ":m")
-	if p.getBoolValue("build.verbose"): print compline
+	misc.printMessageLn(output, ' '.join(compline))
 	try:
-		run = misc.runProgOutput(output, compline)
+		(run, sout) = misc.runProg(compline)
 		if run == False:
-			misc.printError(notify, output, sout)
+			if p.getBoolValue("build.verbose"):
+				misc.printErrorLn(notify, output, _("Burn Error"), sout)
 			raise
 	except:
-		notify.pop(context)
-		notify.push(context, _("Burn error."))
-		"""figure out what we should do in case of failure. Stop ?"""
+		misc.printErrorLn(notify, output, _("Burn Error"), _("Burn ERROR."))
+		return
 	"""Burn and fuse board"""
 	compline=[i for i in avr_bl]
 	compline.append("-c" + pgm.getProtocol(id))
@@ -91,13 +91,11 @@ def burnBootloader(serial, output, notify, id):
 	try:
 		run = misc.runProgOutput(output, compline)
 		if run == False:
-			misc.printError(notify, output, sout)
+			if p.getBoolValue("build.verbose"):
+				misc.printErrorLn(notify, output, _("Burn Error"), sout)
 			raise
 	except:
-		notify.pop(context)
-		notify.push(context, _("Burn error."))
-		misc.printMessageLn(output, \
-			"Burn ERROR.");
+		misc.printErrorLn(notify, output, _("Burn Error"), _("Burn ERROR."))
 		return
 	notify.pop(context)
 	notify.push(context, _("Burn complete."))
@@ -126,14 +124,14 @@ def upload(obj, serial, output, notify):
 	compline.append("-p" + b.getBoardMCU(b.getBoard()))
 	compline.append("-Uflash:w:"+obj+".hex:i")
 	try:
-		if p.getBoolValue("build.verbose"): sys.stderr.write(' '.join(compline)+"\n")
-		run = misc.runProgOutput(output, compline)
+		if p.getBoolValue("build.verbose"):
+			sys.stderr.write(' '.join(compline)+"\n")
+			misc.printMessageLn(output, ' '.join(compline))
+		(run, sout) = misc.runProg(compline)
+		misc.printMessageLn(output, sout, p.getBoolValue("build.verbose"), 'false')
 		if run == False: raise
 	except:
-		notify.pop(context)
-		notify.push(context, _("Flashing error."))
-		misc.printMessageLn(output, \
-			"Flash ERROR.");
+		misc.printErrorLn(notify, output, _("Flashing Error"), _("Flash ERROR.\n"))
 		return
 	notify.pop(context)
 	notify.push(context, _("Flashing complete."))
