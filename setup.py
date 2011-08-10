@@ -115,6 +115,10 @@ for r,d,f in os.walk("hardware"):
 for r,d,f in os.walk("libraries"):
 	if ".git" not in r and f:
 		data_files.append([os.path.join("share", "gnoduino", r), [os.path.join(r,i) for i in f]])
+"""we ship reference module"""
+for r,d,f in os.walk("reference"):
+	if ".git" not in r and f:
+		data_files.append([os.path.join("share", "gnoduino", r), [os.path.join(r,i) for i in f]])
 
 setup(name='gnoduino',
 	version=get_gnoduino_version(),

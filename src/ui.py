@@ -24,6 +24,7 @@ import subprocess
 import select
 import shutil
 import signal
+import time
 
 import gettext
 _ = gettext.gettext
@@ -266,6 +267,9 @@ def butSave(widget, data=None):
 def menuUpload(widget, data=None):
 	upload(widget, ser, data)
 
+def menuReference(widget, data=None):
+	gtk.show_uri(None, "file:///"+os.path.join(misc.getArduinoFile("reference"), "index.html"), int(time.time()))
+
 def about(widget, data=None):
 	about = gui.get_object("about")
 	about.set_version(gnoduino.__version__)
@@ -433,6 +437,7 @@ menus = [
 		("menu-reset-board", menuResetBoard, (ord('m'), gtk.gdk.CONTROL_MASK)),
 		("menu-preferences", preferences, (None, None)),
 		("menu-upload", menuUpload, (ord('u'), gtk.gdk.CONTROL_MASK)),
+		("menu-reference", menuReference, (None, None)),
 		("menu-about", about, (None, None)),
 
 	]
