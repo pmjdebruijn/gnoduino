@@ -1,3 +1,17 @@
+Gnoduino 0.3.1
+==============
+
+- add support for Arduino Reference (Arduino API documentation)
+- fix verbose build flag setting and show proper info in console
+- fix serial port detection when uploading bootloader
+- add autoindent option to the editor
+- make Arduino Uno default board
+- fix loading console size at startup
+- keep showing compiling info on uploads
+- prevent console resizing when mainwindow resize
+- fix "Save As" behaviour
+- update default window size
+
 Gnoduino 0.3.0
 ==============
 
