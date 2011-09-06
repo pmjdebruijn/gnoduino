@@ -35,105 +35,37 @@ import prefs
 LOG_FILENAME = 'arduino.out'
 #logging.basicConfig(filename=LOG_FILENAME,level=logging.DEBUG)
 
-defaultPath = os.path.expanduser('~/.arduino')
-arduino_path = "hardware/arduino/cores/arduino"
-arduino_boot_path = "hardware/arduino/bootloaders"
-arduino_libs_path = "libraries"
+def get_path(main_path, default=None):
+    possible_paths = [
+        os.path.join(os.path.expanduser('~/.arduino'), main_path),
+        os.path.join(os.getcwd(), main_path),
+        os.path.join(sys.prefix, "local", "share", "gnoduino", main_path),
+        os.path.join(sys.prefix, "share", "gnoduino", main_path),
+    ]
+    for path in possible_paths:
+        if os.path.exists(path):
+            return path
+    if default:
+        return default
+    raise SystemExit(_("Cannot find %s") % main_path)
 
 def getArduinoFile(filename):
-	path = None
-	try:
-		path = os.path.join(os.getcwd(), defaultPath, filename)
-		if os.path.exists(path):
-			return path
-		else: raise Exception
-	except:
-		try:
-			path = os.path.join(sys.prefix, "local", "share", "gnoduino", filename)
-			if os.path.exists(path):
-				return path
-			else: raise Exception
-		except:
-			try:
-				path = os.path.join(sys.prefix, "share", "gnoduino", filename)
-				if os.path.exists(path):
-					return path
-				else: raise Exception
-			except Exception,e:
-				print(e)
-				return None
+	return get_path(filename)
 
 def getArduinoPath():
-	try:
-		path = os.path.join(os.getcwd(), arduino_path)
-		if os.path.exists(path):
-			return path
-		else: raise
-	except:
-		try:
-			path = os.path.join(sys.prefix, "share", "gnoduino", arduino_path)
-			if os.path.exists(path):
-				return path
-		except Exception,e:
-			print(e)
-	raise SystemExit(_("Cannot find path"))
+	return get_path("hardware/arduino/cores/arduino")
 
 def getArduinoBootPath():
-	try:
-		path = os.path.join(os.getcwd(), arduino_boot_path)
-		if os.path.exists(path):
-			return path
-		else: raise
-	except:
-		try:
-			path = os.path.join(sys.prefix, "share", "gnoduino", arduino_boot_path)
-			if os.path.exists(path):
-				return path
-		except Exception,e:
-			print(e)
-	raise SystemExit(_("Cannot find path"))
+	return get_path("hardware/arduino/bootloaders")
 
 def getArduinoLibsPath():
-	try:
-		path = os.path.join(os.getcwd(), arduino_libs_path)
-		if os.path.exists(path) is False: raise
-	except:
-		try:
-			path = os.path.join(sys.prefix, "share", "gnoduino", arduino_libs_path)
-			if os.path.exists(path) is False: raise
-		except: path = ""
-	finally: return path
+	return get_path("libraries", default="")
 
 def getArduinoUiPath():
-	try:
-		path = os.path.join(os.getcwd(), "ui")
-		if os.path.exists(path) is False: raise
-	except:
-		try:
-			path = os.path.join(sys.prefix, "local", "share", "gnoduino", "ui")
-			if os.path.exists(path) is False: raise
-		except:
-			try:
-				path = os.path.join(sys.prefix, "share", "gnoduino", "ui")
-				if os.path.exists(path) is False: raise
-			except: path = ""
-	finally: return path
+	return get_path("ui", default="")
 
 def getPixmapPath(pixmap):
-	try:
-		path = os.path.join(os.getcwd(), "pixmaps", pixmap)
-		if os.path.exists(path):
-			return path
-		else: raise NameError("System error")
-	except:
-		try:
-			path = os.path.join(sys.prefix, 'share', 'gnoduino', "pixmaps", pixmap)
-			if os.path.exists(path):
-				return path
-			else: raise NameError("System error")
-		except Exception,e:
-			print(e)
-			raise SystemExit(_("Cannot load pixmap files"))
+	return get_path(os.path.join("pixmaps", pixmap))
 
 def makeWorkdir():
 	return tempfile.mkdtemp("", os.path.join(tempfile.gettempdir(), "build"+str(time.time())))
