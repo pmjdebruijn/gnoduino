@@ -19,6 +19,7 @@
 import os
 import sys
 import gconf
+import glib
 
 import gettext
 _ = gettext.gettext
@@ -63,7 +64,9 @@ class preferences(object):
 				if i[2] is 'int':
 					val = client.get_int(i[1])
 				if i[2] is 'string':
-					val = client.get_string(i[1])
+					try:
+						val = client.get_string(i[1])
+					except glib.GError: None
 				if val is not None and val is not 0:
 					self.defaults.append([i[0], val])
 
