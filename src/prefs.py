@@ -60,6 +60,7 @@ class preferences(object):
 			self.backend = 1
 			client = gconf.client_get_default()
 			for i in config_keys:
+				val = None
 				self.mapping.append([i[0], i[1]])
 				if i[2] is 'int':
 					val = client.get_int(i[1])
