@@ -108,7 +108,7 @@ def get_data_files():
     ]
     for subdir in ("hardware", "libraries", "reference"):
         # We ship hardware/libraries/reference modules if not already installed
-        if not os.path.exists(os.path.join(sys.prefix, "share", "arduino", subdir)):
+        if not os.path.exists(os.path.join(sys.prefix, "share", "arduino", subdir)) or 1:
             for dirpath, dirnames, filenames in os.walk(subdir):
                 if ".git" not in dirpath and filenames:
                     data_files.append([os.path.join("share", "gnoduino", dirpath),

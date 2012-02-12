@@ -39,7 +39,7 @@ def get_path(main_path, default=None):
     possible_paths = [
         os.path.join(os.path.expanduser('~/.arduino'), main_path),
         os.path.join(os.getcwd(), main_path),
-        os.path.join(sys.prefix, "share", "arduino", main_path),
+        #os.path.join(sys.prefix, "share", "arduino", main_path),
         os.path.join(sys.prefix, "local", "share", "gnoduino", main_path),
         os.path.join(sys.prefix, "share", "gnoduino", main_path),
     ]
