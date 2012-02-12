@@ -1,3 +1,10 @@
+Gnoduino 0.3.2
+==============
+
+- fix compilation with newer avr-libc
+- better handling of arduino's preferences.txt file
+- update with latest upstream API (pre1)
+
 Gnoduino 0.3.1
 ==============
 
