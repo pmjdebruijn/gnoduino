@@ -60,6 +60,16 @@ def burnBootloader(serial, output, notify, id):
 	"""De-fuse and erase board"""
 	compline=[i for i in avr_bl]
 	compline.append("-c" + pgm.getProtocol(id))
+	if pgm.getCommunication(id) == 'serial':
+		port = serial.getConfigSerialPort(notify, output)
+		if port == -1:
+			notify.pop(context)
+			notify.push(context, _("Flashing error."))
+			return
+		compline.append("-P" + port)
+		compline.append("-b" + pgm.getSpeed(id))
+	elif pgm.getCommunication(id) == 'usb':
+		compline.append("-Pusb")
 	compline.append("-p" + b.getBoardMCU(b.getBoard()))
 	compline.append("-e")
 	if pgm.getForce(id) == 'true':

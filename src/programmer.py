@@ -51,8 +51,14 @@ class Programmer(object):
 	def getProgrammers(self):
 		return self.programmers
 
+	def getCommunication(self, id):
+		return self.programmers[id-1]['communication']
+
 	def getProtocol(self, id):
 		return self.programmers[id-1]['protocol']
+
+	def getSpeed(self, id):
+		return self.programmers[id-1]['speed']
 
 	def getForce(self, id):
 		return  self.programmers[id-1]['force']
