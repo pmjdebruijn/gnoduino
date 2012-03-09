@@ -1,5 +1,5 @@
 # gnoduino - Python Arduino IDE implementation
-# Copyright (C) 2010  Lucian Langa
+# Copyright (C) 2010-2012  Lucian Langa
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -67,7 +67,8 @@ def burnBootloader(serial, output, notify, id):
 			notify.push(context, _("Flashing error."))
 			return
 		compline.append("-P" + port)
-		compline.append("-b" + pgm.getSpeed(id))
+		if pgm.getSpeed(id) != 0:
+			compline.append("-b" + pgm.getSpeed(id))
 	elif pgm.getCommunication(id) == 'usb':
 		compline.append("-Pusb")
 	compline.append("-p" + b.getBoardMCU(b.getBoard()))
@@ -91,15 +92,26 @@ def burnBootloader(serial, output, notify, id):
 	"""Burn and fuse board"""
 	compline=[i for i in avr_bl]
 	compline.append("-c" + pgm.getProtocol(id))
+	if pgm.getCommunication(id) == 'serial':
+		port = serial.getConfigSerialPort(notify, output)
+		if port == -1:
+			notify.pop(context)
+			notify.push(context, _("Flashing error."))
+			return
+		compline.append("-P" + port)
+		if pgm.getSpeed(id) != 0:
+			compline.append("-b" + pgm.getSpeed(id))
+	elif pgm.getCommunication(id) == 'usb':
+		compline.append("-Pusb")
 	compline.append("-p" + b.getBoardMCU(b.getBoard()))
 	compline.append("-e")
 	if pgm.getForce(id) == 'true':
 		compline.append("-F")
 	compline.append("-Uflash:w:" + findBootLoader() + ":i")
 	compline.append("-Ulock:w:" + b.getFuseLock(b.getBoard()) + ":m")
-	if p.getBoolValue("build.verbose"): print compline
+	misc.printMessageLn(output, ' '.join(compline))
 	try:
-		run = misc.runProgOutput(output, compline)
+		(run, sout) = misc.runProg(compline)
 		if run == False:
 			if p.getBoolValue("build.verbose"):
 				misc.printErrorLn(notify, output, _("Burn Error"), sout)
@@ -150,6 +162,8 @@ def upload(obj, serial, output, notify):
 
 def findBootLoader():
 	b = board.Board()
-	return os.path.join(misc.getArduinoBootPath(), b.getPath(b.getBoard()), \
-		b.getBootloader(b.getBoard())+".hex")
+	boot = b.getBootloader(b.getBoard())
+	if boot.endswith(".hex"): None
+	else: boot = boot + ".hex"
+	return os.path.join(misc.getArduinoBootPath(), b.getPath(b.getBoard()), boot)
 
