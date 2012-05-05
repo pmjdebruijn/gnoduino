@@ -60,6 +60,7 @@ def instext(b, iter, text, len) :
 	lang = get_lang_for_content(cont)
 	if lang != None:
 		b.set_language(lang)
+	config.cur_iter = -1
 
 def updatePos(buffer, sb):
 	sb.pop(1)
