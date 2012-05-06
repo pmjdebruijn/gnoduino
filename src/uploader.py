@@ -138,7 +138,7 @@ def upload(obj, serial, output, notify):
 	protocol = b.getPGM(b.getBoard())
 	# avrdude wants "stk500v1" to distinguish it from stk500v2
 	if protocol == "stk500": protocol = "stk500v1"
-	if protocol == "":
+	if protocol == "" or config.force_protocol is True:
 		protocol =  pgm.getProtocol(pgm.getProgrammer())
 		try:
 			comm = pgm.getCommunication(pgm.getProgrammer())

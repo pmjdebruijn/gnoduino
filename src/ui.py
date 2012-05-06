@@ -718,6 +718,17 @@ def populateExamples():
 	ex.set_submenu(submenu)
 	gui.get_object("filemenu").insert(ex, 2)
 
+def getKeyREvent(widget, event, data=None):
+	config.force_protocol = False
+	gui.get_object("upload").set_tooltip_text(_("Upload"))
+
+def getKeyPEvent(widget, event, data=None):
+	if event == -1 or (event.type == gtk.gdk.KEY_PRESS) and \
+		(gtk.gdk.keyval_name(event.keyval) == 'Shift_R' or \
+			gtk.gdk.keyval_name(event.keyval) == 'Shift_L'):
+				config.force_protocol = True
+				gui.get_object("upload").set_tooltip_text(_("Upload using programmer"))
+
 def run():
 	try:
 		global gui
@@ -778,6 +789,8 @@ def run():
 		if (mw and mh):
 			mainwin.set_default_size(mw, mh)
 		mainwin.connect("configure-event", cb_configure_event)
+		mainwin.connect("key-press-event", getKeyPEvent)
+		mainwin.connect("key-release-event", getKeyREvent)
 		vbox = gui.get_object("vpan")
 		sb = gui.get_object("statusbar1")
 		sb.set_has_resize_grip(False)
