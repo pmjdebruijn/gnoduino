@@ -360,7 +360,7 @@ def launch_in_browser(page):
 		import gconf
 		client = gconf.client_get_default()
 		prog = client.get_string("/desktop/gnome/url-handlers/http/command")
-		subprocess.call(prog % page, shell=True)
+		subprocess.Popen(prog % page, shell=True)
 	except:
 		gtk.show_uri(None, "file:///"+page, int(time.time()))
 
