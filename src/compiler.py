@@ -70,7 +70,8 @@ cppobj_additional = [
 			"CDC.cpp",
 			"Stream.cpp",
 			"IPAddress.cpp",
-			"USBCore.cpp"
+			"USBCore.cpp",
+			"HID.cpp"
 			]
 
 defc = [
