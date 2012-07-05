@@ -299,6 +299,11 @@ def compileObjects(objects, flags, objout, output):
 		compline.append("-DF_CPU="+b.getBoardFCPU(b.getBoard()))
 		compline.extend(misc.getArduinoIncludes())
 		if misc.getArduinoVersion() >= 100:
+			try:
+				compline.append("-DUSB_VID="+b.getBoardUSBVID(b.getBoard()))
+				compline.append("-DUSB_PID="+b.getBoardUSBPID(b.getBoard()))
+			except: pass
+		if misc.getArduinoVersion() >= 100:
 			compline.append("-DARDUINO=100")
 		compline.append(os.path.join(misc.getArduinoPath(), i))
 		compline.append("-o"+objout+"/"+i+".o")

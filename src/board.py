@@ -108,6 +108,12 @@ class Board(object):
 	def getPath(self, id):
 		return self.boards[id]['path']
 
+	def getBoardUSBVID(self, id):
+		return self.boards[id]['vid']
+
+	def getBoardUSBPID(self, id):
+		return self.boards[id]['pid']
+
 	def getVariant(self, id):
 		try:
 			return self.boards[id]['variant']
