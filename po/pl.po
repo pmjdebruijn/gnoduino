@@ -1,0 +1,433 @@
+# -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+# Aviary.pl
+# Jeśli masz jakiekolwiek uwagi odnoszące się do tłumaczenia lub chcesz
+# pomóc w jego rozwijaniu i pielęgnowaniu, napisz do nas:
+# gnomepl@aviary.pl
+# -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+msgid ""
+msgstr ""
+"Project-Id-Version: gnoduino\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-08-27 22:49+0200\n"
+"PO-Revision-Date: 2012-08-27 22:50+0200\n"
+"Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
+"Language-Team: Polish <gnomepl@aviary.pl>\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2);\n"
+"X-Poedit-Language: Polish\n"
+"X-Poedit-Country: Poland\n"
+
+#: ../src/compiler.py:137
+msgid "Compiling..."
+msgstr "Kompilowanie..."
+
+#: ../src/compiler.py:156 ../src/compiler.py:162 ../src/compiler.py:168
+#: ../src/compiler.py:175 ../src/compiler.py:193 ../src/compiler.py:218
+msgid "Compile Error"
+msgstr "Błąd kompilacji"
+
+#: ../src/compiler.py:248
+msgid "Linking error"
+msgstr "Błąd konsolidacji"
+
+#: ../src/compiler.py:260 ../src/compiler.py:273
+msgid "Object error"
+msgstr "Błąd obiektu"
+
+#: ../src/compiler.py:279
+msgid "Done compiling."
+msgstr "Ukończono kompilowanie."
+
+#: ../src/compiler.py:283
+#, python-format
+msgid "Binary sketch size: %s bytes (of a %s bytes maximum)\n"
+msgstr "Rozmiar binarnego pliku szkicu w bajtach: %s (maksymalnie: %s)\n"
+
+#: ../src/compiler.py:369 ../src/compiler.py:394
+msgid "Library Error"
+msgstr "Błąd biblioteki"
+
+#: ../src/misc.py:54
+#, python-format
+msgid ""
+"Unable to locate %s\n"
+"Arduino SDK missing or broken."
+msgstr ""
+"Nie można ustalić położenia %s\n"
+"Brak Arduino SDK lub jest uszkodzone."
+
+#: ../src/misc.py:148
+#, python-format
+msgid "Cannot load %s file. Exiting."
+msgstr "Nie można wczytać pliku %s. Kończenie działania."
+
+#: ../src/misc.py:151
+#, python-format
+msgid "Error reading %s file. File is corrupt. Installation problem.\n"
+msgstr ""
+"Błąd podczas odczytywania plik %s. Plik jest uszkodzony. Problem "
+"instalacji.\n"
+
+#: ../src/misc.py:275
+msgid "Error compiling."
+msgstr "Błąd podczas kompilowania."
+
+#: ../src/misc.py:346
+msgid "Close without Saving"
+msgstr "Zamknij bez zapisywania"
+
+#: ../src/misc.py:348
+msgid "If you don't save, changes will be permanently lost."
+msgstr ""
+"Jeżeli dokument nie zostanie zapisany, to zmiany zostaną bezpowrotnie "
+"utracone."
+
+#: ../src/serialio.py:92
+msgid ""
+"Serial port not configured!\n"
+"Use Tools->Serial Port to configure port."
+msgstr ""
+"Port szeregowy nie jest skonfigurowany.\n"
+"Należy użyć Narzędzia->Port szeregowy, aby go skonfigurować."
+
+#: ../src/srcview.py:149 ../src/srcview.py:159
+#, python-format
+msgid "'%s' not found."
+msgstr "Nie odnaleziono \"%s\"."
+
+#: ../src/ui.py:66 ../src/ui.py:86 ../src/ui.py:99 ../src/ui.py:167
+#: ../src/ui.py:182
+msgid "Untitled"
+msgstr "Bez tytułu"
+
+#: ../src/ui.py:67
+msgid "Save document"
+msgstr "Zapisz dokument"
+
+#: ../src/ui.py:68
+#, python-format
+msgid ""
+"Save changes to document \"%s\"\n"
+" before closing?"
+msgstr ""
+"Zapisać zmiany w dokumencie \"%s\"\n"
+" przed zamknięciem?"
+
+#: ../src/ui.py:176
+msgid "Save file"
+msgstr "Zapisz plik"
+
+#: ../src/ui.py:193
+msgid "Open file"
+msgstr "Otwórz plik"
+
+#: ../src/ui.py:219
+#, python-format
+msgid "<b>A file named %s already exists. Do you want to replace it?</b>"
+msgstr "<b>Plik o nazwie %s już istnieje. Zastąpić go?</b>"
+
+#: ../src/ui.py:220
+#, python-format
+msgid ""
+"The file already exists in \"%s\". Replacing it will overwrite its contents."
+msgstr "Plik już istnieje w \"%s\". Zastąpienie go nadpisze jego zawartość."
+
+#: ../src/ui.py:525
+msgid "Open Recent"
+msgstr "Otwórz ostatnie"
+
+#: ../src/ui.py:560 ../ui/main.ui.h:59
+msgid "Send"
+msgstr "Wyślij"
+
+#: ../src/ui.py:561
+msgid "Clear"
+msgstr "Wyczyść"
+
+#: ../src/ui.py:599
+#, python-format
+msgid "%s baud"
+msgstr "%s baudów"
+
+#: ../src/ui.py:719
+msgid "E_xamples"
+msgstr "_Przykłady"
+
+#: ../src/ui.py:725 ../ui/main.ui.h:55
+msgid "Upload"
+msgstr "Wyślij"
+
+#: ../src/ui.py:732
+msgid "Upload using programmer"
+msgstr "Wysyła używając programatora"
+
+#: ../src/ui.py:771 ../src/ui.py:777 ../src/ui.py:783
+msgid "System error"
+msgstr "Błąd systemu"
+
+#: ../src/ui.py:786
+msgid "Cannot load ui file"
+msgstr "Nie można wczytać pliku interfejsu użytkownika"
+
+#: ../src/ui.py:901
+msgid "--help    Print the command line options"
+msgstr "--help    Wyświetla opcje wiersza poleceń"
+
+#: ../src/ui.py:902
+msgid "--version Output version information and exit"
+msgstr "--version Wyświetla informacje o wersji i kończy działanie"
+
+#: ../src/uploader.py:54
+msgid "Burning bootloader..."
+msgstr "Nagrywanie programu startowego..."
+
+#: ../src/uploader.py:67 ../src/uploader.py:101 ../src/uploader.py:149
+#: ../src/uploader.py:162
+msgid "Flashing error."
+msgstr "Błąd podczas zapisywania w pamięci flash."
+
+#: ../src/uploader.py:92 ../src/uploader.py:123
+msgid "Burn Error"
+msgstr "Błąd nagrywania"
+
+#: ../src/uploader.py:92 ../src/uploader.py:123
+msgid "Burn ERROR."
+msgstr "BŁĄD nagrywania."
+
+#: ../src/uploader.py:126
+msgid "Burn complete."
+msgstr "Ukończono nagrywanie."
+
+#: ../src/uploader.py:135
+msgid "Flashing..."
+msgstr "Zapisywanie w pamięci flash..."
+
+#: ../src/uploader.py:181
+msgid "Flashing Error"
+msgstr "Błąd podczas zapisywania w pamięci flash"
+
+#: ../src/uploader.py:181
+msgid "Flash ERROR.\n"
+msgstr "BŁĄD zapisywania w pamięci flash.\n"
+
+#: ../src/uploader.py:184
+msgid "Flashing complete."
+msgstr "Ukończono zapisywanie w pamięci flash."
+
+#: ../ui/arduino.xml.h:1
+msgid "Arduino"
+msgstr "Arduino"
+
+#: ../ui/arduino.xml.h:2
+msgid "Arduino color scheme"
+msgstr "Schemat kolorów Arduino"
+
+#: ../ui/main.ui.h:1
+msgid "Lucian Langa <lucilanga@gnome.org>"
+msgstr "Lucian Langa <lucilanga@gnome.org>"
+
+#: ../ui/main.ui.h:2
+msgid "GNOME Arduino IDE"
+msgstr "Zintegrowane środowisko programistyczne Arduino dla środowiska GNOME"
+
+#: ../ui/main.ui.h:3
+msgid "gnoduino"
+msgstr "gnoduino"
+
+#: ../ui/main.ui.h:4
+msgid ""
+" gnoduino - Python Arduino IDE implementation\n"
+" Copyright (C) 2010-2012  Lucian Langa\n"
+"\n"
+"This program is free software; you can redistribute it and/or\n"
+"modify it under the terms of the GNU General Public License\n"
+"as published by the Free Software Foundation; either version 2\n"
+"of the License, or (at your option) any later version.\n"
+"\n"
+"This program is distributed in the hope that it will be useful,\n"
+"but WITHOUT ANY WARRANTY; without even the implied warranty of\n"
+"MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n"
+"GNU General Public License for more details.\n"
+"\n"
+"You should have received a copy of the GNU General Public License\n"
+"along with this program; if not, write to the Free Software\n"
+"Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, "
+"USA.\n"
+msgstr ""
+" gnoduino - Implementacja środowiska programistycznego Arduino w języku "
+"Python\n"
+" Copyright (C) 2010-2012  Lucian Langa\n"
+"\n"
+"Niniejszy program jest wolnym oprogramowaniem; można go rozprowadzać\n"
+"dalej i/lub modyfikować na warunkach Powszechnej Licencji Publicznej\n"
+"GNU, wydanej przez Fundację Wolnego Oprogramowania (Free Software\n"
+"Foundation) - według wersji drugiej tej Licencji lub którejś z\n"
+"późniejszych wersji.\n"
+"\n"
+"Niniejszy program rozpowszechniany jest z nadzieją, iż będzie on\n"
+"użyteczny - jednak BEZ JAKIEJKOLWIEK GWARANCJI, nawet domyślnej\n"
+"gwarancji PRZYDATNOŚCI HANDLOWEJ albo PRZYDATNOŚCI DO OKREŚLONYCH\n"
+"ZASTOSOWAŃ. W celu uzyskania bliższych informacji należy zapoznać\n"
+"się z Powszechną Licencją Publiczną GNU.\n"
+"\n"
+"Z pewnością wraz z niniejszym programem dostarczono także egzemplarz\n"
+"Powszechnej Licencji Publicznej GNU (GNU General Public License); jeśli\n"
+"nie - proszę napisać do Free Software Foundation, Inc., 51 Franklin\n"
+"Street, Fifth Floor, Boston, MA 02110-130159 USA.\n"
+
+#: ../ui/main.ui.h:21
+msgid "Search for:"
+msgstr "Wyszukiwanie:"
+
+#: ../ui/main.ui.h:22
+msgid "Match entire word only"
+msgstr "Tylko całe wyrazy"
+
+#: ../ui/main.ui.h:23
+msgid "Wrap around"
+msgstr "Automatyczny powrót do początku"
+
+#: ../ui/main.ui.h:24
+msgid "Match case"
+msgstr "Rozróżnianie małych i wielkich liter"
+
+#: ../ui/main.ui.h:25
+msgid "Search backwards"
+msgstr "Wyszukiwanie wstecz"
+
+#: ../ui/main.ui.h:26
+msgid "Editor font size"
+msgstr "Rozmiar czcionki edytora"
+
+#: ../ui/main.ui.h:27
+msgid "Console font size"
+msgstr "Rozmiar czcionki konsoli"
+
+#: ../ui/main.ui.h:28
+msgid "Verbose build"
+msgstr "Bardziej szczegółowe budowanie"
+
+#: ../ui/main.ui.h:29
+msgid "Verbose upload"
+msgstr "Bardziej szczegółowe wysyłanie"
+
+#: ../ui/main.ui.h:30
+msgid "Show line numbers"
+msgstr "Wyświetlanie numerów wierszy"
+
+#: ../ui/main.ui.h:31
+msgid "Sketchdir: "
+msgstr "Katalog szkiców: "
+
+#: ../ui/main.ui.h:32
+msgid ""
+"Enter any supplementary path that compiler will check for, separate them by "
+"semicolons. (eg /usr/share/gnoduino;/usr/local/share/gnoduino)"
+msgstr ""
+"Proszę podać dowolne dodatkowe ścieżki, które powinny być sprawdzane przez "
+"kompilator, oddzielając je średnikiem (np. /usr/share/gnoduino;/usr/local/"
+"share/gnoduino)."
+
+#: ../ui/main.ui.h:33
+msgid "Additional library paths:"
+msgstr "Dodatkowe ścieżki do bibliotek:"
+
+#: ../ui/main.ui.h:34
+msgid "_File"
+msgstr "_Plik"
+
+#: ../ui/main.ui.h:35
+msgid "Upload to I/O Board"
+msgstr "Wyślij do płyty wejścia/wyjścia"
+
+#: ../ui/main.ui.h:36
+msgid "Preferences"
+msgstr "Preferencje"
+
+#: ../ui/main.ui.h:37
+msgid "_Edit"
+msgstr "_Edycja"
+
+#: ../ui/main.ui.h:38
+msgid "Find Next"
+msgstr "Znajdź następne"
+
+#: ../ui/main.ui.h:39
+msgid "Sketch"
+msgstr "Szkic"
+
+#: ../ui/main.ui.h:40
+msgid "Verify/Compile"
+msgstr "Sprawdź/skompiluj"
+
+#: ../ui/main.ui.h:41
+msgid "Stop"
+msgstr "Zatrzymaj"
+
+#: ../ui/main.ui.h:42
+msgid "Import Library"
+msgstr "Zaimportuj bibliotekę"
+
+#: ../ui/main.ui.h:43
+msgid "Add File..."
+msgstr "Dodaj plik..."
+
+#: ../ui/main.ui.h:44
+msgid "Tools"
+msgstr "Narzędzia"
+
+#: ../ui/main.ui.h:45
+msgid "Auto Format"
+msgstr "Automatyczne formatowanie"
+
+#: ../ui/main.ui.h:46
+msgid "Serial Monitor"
+msgstr "Monitor szeregowy"
+
+#: ../ui/main.ui.h:47
+msgid "Reset Board"
+msgstr "Resetuj płytę"
+
+#: ../ui/main.ui.h:48
+msgid "Board"
+msgstr "Płyta"
+
+#: ../ui/main.ui.h:49
+msgid "Serial Port"
+msgstr "Port szeregowy"
+
+#: ../ui/main.ui.h:50
+msgid "Programmer"
+msgstr "Programator"
+
+#: ../ui/main.ui.h:51
+msgid "Burn Bootloader"
+msgstr "Nagraj program startowy"
+
+#: ../ui/main.ui.h:52
+msgid "_Help"
+msgstr "Pomo_c"
+
+#: ../ui/main.ui.h:53
+msgid "Reference"
+msgstr "Odniesienie"
+
+#: ../ui/main.ui.h:54
+msgid "Compile"
+msgstr "Skompiluj"
+
+#: ../ui/main.ui.h:56
+msgid "New"
+msgstr "Nowy"
+
+#: ../ui/main.ui.h:57
+msgid "Open"
+msgstr "Otwórz"
+
+#: ../ui/main.ui.h:58
+msgid "Save"
+msgstr "Zapisz"
