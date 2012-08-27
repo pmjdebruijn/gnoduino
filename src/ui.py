@@ -691,10 +691,12 @@ def populateExampleLine(entry, menu):
 		menuItem.set_submenu(subitem)
 		menu.append(menuItem)
 	else:
-		if os.path.basename(os.path.split(entry)[0]) == "examples":
-			menuItem.set_data("file", os.path.join(entry, i))
-			menuItem.connect("activate", exampleProcess)
-			menu.append(menuItem)
+		try:
+			if os.path.basename(os.path.split(entry)[0]) == "examples":
+				menuItem.set_data("file", os.path.join(entry, i))
+				menuItem.connect("activate", exampleProcess)
+				menu.append(menuItem)
+		except: pass
 
 def populateExamples():
 	submenu = gtk.Menu()
