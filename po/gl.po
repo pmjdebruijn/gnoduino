@@ -8,44 +8,44 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-04-13 15:47+0200\n"
-"PO-Revision-Date: 2012-04-13 15:48+0200\n"
+"POT-Creation-Date: 2012-08-30 14:44+0200\n"
+"PO-Revision-Date: 2012-08-30 14:44+0200\n"
 "Last-Translator: Fran Dieguez <frandieguez@gnome.org>\n"
 "Language-Team: Galician <gnome-l10n-gl@gnome.org>\n"
 "Language: gl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.2\n"
+"X-Generator: Gtranslator 2.91.5\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 
-#: ../src/compiler.py:136
+#: ../src/compiler.py:137
 msgid "Compiling..."
 msgstr "Compilando..."
 
-#: ../src/compiler.py:155 ../src/compiler.py:161 ../src/compiler.py:167
-#: ../src/compiler.py:174 ../src/compiler.py:192 ../src/compiler.py:217
+#: ../src/compiler.py:156 ../src/compiler.py:162 ../src/compiler.py:168
+#: ../src/compiler.py:175 ../src/compiler.py:193 ../src/compiler.py:218
 msgid "Compile Error"
 msgstr "Erro ao compilar"
 
-#: ../src/compiler.py:247
+#: ../src/compiler.py:248
 msgid "Linking error"
 msgstr "Erro ao ligar"
 
-#: ../src/compiler.py:259 ../src/compiler.py:272
+#: ../src/compiler.py:260 ../src/compiler.py:273
 msgid "Object error"
 msgstr "Erro no obxecto"
 
-#: ../src/compiler.py:278
+#: ../src/compiler.py:279
 msgid "Done compiling."
 msgstr "Compilación rematada."
 
-#: ../src/compiler.py:282
+#: ../src/compiler.py:283
 #, python-format
 msgid "Binary sketch size: %s bytes (of a %s bytes maximum)\n"
 msgstr "Tamaño do programa binario: %s bytes (dun máximo de %s)\n"
 
-#: ../src/compiler.py:363 ../src/compiler.py:388
+#: ../src/compiler.py:369 ../src/compiler.py:394
 msgid "Library Error"
 msgstr "Erro na biblioteca"
 
@@ -70,15 +70,15 @@ msgstr ""
 "Produciuse un erro ó ler o ficheiro %s. Está corrompido. Problema na "
 "instalación.\n"
 
-#: ../src/misc.py:274
+#: ../src/misc.py:275
 msgid "Error compiling."
 msgstr "Erro ao compilar."
 
-#: ../src/misc.py:344
+#: ../src/misc.py:346
 msgid "Close without Saving"
 msgstr "Pechar sen gardar"
 
-#: ../src/misc.py:346
+#: ../src/misc.py:348
 msgid "If you don't save, changes will be permanently lost."
 msgstr "Se non garda, perderanse as modificacións."
 
@@ -90,21 +90,21 @@ msgstr ""
 "Porto serie non configurado!\n"
 "Empregue Ferramentas->Porto serie para configuralo."
 
-#: ../src/srcview.py:148 ../src/srcview.py:158
+#: ../src/srcview.py:149 ../src/srcview.py:159
 #, python-format
 msgid "'%s' not found."
 msgstr "Non foi posíbel atopar «%s»."
 
-#: ../src/ui.py:67 ../src/ui.py:87 ../src/ui.py:100 ../src/ui.py:168
-#: ../src/ui.py:183
+#: ../src/ui.py:66 ../src/ui.py:86 ../src/ui.py:99 ../src/ui.py:167
+#: ../src/ui.py:182
 msgid "Untitled"
 msgstr "Sen título"
 
-#: ../src/ui.py:68
+#: ../src/ui.py:67
 msgid "Save document"
 msgstr "Gardar o documento"
 
-#: ../src/ui.py:69
+#: ../src/ui.py:68
 #, python-format
 msgid ""
 "Save changes to document \"%s\"\n"
@@ -113,38 +113,38 @@ msgstr ""
 "Quere gardar as modificacións de «%s»\n"
 " antes de pechar?"
 
-#: ../src/ui.py:177
+#: ../src/ui.py:176
 msgid "Save file"
 msgstr "Gardar o ficheiro"
 
-#: ../src/ui.py:194
+#: ../src/ui.py:193
 msgid "Open file"
 msgstr "Abrir un ficheiro"
 
-#: ../src/ui.py:220
+#: ../src/ui.py:219
 #, python-format
 msgid "<b>A file named %s already exists. Do you want to replace it?</b>"
 msgstr "<b>Xa existe un ficheiro de nome %s. Quere substituílo?</b>"
 
-#: ../src/ui.py:221
+#: ../src/ui.py:220
 #, python-format
 msgid ""
 "The file already exists in \"%s\". Replacing it will overwrite its contents."
 msgstr "Xa existe o ficheiro en «%s». Substituílo sobrescribirá o seu contido."
 
-#: ../src/ui.py:526
+#: ../src/ui.py:525
 msgid "Open Recent"
 msgstr "Abrir un recente"
 
-#: ../src/ui.py:561 ../ui/main.ui.h:59
+#: ../src/ui.py:560 ../ui/main.ui.h:59
 msgid "Send"
 msgstr "Enviar"
 
-#: ../src/ui.py:562
+#: ../src/ui.py:561
 msgid "Clear"
 msgstr "Limpar"
 
-#: ../src/ui.py:601
+#: ../src/ui.py:599
 #, python-format
 msgid "%s baud"
 msgstr "%s baud"
@@ -153,19 +153,27 @@ msgstr "%s baud"
 msgid "E_xamples"
 msgstr "E_xemplos"
 
-#: ../src/ui.py:760 ../src/ui.py:766 ../src/ui.py:772
+#: ../src/ui.py:725 ../ui/main.ui.h:55
+msgid "Upload"
+msgstr "Transferir"
+
+#: ../src/ui.py:732
+msgid "Upload using programmer"
+msgstr "Subir usando o programador"
+
+#: ../src/ui.py:771 ../src/ui.py:777 ../src/ui.py:783
 msgid "System error"
 msgstr "Erro do sistema"
 
-#: ../src/ui.py:775
+#: ../src/ui.py:786
 msgid "Cannot load ui file"
 msgstr "Non foi posíbel cargar o ficheiro ui"
 
-#: ../src/ui.py:886
+#: ../src/ui.py:901
 msgid "--help    Print the command line options"
 msgstr "--help    Mostra as opcións da liña de ordes"
 
-#: ../src/ui.py:887
+#: ../src/ui.py:902
 msgid "--version Output version information and exit"
 msgstr "--version Mostra información da versión e sae"
 
@@ -405,21 +413,17 @@ msgstr "Referencia"
 msgid "Compile"
 msgstr "Compilar"
 
-#: ../ui/main.ui.h:55
+#: ../ui/main.ui.h:56
 msgid "New"
 msgstr "Novo"
 
-#: ../ui/main.ui.h:56
+#: ../ui/main.ui.h:57
 msgid "Open"
 msgstr "Abrir"
 
-#: ../ui/main.ui.h:57
+#: ../ui/main.ui.h:58
 msgid "Save"
 msgstr "Gardar"
-
-#: ../ui/main.ui.h:58
-msgid "Upload"
-msgstr "Transferir"
 
 #~ msgid "Cannot find %s"
 #~ msgstr "Non foi posíbel atopar %s"
