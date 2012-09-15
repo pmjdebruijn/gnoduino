@@ -1,0 +1,421 @@
+# Greek translation for gnoduino.
+# Copyright (C) 2012 gnoduino's COPYRIGHT HOLDER
+# This file is distributed under the same license as the gnoduino package.
+# Efstathios Iosifidis <iosifidis@opensuse.org>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnoduino master\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
+"product=gnoduino&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2012-08-27 09:29+0000\n"
+"PO-Revision-Date: 2012-09-15 13:00+0200\n"
+"Last-Translator: Tom Tryfonidis <tomtryf@gmail.com>\n"
+"Language-Team: Ελληνικά, Σύγχρονα <opensuse-translation-el@opensuse.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+#: ../src/compiler.py:137
+msgid "Compiling..."
+msgstr "Μεταγλώττιση..."
+
+#: ../src/compiler.py:156 ../src/compiler.py:162 ../src/compiler.py:168
+#: ../src/compiler.py:175 ../src/compiler.py:193 ../src/compiler.py:218
+msgid "Compile Error"
+msgstr "Σφάλμα μεταγλώττισης"
+
+#: ../src/compiler.py:248
+msgid "Linking error"
+msgstr "Σφάλμα σύνδεσης"
+
+#: ../src/compiler.py:260 ../src/compiler.py:273
+msgid "Object error"
+msgstr "Σφάλμα αντικειμένου"
+
+#: ../src/compiler.py:279
+msgid "Done compiling."
+msgstr "Ολοκλήρωση μεταγλώττισης."
+
+#: ../src/compiler.py:283
+#, python-format
+msgid "Binary sketch size: %s bytes (of a %s bytes maximum)\n"
+msgstr ""
+
+#: ../src/compiler.py:369 ../src/compiler.py:394
+msgid "Library Error"
+msgstr "Σφάλμα Βιβλιοθήκης"
+
+#: ../src/misc.py:54
+#, python-format
+msgid ""
+"Unable to locate %s\n"
+"Arduino SDK missing or broken."
+msgstr ""
+"Αδυναμία εντοπισμού %s\n"
+"Το Arduino SDK είναι κατεστραμένο ή απουσιάζει."
+
+#: ../src/misc.py:148
+#, python-format
+msgid "Cannot load %s file. Exiting."
+msgstr "Αδυναμία φόρτωσης αρχείου %s. Έξοδος."
+
+#: ../src/misc.py:151
+#, python-format
+msgid "Error reading %s file. File is corrupt. Installation problem.\n"
+msgstr ""
+"Σφάλμα ανάγνωσης του αρχείου %s. Το αρχείο είναι κατεστραμμένο. Πρόβλημα "
+"εγκατάστασης.\n"
+
+#: ../src/misc.py:275
+msgid "Error compiling."
+msgstr "Σφάλμα μεταγλώττισης."
+
+#: ../src/misc.py:346
+msgid "Close without Saving"
+msgstr "Έξοδος χωρίς αποθήκευση"
+
+#: ../src/misc.py:348
+msgid "If you don't save, changes will be permanently lost."
+msgstr "Εάν δεν αποθηκεύσετε, οι αλλαγές θα χαθούν μόνιμα."
+
+#: ../src/serialio.py:92
+msgid ""
+"Serial port not configured!\n"
+"Use Tools->Serial Port to configure port."
+msgstr ""
+"Δεν ρυθμίστηκε η σειριακή πόρτα!\n"
+"Χρησιμοποιήστε τα Εργαλεία->Σειριακή πόρτα για να τη ρυθμίσετε."
+
+#: ../src/srcview.py:149 ../src/srcview.py:159
+#, python-format
+msgid "'%s' not found."
+msgstr "Δεν βρέθηκε το '%s'"
+
+#: ../src/ui.py:66 ../src/ui.py:86 ../src/ui.py:99 ../src/ui.py:167
+#: ../src/ui.py:182
+msgid "Untitled"
+msgstr "Ανώνυμο"
+
+#: ../src/ui.py:67
+msgid "Save document"
+msgstr "Αποθήκευση εγγράφου"
+
+#: ../src/ui.py:68
+#, python-format
+msgid ""
+"Save changes to document \"%s\"\n"
+" before closing?"
+msgstr ""
+"Αποθήκευση αλλαγών στο έγγραφο  \"%s\"\n"
+" πριν την έξοδο;"
+
+#: ../src/ui.py:176
+msgid "Save file"
+msgstr "Αποθήκευση αρχείου"
+
+#: ../src/ui.py:193
+msgid "Open file"
+msgstr "Άνοιγμα αρχείου"
+
+#: ../src/ui.py:219
+#, python-format
+msgid "<b>A file named %s already exists. Do you want to replace it?</b>"
+msgstr ""
+"<b>Υπάρχει ήδη ένα αρχείο με όνομα %s. Θέλετε να το αντικαταστήσετε;</b>"
+
+#: ../src/ui.py:220
+#, python-format
+msgid ""
+"The file already exists in \"%s\". Replacing it will overwrite its contents."
+msgstr ""
+"Το αρχείο υπάρχει ήδη στο \"%s\". Η αντικατάσταση του θα αλλάξει τα "
+"περιεχόμενα του."
+
+#: ../src/ui.py:525
+msgid "Open Recent"
+msgstr "Άνοιγμα πρόσφατων"
+
+#: ../src/ui.py:560 ../ui/main.ui.h:59
+msgid "Send"
+msgstr "Αποστολή"
+
+#: ../src/ui.py:561
+msgid "Clear"
+msgstr "Εκκαθάριση"
+
+#: ../src/ui.py:599
+#, python-format
+msgid "%s baud"
+msgstr "%s baud"
+
+#: ../src/ui.py:719
+msgid "E_xamples"
+msgstr "Π_αραδείγματα"
+
+#: ../src/ui.py:725 ../ui/main.ui.h:55
+msgid "Upload"
+msgstr "Αποστολή"
+
+#: ../src/ui.py:732
+msgid "Upload using programmer"
+msgstr "Αποστολή χρησιμοποιώντας τον προγραμματιστή"
+
+#: ../src/ui.py:771 ../src/ui.py:777 ../src/ui.py:783
+msgid "System error"
+msgstr "Σφάλμα συστήματος"
+
+#: ../src/ui.py:786
+msgid "Cannot load ui file"
+msgstr "Αδυναμία φόρτωσης ui αρχείου"
+
+#: ../src/ui.py:901
+msgid "--help    Print the command line options"
+msgstr "--help    Εκτύπωση επιλογών του τερματικού"
+
+#: ../src/ui.py:902
+msgid "--version Output version information and exit"
+msgstr "--version Προβολή έκδοσης και έξοδος"
+
+#: ../src/uploader.py:54
+msgid "Burning bootloader..."
+msgstr "Εγγραφή bootloader..."
+
+#: ../src/uploader.py:67 ../src/uploader.py:101 ../src/uploader.py:149
+#: ../src/uploader.py:162
+msgid "Flashing error."
+msgstr ""
+
+#: ../src/uploader.py:92 ../src/uploader.py:123
+msgid "Burn Error"
+msgstr "Σφάλμα εγγραφής"
+
+#: ../src/uploader.py:92 ../src/uploader.py:123
+msgid "Burn ERROR."
+msgstr "ΣΦΑΛΜΑ εγγραφής."
+
+#: ../src/uploader.py:126
+msgid "Burn complete."
+msgstr "Η εγγραφή ολοκληρώθηκε."
+
+#: ../src/uploader.py:135
+msgid "Flashing..."
+msgstr ""
+
+#: ../src/uploader.py:181
+msgid "Flashing Error"
+msgstr ""
+
+#: ../src/uploader.py:181
+msgid "Flash ERROR.\n"
+msgstr ""
+
+#: ../src/uploader.py:184
+msgid "Flashing complete."
+msgstr ""
+
+#: ../ui/arduino.xml.h:1
+msgid "Arduino"
+msgstr "Arduino"
+
+#: ../ui/arduino.xml.h:2
+msgid "Arduino color scheme"
+msgstr "Σχήμα χρώματος του arduino"
+
+#: ../ui/main.ui.h:1
+msgid "Lucian Langa <lucilanga@gnome.org>"
+msgstr "Lucian Langa <lucilanga@gnome.org>"
+
+#: ../ui/main.ui.h:2
+msgid "GNOME Arduino IDE"
+msgstr "GNOME Arduino IDE"
+
+#: ../ui/main.ui.h:3
+msgid "gnoduino"
+msgstr "gnoduino"
+
+#: ../ui/main.ui.h:4
+msgid ""
+" gnoduino - Python Arduino IDE implementation\n"
+" Copyright (C) 2010-2012  Lucian Langa\n"
+"\n"
+"This program is free software; you can redistribute it and/or\n"
+"modify it under the terms of the GNU General Public License\n"
+"as published by the Free Software Foundation; either version 2\n"
+"of the License, or (at your option) any later version.\n"
+"\n"
+"This program is distributed in the hope that it will be useful,\n"
+"but WITHOUT ANY WARRANTY; without even the implied warranty of\n"
+"MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n"
+"GNU General Public License for more details.\n"
+"\n"
+"You should have received a copy of the GNU General Public License\n"
+"along with this program; if not, write to the Free Software\n"
+"Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, "
+"USA.\n"
+msgstr ""
+" gnoduino - Υλοποίηση Python Arduino IDE\n"
+" Πνευματικά δικαιώματα (C) 2010-2012  Lucian Langa\n"
+"\n"
+"Το Gnome Subtitles διανέμεται με την ελπίδα ότι θα αποδεχθεί χρήσιμο,\n"
+"παρόλα αυτά ΧΩΡΙΣ ΚΑΜΜΙΑ ΕΓΓΥΗΣΗ, χωρίς ούτε και την σιωπηρή εγγύηση\n"
+"ΕΜΠΟΡΕΥΣΙΜΟΤΗΤΑΣ ή ΚΑΤΑΛΛΗΛΟΤΗΤΑΣ ΓΙΑ ΕΙΔΙΚΟ ΣΚΟΠΟ. Για περισσότερες\n"
+"λεπτομέρειες ανατρέξτε στη Γενική Άδεια Δημόσιας Χρήσης GNU.\n"
+"\n"
+"Θα πρέπει να έχετε λάβει αντίγραφο της Γενικής Άδειας Δημόσιας Χρήσης GNU\n"
+"μαζίμε το πρόγραμμα. Αν όχι, γράψτε στο Free Software\n"
+"Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA\n"
+
+#: ../ui/main.ui.h:21
+msgid "Search for:"
+msgstr "Αναζήτηση για:"
+
+#: ../ui/main.ui.h:22
+msgid "Match entire word only"
+msgstr "Ταίριασμα μόνο ολόκληρης της λέξης"
+
+#: ../ui/main.ui.h:23
+msgid "Wrap around"
+msgstr ""
+
+#: ../ui/main.ui.h:24
+msgid "Match case"
+msgstr ""
+
+#: ../ui/main.ui.h:25
+msgid "Search backwards"
+msgstr "Αναζήτηση προς τα πίσω"
+
+#: ../ui/main.ui.h:26
+msgid "Editor font size"
+msgstr "Επεξεργαστής μεγέθους γραμματοσειράς"
+
+#: ../ui/main.ui.h:27
+msgid "Console font size"
+msgstr "Μέγεθος γραμματοσειράς τερματικού"
+
+#: ../ui/main.ui.h:28
+msgid "Verbose build"
+msgstr ""
+
+#: ../ui/main.ui.h:29
+msgid "Verbose upload"
+msgstr ""
+
+#: ../ui/main.ui.h:30
+msgid "Show line numbers"
+msgstr "Εμφάνιση αριθμών γραμμών"
+
+#: ../ui/main.ui.h:31
+msgid "Sketchdir: "
+msgstr "Κατάλογος σχεδίασης:"
+
+#: ../ui/main.ui.h:32
+msgid ""
+"Enter any supplementary path that compiler will check for, separate them by "
+"semicolons. (eg /usr/share/gnoduino;/usr/local/share/gnoduino)"
+msgstr ""
+"Πληκτρολογήστε οποιαδήποτε συμπληρωματική διαδρομή για να ελέγξει ο "
+"μεταγλωττιστής, διαχωρισμένες με ερωτηματικά. (π.χ /usr/share/gnoduino;/usr/"
+"local/share/gnoduino)"
+
+#: ../ui/main.ui.h:33
+msgid "Additional library paths:"
+msgstr "Επιπρόσθετες διαδρομών βιβλιοθηκών:"
+
+#: ../ui/main.ui.h:34
+msgid "_File"
+msgstr "_Αρχείο"
+
+#: ../ui/main.ui.h:35
+msgid "Upload to I/O Board"
+msgstr "Αποστολή στην πλακέτα I/O"
+
+#: ../ui/main.ui.h:36
+msgid "Preferences"
+msgstr "Ιδιότητες"
+
+#: ../ui/main.ui.h:37
+msgid "_Edit"
+msgstr "_Επεξεργασία"
+
+#: ../ui/main.ui.h:38
+msgid "Find Next"
+msgstr "Εύρεση επόμενου"
+
+#: ../ui/main.ui.h:39
+msgid "Sketch"
+msgstr "Σχεδίαση"
+
+#: ../ui/main.ui.h:40
+msgid "Verify/Compile"
+msgstr "Επιβεβαίωση/Μεταγλώττιση"
+
+#: ../ui/main.ui.h:41
+msgid "Stop"
+msgstr "Διακοπή"
+
+#: ../ui/main.ui.h:42
+msgid "Import Library"
+msgstr "Εισαγωγή βιβλιοθήκης"
+
+#: ../ui/main.ui.h:43
+msgid "Add File..."
+msgstr "Πρσθήκη αρχείου..."
+
+#: ../ui/main.ui.h:44
+msgid "Tools"
+msgstr "Εργαλεία"
+
+#: ../ui/main.ui.h:45
+msgid "Auto Format"
+msgstr ""
+
+#: ../ui/main.ui.h:46
+msgid "Serial Monitor"
+msgstr ""
+
+#: ../ui/main.ui.h:47
+msgid "Reset Board"
+msgstr "Επαναφορά πλακέτας"
+
+#: ../ui/main.ui.h:48
+msgid "Board"
+msgstr "Πλακέτα"
+
+#: ../ui/main.ui.h:49
+msgid "Serial Port"
+msgstr "Σειριακή θύρα"
+
+#: ../ui/main.ui.h:50
+msgid "Programmer"
+msgstr "Προγραμματιστής"
+
+#: ../ui/main.ui.h:51
+msgid "Burn Bootloader"
+msgstr "Εγγραφή bootloader"
+
+#: ../ui/main.ui.h:52
+msgid "_Help"
+msgstr "_Βοήθεια"
+
+#: ../ui/main.ui.h:53
+msgid "Reference"
+msgstr "Αναφορά"
+
+#: ../ui/main.ui.h:54
+msgid "Compile"
+msgstr "Μεταγλώττιση"
+
+#: ../ui/main.ui.h:56
+msgid "New"
+msgstr "Νέο"
+
+#: ../ui/main.ui.h:57
+msgid "Open"
+msgstr "Άνοιγμα"
+
+#: ../ui/main.ui.h:58
+msgid "Save"
+msgstr "Αποθήκευση"
