@@ -8,42 +8,42 @@ msgstr ""
 "Project-Id-Version: gnoduino master fr\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
 "product=gnoduino&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2012-04-09 18:01+0000\n"
-"PO-Revision-Date: 2012-03-09 09:23+0200\n"
+"POT-Creation-Date: 2012-08-27 09:29+0000\n"
+"PO-Revision-Date: 2012-09-25 17:59+0200\n"
 "Last-Translator: Alain Lojewski <allomervan@gmail.com>\n"
 "Language-Team: GNOME French team <gnomefr@traduc.org>\n"
+"Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: fr\n"
 
-#: ../src/compiler.py:136
+#: ../src/compiler.py:137
 msgid "Compiling..."
 msgstr "Compilation..."
 
-#: ../src/compiler.py:155 ../src/compiler.py:161 ../src/compiler.py:167
-#: ../src/compiler.py:174 ../src/compiler.py:192 ../src/compiler.py:217
+#: ../src/compiler.py:156 ../src/compiler.py:162 ../src/compiler.py:168
+#: ../src/compiler.py:175 ../src/compiler.py:193 ../src/compiler.py:218
 msgid "Compile Error"
 msgstr "Erreur de compilation"
 
-#: ../src/compiler.py:247
+#: ../src/compiler.py:248
 msgid "Linking error"
 msgstr "Erreur de liaison"
 
-#: ../src/compiler.py:259 ../src/compiler.py:272
+#: ../src/compiler.py:260 ../src/compiler.py:273
 msgid "Object error"
 msgstr "Erreur d'objet"
 
-#: ../src/compiler.py:278
+#: ../src/compiler.py:279
 msgid "Done compiling."
 msgstr "Compilation terminée."
 
-#: ../src/compiler.py:282
+#: ../src/compiler.py:283
 #, python-format
 msgid "Binary sketch size: %s bytes (of a %s bytes maximum)\n"
 msgstr "Taille du programme binaire : %s octets (sur %s octets maximum)\n"
 
-#: ../src/compiler.py:363 ../src/compiler.py:388
+#: ../src/compiler.py:369 ../src/compiler.py:394
 msgid "Library Error"
 msgstr "Erreur de bibliothèque"
 
@@ -68,15 +68,15 @@ msgstr ""
 "Erreur de lecture du fichier %s. Le fichier est corrompu. Problème "
 "d'installation.\n"
 
-#: ../src/misc.py:274
+#: ../src/misc.py:275
 msgid "Error compiling."
 msgstr "Erreur de compilation."
 
-#: ../src/misc.py:344
+#: ../src/misc.py:346
 msgid "Close without Saving"
 msgstr "Fermer sans enregistrer"
 
-#: ../src/misc.py:346
+#: ../src/misc.py:348
 msgid "If you don't save, changes will be permanently lost."
 msgstr ""
 "Si vous n'enregistrez pas, les modifications seront définitivement perdues."
@@ -89,21 +89,21 @@ msgstr ""
 "Le port série n'est pas configuré.\n"
 "Utilisez Outils->Port série pour configurer le port."
 
-#: ../src/srcview.py:148 ../src/srcview.py:158
+#: ../src/srcview.py:149 ../src/srcview.py:159
 #, python-format
 msgid "'%s' not found."
 msgstr "« %s » introuvable."
 
-#: ../src/ui.py:67 ../src/ui.py:87 ../src/ui.py:100 ../src/ui.py:168
-#: ../src/ui.py:183
+#: ../src/ui.py:66 ../src/ui.py:86 ../src/ui.py:99 ../src/ui.py:167
+#: ../src/ui.py:182
 msgid "Untitled"
 msgstr "Sans nom"
 
-#: ../src/ui.py:68
+#: ../src/ui.py:67
 msgid "Save document"
 msgstr "Enregistrer le document"
 
-#: ../src/ui.py:69
+#: ../src/ui.py:68
 #, python-format
 msgid ""
 "Save changes to document \"%s\"\n"
@@ -112,20 +112,20 @@ msgstr ""
 "Enregistrer les modifications du document « %s »\n"
 " avant de fermer ?"
 
-#: ../src/ui.py:177
+#: ../src/ui.py:176
 msgid "Save file"
 msgstr "Enregistrer le fichier"
 
-#: ../src/ui.py:194
+#: ../src/ui.py:193
 msgid "Open file"
 msgstr "Ouvrir un fichier"
 
-#: ../src/ui.py:220
+#: ../src/ui.py:219
 #, python-format
 msgid "<b>A file named %s already exists. Do you want to replace it?</b>"
 msgstr "<b>Il existe déjà un fichier nommé %s. Voulez-vous le remplacer ?</b>"
 
-#: ../src/ui.py:221
+#: ../src/ui.py:220
 #, python-format
 msgid ""
 "The file already exists in \"%s\". Replacing it will overwrite its contents."
@@ -133,19 +133,19 @@ msgstr ""
 "Ce fichier existe déjà dans « %s ». Si vous le remplacez, son contenu sera "
 "écrasé."
 
-#: ../src/ui.py:526
+#: ../src/ui.py:525
 msgid "Open Recent"
 msgstr "Récemment ouverts"
 
-#: ../src/ui.py:561 ../ui/main.ui.h:59
+#: ../src/ui.py:560 ../ui/main.ui.h:59
 msgid "Send"
 msgstr "Envoyer"
 
-#: ../src/ui.py:562
+#: ../src/ui.py:561
 msgid "Clear"
 msgstr "Effacer"
 
-#: ../src/ui.py:601
+#: ../src/ui.py:599
 #, python-format
 msgid "%s baud"
 msgstr "%s baud"
@@ -154,20 +154,28 @@ msgstr "%s baud"
 msgid "E_xamples"
 msgstr "E_xemples"
 
-#: ../src/ui.py:760 ../src/ui.py:766 ../src/ui.py:772
+#: ../src/ui.py:725 ../ui/main.ui.h:55
+msgid "Upload"
+msgstr "Transférer"
+
+#: ../src/ui.py:732
+msgid "Upload using programmer"
+msgstr "Transférer à l'aide du programmeur"
+
+#: ../src/ui.py:771 ../src/ui.py:777 ../src/ui.py:783
 msgid "System error"
 msgstr "Erreur système"
 
 #  ../src/ui.py:687
-#: ../src/ui.py:775
+#: ../src/ui.py:786
 msgid "Cannot load ui file"
 msgstr "Impossible de charger le fichier d'interface"
 
-#: ../src/ui.py:886
+#: ../src/ui.py:901
 msgid "--help    Print the command line options"
 msgstr "--help    Affiche les options de la ligne de commande"
 
-#: ../src/ui.py:887
+#: ../src/ui.py:902
 msgid "--version Output version information and exit"
 msgstr "--version Affiche les informations de version et quitte"
 
@@ -389,7 +397,7 @@ msgstr "Port série"
 
 #: ../ui/main.ui.h:50
 msgid "Programmer"
-msgstr "Programmer"
+msgstr "Programmeur"
 
 #: ../ui/main.ui.h:51
 msgid "Burn Bootloader"
@@ -407,18 +415,14 @@ msgstr "Référence"
 msgid "Compile"
 msgstr "Compiler"
 
-#: ../ui/main.ui.h:55
+#: ../ui/main.ui.h:56
 msgid "New"
 msgstr "Nouveau"
 
-#: ../ui/main.ui.h:56
+#: ../ui/main.ui.h:57
 msgid "Open"
 msgstr "Ouvrir"
 
-#: ../ui/main.ui.h:57
+#: ../ui/main.ui.h:58
 msgid "Save"
 msgstr "Enregistrer"
-
-#: ../ui/main.ui.h:58
-msgid "Upload"
-msgstr "Transférer"
