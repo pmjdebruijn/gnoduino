@@ -1,5 +1,5 @@
 # Arduino python implementation
-# Copyright (C) 2010  Lucian Langa
+# Copyright (C) 2010-2012  Lucian Langa
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -55,12 +55,24 @@ def get_lang_for_content(content):
 			if p == mime:
 				return lang
 
-def instext(b, iter, text, len) :
+def instextCallback(b, iter, text, len) :
 	cont = b.get_text(b.get_start_iter(), b.get_end_iter())
 	lang = get_lang_for_content(cont)
 	if lang != None:
 		b.set_language(lang)
 	config.cur_iter = -1
+
+def insertText(text, line):
+	page = ui.getCurrentPage()
+	view = page.get_data("view")
+	b = view.get_buffer()
+	iter = b.get_iter_at_mark(b.get_insert())
+	iter.set_line(line);
+	t = ""
+	for i in text:
+		t = t + "#include <" + i + ">\n"
+	t = t + "\n"
+	b.insert(iter, t)
 
 def updatePos(buffer, sb):
 	sb.pop(1)
@@ -190,7 +202,7 @@ def createsrcview(status, f=None):
 	sv.set_right_margin_position(80)
 	updatePos(sbuffer, status)
 	sbuffer.connect("mark_set", markCb, status)
-	sbuffer.connect("insert_text", instext)
+	sbuffer.connect("insert_text", instextCallback)
 	sv.set_highlight_current_line(True)
 	resetCursor(sbuffer)
 	return sbuffer, sv

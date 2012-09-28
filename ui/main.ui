@@ -757,7 +757,7 @@ Pascal de Bruijn &lt;pmjdebruijn@pcode.nl&gt;</property>
                 <property name="label" translatable="yes">Sketch</property>
                 <property name="use_underline">True</property>
                 <child type="submenu">
-                  <object class="GtkMenu" id="menu4">
+                  <object class="GtkMenu" id="sketchmenu">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <child>
@@ -776,15 +776,6 @@ Pascal de Bruijn &lt;pmjdebruijn@pcode.nl&gt;</property>
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="label" translatable="yes">Stop</property>
-                        <property name="use_underline">True</property>
-                      </object>
-                    </child>
-                    <child>
-                      <object class="GtkMenuItem" id="menu-import">
-                        <property name="use_action_appearance">False</property>
-                        <property name="visible">True</property>
-                        <property name="can_focus">False</property>
-                        <property name="label" translatable="yes">Import Library</property>
                         <property name="use_underline">True</property>
                       </object>
                     </child>

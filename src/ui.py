@@ -247,9 +247,6 @@ def find(widget, data=None):
 		srcview.findText(find_text, -1, [gui.get_object(i) for i in cbs])
 	find.hide()
 
-def libImport(widget, data=None):
-	compiler.getLibraries()
-
 def compile(widget, data=file):
 	cserial(None, 0, sctw)
 	page = getCurrentPage()
@@ -463,7 +460,6 @@ menus = [
 		("menu-copy", copy, (ord('c'), gtk.gdk.CONTROL_MASK)),
 		("menu-paste", paste, (ord('v'), gtk.gdk.CONTROL_MASK)),
 		("menu-compile", compile, (ord('r'), gtk.gdk.CONTROL_MASK)),
-		("menu-import", libImport, (ord('i'), gtk.gdk.CONTROL_MASK)),
 		("menu-reset-board", menuResetBoard, (ord('m'), gtk.gdk.CONTROL_MASK)),
 		("menu-preferences", preferences, (None, None)),
 		("menu-upload", menuUpload, (ord('u'), gtk.gdk.CONTROL_MASK)),
@@ -658,6 +654,9 @@ def _search_locales():
 def exampleProcess(widget):
 	processFile(widget.get_data("file"))
 
+def importProcess(widget):
+	srcview.insertText(widget.get_data("file"), 0)
+
 def populateExampleLine(entry, menu):
 	subitem = gtk.Menu()
 	menuItem = gtk.MenuItem(os.path.basename(entry))
@@ -698,6 +697,33 @@ def populateExampleLine(entry, menu):
 				menu.append(menuItem)
 		except: pass
 
+def populateImportLine(entry, menu):
+	subitem = gtk.Menu()
+	menuItem = gtk.MenuItem(os.path.basename(entry))
+	for i in sorted(os.listdir(entry)):
+		if os.path.isdir(os.path.join(entry,i)):
+			f = os.path.join(entry, i, i + ".h")
+			if not os.path.exists(f): continue
+			item = gtk.MenuItem(os.path.basename(i))
+			item.set_data("file", f)
+			item.connect("activate", exampleProcess)
+			subitem.append(item)
+		else:
+			l = []
+			for j in sorted(os.listdir(entry)):
+				if j.endswith(".h") is True:
+					f = os.path.join(entry, j)
+					if not os.path.exists(f): continue
+					l.append(j)
+					#item = gtk.MenuItem(os.path.basename(j))
+					#item.set_data("file", f)
+					#item.connect("activate", exampleProcess)
+					#subitem.append(item)
+			menuItem.set_data("file", l);
+			menuItem.connect("activate", importProcess)
+			break
+	menu.append(menuItem)
+
 def populateExamples():
 	submenu = gtk.Menu()
 	for dir in ["examples", "libraries"]:
@@ -719,6 +745,27 @@ def populateExamples():
 	ex = gtk.MenuItem(_("E_xamples"), use_underline=True)
 	ex.set_submenu(submenu)
 	gui.get_object("filemenu").insert(ex, 2)
+
+def populateImport():
+	submenu = gtk.Menu()
+	dir = "libraries"
+	if misc.get_path(dir, "\0") != "\0":
+		d =  os.listdir(misc.get_path(dir))
+	q = []
+	for i in d: q.append(misc.get_path(os.path.join(dir, i)))
+	for c in sorted(q): populateImportLine(c, submenu)
+	paths = []
+	if config.user_library != None and config.user_library != -1:
+		paths.extend(i.strip() for i in config.user_library.split(';'))
+	for p in paths:
+		if os.path.exists(p):
+			q = []
+			if os.path.isdir(os.path.join(p, "examples")):
+				q.append(p)
+		for c in sorted(q): populateImportLine(c, submenu)
+	ex = gtk.MenuItem(_("Import Library"), use_underline=True)
+	ex.set_submenu(submenu)
+	gui.get_object("sketchmenu").insert(ex, 2)
 
 def getKeyREvent(widget, event, data=None):
 	config.force_protocol = False
@@ -859,6 +906,7 @@ def run():
 		gui.get_object("serial_port").set_sensitive(activePort)
 		createRecentMenu()
 		populateExamples()
+		populateImport()
 
 		sub = gtk.Menu()
 		maingroup = gtk.RadioMenuItem(None, None)
