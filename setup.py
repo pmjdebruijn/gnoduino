@@ -114,7 +114,7 @@ def get_data_files():
         ('share/gnoduino/ui', ['ui/main.ui', 'ui/arduino.xml']),
         ('share/gnoduino/', ['ChangeLog', 'NEWS', 'preferences.txt']),
         ('share/gnoduino/pixmaps', glob.glob('pixmaps/*.png')),
-        ('share/gnoduino/scripts', ['scripts/gen_boards.py', 'scripts/gen_programmers.py']),
+        ('share/gnoduino/scripts', ['scripts/gen_boards.py', 'scripts/gen_programmers.py', 'scripts/gen-pixmaps.sh']),
         ('share/man/man1', ['data/gnoduino.1']),
         ('share/applications', ['data/gnoduino.desktop']),
         ('share/pixmaps', ['pixmaps/gnoduino.png']),
