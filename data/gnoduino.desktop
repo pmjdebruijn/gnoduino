@@ -10,3 +10,4 @@ Terminal=false
 Type=Application
 MimeType=application/x-csrc;
 Categories=Development;Engineering;Electronics;
+Keywords=Arduino;AVR;Microcontroller
