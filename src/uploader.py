@@ -162,7 +162,7 @@ def upload(obj, serial, output, notify):
 			notify.push(context, _("Flashing error."))
 			return
 		compline.append("-P" + port)
-		serial.resetBoard()
+		serial.resetBoard(b.getPath(b.getBoard()))
 	compline.append("-c" + protocol)
 	try:
 		compline.append("-b" + b.getPGMSpeed(b.getBoard()))

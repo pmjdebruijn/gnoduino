@@ -74,10 +74,31 @@ class sconsole:
 				console.scroll_mark_onscreen(b.get_insert())
 		return True
 
-	def resetBoard(self):
-		self.serial.setDTR(False)
-		time.sleep(0.1)
-		self.serial.setDTR(True)
+	def resetBoard(self, board=None):
+		if board == 'caterina' or board == 'caterina-LilyPadUSB':
+			bootPort = self.serial.port
+			if self.serial.isOpen():
+				self.serial.close()
+			self.serial.baudrate = 1200
+			self.serial.open()
+			self.serial.close()
+			time.sleep(0.3)
+			c=0
+			while c < 10000:
+			 	"""back to the default rate or we will trigger reset again"""
+				self.serial.baudrate = 9600
+				for p in  self.scan():
+					print p
+					#if p == bootPort and self.tryPort(p):
+					if p == bootPort:
+						#if self.tryPort(p):
+						return
+				time.sleep(0.25)
+				c = c + 250
+		else:
+			self.serial.setDTR(False)
+			time.sleep(0.1)
+			self.serial.setDTR(True)
 
 	def clearConsole(self, w, console):
 		b = console.get_buffer()
