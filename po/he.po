@@ -1,0 +1,436 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Gnoduino\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-12-28 14:53+0200\n"
+"PO-Revision-Date: 2012-12-28 15:10+0200\n"
+"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
+"Language-Team: Yaron Shahrabani <sh.yaron@gmail.com>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Language: Hebrew\n"
+"X-Poedit-Country: ISRAEL\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+#: ../src/compiler.py:137
+msgid "Compiling..."
+msgstr "מתבצע הידור"
+
+#: ../src/compiler.py:156
+#: ../src/compiler.py:162
+#: ../src/compiler.py:168
+#: ../src/compiler.py:175
+#: ../src/compiler.py:193
+#: ../src/compiler.py:218
+msgid "Compile Error"
+msgstr "שגיאת הידור"
+
+#: ../src/compiler.py:248
+msgid "Linking error"
+msgstr "שגיאת קישור"
+
+#: ../src/compiler.py:260
+#: ../src/compiler.py:273
+msgid "Object error"
+msgstr "שגיאת עצם"
+
+#: ../src/compiler.py:279
+msgid "Done compiling."
+msgstr "ההידור הושלם."
+
+#: ../src/compiler.py:283
+#, python-format
+msgid "Binary sketch size: %s bytes (of a %s bytes maximum)\n"
+msgstr "גודל הסקיצה הבינרית: %s בית (מתוך %s בתים לכל היותר)\n"
+
+#: ../src/compiler.py:369
+#: ../src/compiler.py:394
+msgid "Library Error"
+msgstr "שגיאת ספרייה"
+
+#: ../src/misc.py:54
+#, python-format
+msgid ""
+"Unable to locate %s\n"
+"Arduino SDK missing or broken."
+msgstr ""
+"לא ניתן לאתר את %s\n"
+"ערכת הפיתוח לארדוינו חסרה או פגומה."
+
+#: ../src/misc.py:148
+#, python-format
+msgid "Cannot load %s file. Exiting."
+msgstr "לא ניתן לטעון את קובץ ה־%s. התכנית תיסגר."
+
+#: ../src/misc.py:151
+#, python-format
+msgid "Error reading %s file. File is corrupt. Installation problem.\n"
+msgstr "שגיאה בקריאת הקובץ %s. הקובץ פגום. תקלה בהתקנה.\n"
+
+#: ../src/misc.py:275
+msgid "Error compiling."
+msgstr "שגיאה בהידור."
+
+#: ../src/misc.py:346
+msgid "Close without Saving"
+msgstr "לסגור מבלי לשמור"
+
+#: ../src/misc.py:348
+msgid "If you don't save, changes will be permanently lost."
+msgstr "אם לא תתבצע שמירה, השינויים יאבדו לנצח."
+
+#: ../src/serialio.py:113
+msgid ""
+"Serial port not configured!\n"
+"Use Tools->Serial Port to configure port."
+msgstr ""
+"לא הוגדרה פתחה טורית!\n"
+"יש להשתמש בכלים->פתחה טורית כדי להגדיר פתחה."
+
+#: ../src/srcview.py:161
+#: ../src/srcview.py:171
+#, python-format
+msgid "'%s' not found."
+msgstr "‚%s‘ לא נמצא."
+
+#: ../src/ui.py:66
+#: ../src/ui.py:86
+#: ../src/ui.py:99
+#: ../src/ui.py:167
+#: ../src/ui.py:182
+msgid "Untitled"
+msgstr "ללא שם"
+
+#: ../src/ui.py:67
+msgid "Save document"
+msgstr "שמירת המסמך"
+
+#: ../src/ui.py:68
+#, python-format
+msgid ""
+"Save changes to document \"%s\"\n"
+" before closing?"
+msgstr ""
+"האם לשמור את השינויים למסמך „%s“\n"
+" לפני הסגירה?"
+
+#: ../src/ui.py:176
+msgid "Save file"
+msgstr "שמירת קובץ"
+
+#: ../src/ui.py:193
+msgid "Open file"
+msgstr "פתיחת קובץ"
+
+#: ../src/ui.py:219
+#, python-format
+msgid "<b>A file named %s already exists. Do you want to replace it?</b>"
+msgstr "<b>כבר קיים קובץ בשם %s. האם ברצונך להחליף אותו?</b>"
+
+#: ../src/ui.py:220
+#, python-format
+msgid "The file already exists in \"%s\". Replacing it will overwrite its contents."
+msgstr "הקובץ כבר קיים תחת „%s“. החלפתו תשכתב על תוכנו."
+
+#: ../src/ui.py:521
+msgid "Open Recent"
+msgstr "פתיחת האחרון"
+
+#: ../src/ui.py:556
+#: ../ui/main.ui.h:58
+msgid "Send"
+msgstr "שליחה"
+
+#: ../src/ui.py:557
+msgid "Clear"
+msgstr "איפוס"
+
+#: ../src/ui.py:595
+#, python-format
+msgid "%s baud"
+msgstr "%s באוד"
+
+#: ../src/ui.py:745
+msgid "E_xamples"
+msgstr "_דוגמאות"
+
+#: ../src/ui.py:766
+msgid "Import Library"
+msgstr "יבוא ספרייה"
+
+#: ../src/ui.py:772
+#: ../ui/main.ui.h:54
+msgid "Upload"
+msgstr "העלאה"
+
+#: ../src/ui.py:779
+msgid "Upload using programmer"
+msgstr "העלאה בעזרת מתכנת"
+
+#: ../src/ui.py:818
+#: ../src/ui.py:824
+#: ../src/ui.py:830
+msgid "System error"
+msgstr "שגיאת מערכת"
+
+#: ../src/ui.py:833
+msgid "Cannot load ui file"
+msgstr "Cannot load ui file"
+
+#: ../src/ui.py:949
+msgid "--help    Print the command line options"
+msgstr "--help    Print the command line options"
+
+#: ../src/ui.py:950
+msgid "--version Output version information and exit"
+msgstr "--version Output version information and exit"
+
+#: ../src/uploader.py:54
+msgid "Burning bootloader..."
+msgstr "מנהל האתחול נצרב..."
+
+#: ../src/uploader.py:67
+#: ../src/uploader.py:101
+#: ../src/uploader.py:149
+#: ../src/uploader.py:162
+msgid "Flashing error."
+msgstr "שגיאת כתיבה."
+
+#: ../src/uploader.py:92
+#: ../src/uploader.py:123
+msgid "Burn Error"
+msgstr "שגיאת צריבה"
+
+#: ../src/uploader.py:92
+#: ../src/uploader.py:123
+msgid "Burn ERROR."
+msgstr "שגיאת צריבה."
+
+#: ../src/uploader.py:126
+msgid "Burn complete."
+msgstr "הצריכה הושלמה."
+
+#: ../src/uploader.py:135
+msgid "Flashing..."
+msgstr "מתבצעת כתיבה..."
+
+#: ../src/uploader.py:181
+msgid "Flashing Error"
+msgstr "שגיאת כתיבה"
+
+#: ../src/uploader.py:181
+msgid "Flash ERROR.\n"
+msgstr "שגיאת כתיבה.\n"
+
+#: ../src/uploader.py:184
+msgid "Flashing complete."
+msgstr "הכתיבה הושלמה."
+
+#: ../ui/arduino.xml.h:1
+msgid "Arduino"
+msgstr "ארדוינו"
+
+#: ../ui/arduino.xml.h:2
+msgid "Arduino color scheme"
+msgstr "ערכת צבע של ארדוינו"
+
+#: ../ui/main.ui.h:1
+msgid "Lucian Langa <lucilanga@gnome.org>"
+msgstr "Lucian Langa <lucilanga@gnome.org>"
+
+#: ../ui/main.ui.h:2
+msgid "GNOME Arduino IDE"
+msgstr "סביבת פיתוח לארדוינו תחת GNOME"
+
+#: ../ui/main.ui.h:3
+msgid "gnoduino"
+msgstr "gnoduino"
+
+#: ../ui/main.ui.h:4
+msgid ""
+" gnoduino - Python Arduino IDE implementation\n"
+" Copyright (C) 2010-2012  Lucian Langa\n"
+"\n"
+"This program is free software; you can redistribute it and/or\n"
+"modify it under the terms of the GNU General Public License\n"
+"as published by the Free Software Foundation; either version 2\n"
+"of the License, or (at your option) any later version.\n"
+"\n"
+"This program is distributed in the hope that it will be useful,\n"
+"but WITHOUT ANY WARRANTY; without even the implied warranty of\n"
+"MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n"
+"GNU General Public License for more details.\n"
+"\n"
+"You should have received a copy of the GNU General Public License\n"
+"along with this program; if not, write to the Free Software\n"
+"Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.\n"
+msgstr ""
+" gnoduino - יישום של סביבת פיתוח לארדוינו שכתובה בפיית׳ון\n"
+" כל הזכויות שמורות (C)‏ 2010‏-2012  Lucian Langa\n"
+"\n"
+"This program is free software; you can redistribute it and/or\n"
+"modify it under the terms of the GNU General Public License\n"
+"as published by the Free Software Foundation; either version 2\n"
+"of the License, or (at your option) any later version.\n"
+"\n"
+"This program is distributed in the hope that it will be useful,\n"
+"but WITHOUT ANY WARRANTY; without even the implied warranty of\n"
+"MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n"
+"GNU General Public License for more details.\n"
+"\n"
+"You should have received a copy of the GNU General Public License\n"
+"along with this program; if not, write to the Free Software\n"
+"Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.\n"
+
+#: ../ui/main.ui.h:21
+msgid "Search for:"
+msgstr "חיפוש אחר:"
+
+#: ../ui/main.ui.h:22
+msgid "Match entire word only"
+msgstr "התאמת מילים שלמות בלבד"
+
+#: ../ui/main.ui.h:23
+msgid "Wrap around"
+msgstr "גלישת שורות"
+
+#: ../ui/main.ui.h:24
+msgid "Match case"
+msgstr "התאמת רישיות"
+
+#: ../ui/main.ui.h:25
+msgid "Search backwards"
+msgstr "חיפוש אחורה"
+
+#: ../ui/main.ui.h:26
+msgid "Editor font size"
+msgstr "גודל גופן העורך"
+
+#: ../ui/main.ui.h:27
+msgid "Console font size"
+msgstr "גודל גופן המסוף"
+
+#: ../ui/main.ui.h:28
+msgid "Verbose build"
+msgstr "בנייה מפורטת"
+
+#: ../ui/main.ui.h:29
+msgid "Verbose upload"
+msgstr "העלאה מפורטת"
+
+#: ../ui/main.ui.h:30
+msgid "Show line numbers"
+msgstr "הצגת מספרי שורות"
+
+#: ../ui/main.ui.h:31
+msgid "Sketchdir: "
+msgstr "תיקיית הסקיצות:"
+
+#: ../ui/main.ui.h:32
+msgid "Enter any supplementary path that compiler will check for, separate them by semicolons. (eg /usr/share/gnoduino;/usr/local/share/gnoduino)"
+msgstr "נא לציין נתיב משלים שהמהדיר יחפש בו, יש להפקיד בנקודה פסיק (לדוגמה ‎/usr/share/gnoduino;/usr/local/share/gnoduino)"
+
+#: ../ui/main.ui.h:33
+msgid "Additional library paths:"
+msgstr "נתיבי ספריות נוספים:"
+
+#: ../ui/main.ui.h:34
+msgid "_File"
+msgstr "_קובץ"
+
+#: ../ui/main.ui.h:35
+msgid "Upload to I/O Board"
+msgstr "העלאה לוח הקלט/פלט"
+
+#: ../ui/main.ui.h:36
+msgid "Preferences"
+msgstr "העדפות"
+
+#: ../ui/main.ui.h:37
+msgid "_Edit"
+msgstr "ע_ריכה"
+
+#: ../ui/main.ui.h:38
+msgid "Find Next"
+msgstr "חיפוש הבא"
+
+#: ../ui/main.ui.h:39
+msgid "Sketch"
+msgstr "סקיצה"
+
+#: ../ui/main.ui.h:40
+msgid "Verify/Compile"
+msgstr "אימות/הידור"
+
+#: ../ui/main.ui.h:41
+msgid "Stop"
+msgstr "עצירה"
+
+#: ../ui/main.ui.h:42
+msgid "Add File..."
+msgstr "הוספת קובץ..."
+
+#: ../ui/main.ui.h:43
+msgid "Tools"
+msgstr "כלים"
+
+#: ../ui/main.ui.h:44
+msgid "Auto Format"
+msgstr "עיצוב אוטומטי"
+
+#: ../ui/main.ui.h:45
+msgid "Serial Monitor"
+msgstr "צג טורי"
+
+#: ../ui/main.ui.h:46
+msgid "Reset Board"
+msgstr "איפוס הלוח"
+
+#: ../ui/main.ui.h:47
+msgid "Board"
+msgstr "לוח"
+
+#: ../ui/main.ui.h:48
+msgid "Serial Port"
+msgstr "פתחה טורית"
+
+#: ../ui/main.ui.h:49
+msgid "Programmer"
+msgstr "מתכנת"
+
+#: ../ui/main.ui.h:50
+msgid "Burn Bootloader"
+msgstr "צריבת מנהל אתחול"
+
+#: ../ui/main.ui.h:51
+msgid "_Help"
+msgstr "ע_זרה"
+
+#: ../ui/main.ui.h:52
+msgid "Reference"
+msgstr "הפניה"
+
+#: ../ui/main.ui.h:53
+msgid "Compile"
+msgstr "הידור"
+
+#: ../ui/main.ui.h:55
+msgid "New"
+msgstr "חדש"
+
+#: ../ui/main.ui.h:56
+msgid "Open"
+msgstr "פתיחה"
+
+#: ../ui/main.ui.h:57
+msgid "Save"
+msgstr "שמירה"
+
