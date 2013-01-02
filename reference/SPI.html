@@ -97,9 +97,9 @@ a.varlink { text-decoration:none; }
 <p class='vspace'></p><p>For more on SPI, see <a class='urllink' href='http://en.wikipedia.org/wiki/Serial_Peripheral_Interface_Bus#Mode_Numbers' rel='nofollow'>Wikipedia's page on SPI</a>.
 </p>
 <p class='vspace'></p><h3>Connections </h3>
-<p>On the Arduino Duemilanove and other <span class='wikiword'>ATmega168</span> / 328-based boards, the SPI bus uses pins 10 (SS), 11 (MOSI), 12 (MISO), and 13 (SCK).  On the Arduino Mega, this is 50 (MISO), 51 (MOSI), 52 (SCK), and 53 (SS).  Note that even if you're not using the SS pin, it must remain set as an output; otherwise, the SPI interface can be put into slave mode, rendering the library inoperative.  
+<p>On the Arduino Duemilanove and other <span class='wikiword'>ATmega168</span> / 328-based boards, the SPI bus uses pins 10 (SS), 11 (MOSI), 12 (MISO), and 13 (SCK).  On the Arduino Mega, this is 50 (MISO), 51 (MOSI), 52 (SCK), and 53 (SS).  MISO, MOSI, and SCK are also available in a consistent physical location on the ICSP header; this is useful, for example, in designing a shield that works on the Uno and the Mega.  
 </p>
-<p class='vspace'></p><p>It is possible to use a pin other than pin 10 as the slave select (SS) pin.  For example, the Arduino Ethernet shield uses pin 4 to control the SPI connection to the on-board SD card, and pin 10 to control the connection to the Ethernet controller.
+<p class='vspace'></p><p>Note that even if you're not using the SS pin, it must remain set as an output; otherwise, the SPI interface can be put into slave mode, rendering the library inoperative.  It is, however, possible to use a pin other than pin 10 as the slave select (SS) pin.  For example, the Arduino Ethernet shield uses pin 4 to control the SPI connection to the on-board SD card, and pin 10 to control the connection to the Ethernet controller.
 </p>
 <p class='vspace'></p></td><td  width='10%' valign='top'>
 <p class='vspace'></p></td><td  width='35%' valign='top'>
