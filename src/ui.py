@@ -74,6 +74,8 @@ def destroyPage(w, b):
 	nb.remove_page(nb.page_num(b))
 	if nb.get_n_pages() < 1:
 		createPage(nb)
+	else:
+		mainwin.set_title(getCurrentPage().get_data("title"))
 	return True
 
 def updatePageTitle(w, status):
@@ -86,17 +88,24 @@ def updatePageTitle(w, status):
 		name = _("Untitled")
 
 	if (misc.bufferModified(w, f)):
-		l.set_text("*"+name)
+		text  = "*" + name
 	else:
-		l.set_text(name)
+		text = name
+
+	l.set_text(text)
+	mainwin.set_title(text+" - gnoduino")
+	page.set_data("title", text+" - gnoduino")
 	srcview.updatePos(w, status)
 
 def switchPage(page, a, b, c):
 	nb.set_current_page(int(chr(b-1)))
+	mainwin.set_title(getCurrentPage().get_data("title"))
 
 def createPage(nb, f=None):
 	hbox = gtk.HBox(False, 0)
-	flabel = gtk.Label(os.path.basename(f) if f else _("Untitled"))
+	title = os.path.basename(f) if f else _("Untitled")
+	flabel = gtk.Label(title)
+	mainwin.set_title(title+" - Gnoduino")
 	hbox.pack_start(flabel, True, False, 3)
 	b = gtk.Button()
 	img = gtk.Image()
@@ -121,6 +130,7 @@ def createPage(nb, f=None):
 	wp.set_data("view", sv)	#add buffer information to the page widget
 	wp.set_data("label", flabel)	#add source view widget to the page widget
 	wp.set_data("close", b)	#add close widget to the page widget
+	wp.set_data("title", title + " - Gnoduino")
 	nb.set_current_page(p)
 	page = nb.get_nth_page(p)
 	nb.set_scrollable(True);
@@ -931,7 +941,6 @@ def run():
 
 		mainwin.set_focus(sv)
 		mainwin.show_all()
-		mainwin.set_title("Gnoduino")
 		mainwin.connect("delete-event", quit)
 		gui.get_object("ser_monitor").connect("activate", cserial, sertime, sctw)
 		gui.get_object("serial").connect("clicked", cserial, sertime, sctw)
