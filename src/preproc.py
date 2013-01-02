@@ -36,13 +36,33 @@ def firstStatement(instr):
 	if not m: return 0
 	return m.end(0)
 
+def lastInclude(instr):
+	m = re.finditer(r"^#include\s+[\w+\".<>\-]+", instr, re.M)
+	return max(enumerate(m))[1].end()
+
 def findPrototype(instr):
-	res = ""
+	pro = []
+	m = re.findall(r"^\w+\s+\w+\([^)]*\)[\s+/*\w*\s+]*;", instr, re.M)
+	for z in m:
+		q = re.findall("\w+\s+\w+", z)
+		pro.append(q[0])
+	return pro
+
+def genPrototype(instr):
+	hdup = 0
+	hdr = ""
+	"""find exisiting prototypes"""
+	proto = findPrototype(instr)
 	m = re.findall(r"^\w+\s+\w+\([^)]*\)[\s+/*\w*\s+]*{", instr, re.M)
 	for z in m:
+		t = re.findall("\w+\s+\w+", z)
+		for p in proto:
+			if p==t[0]: hdup=1
+		if hdup: continue
 		q = re.findall("\w+\s+\w+\([^)]*\)", z)
-		res = res + q[0]+";\n";
-	return res
+		hdr = hdr + q[0]+";\n"
+	return hdr
+
 
 def findIncludes(instr, local=False):
 	res = ""
@@ -92,10 +112,13 @@ def addHeaders(path, b):
 	cont = b.get_text(b.get_start_iter(), b.get_end_iter())
 	fs = firstStatement(cont)
 	if fs != None:
-		proto = findPrototype(cont)
-		result = cont[:fs:]+"\n#include \""+misc.getArduinoAPIFile()+"\"\n" + proto + cont[fs:]+"\n\n"
+		proto = genPrototype(cont)
+		incl = lastInclude(cont)
+		result = cont[:fs:]+"\n#include \""+misc.getArduinoAPIFile()+"\"\n" \
+			+ cont[:incl:] + "\n" + proto + cont[fs+incl:]+"\n\n"
 	else:
 		result = "\n#include \""+misc.getArduinoAPIFile()+"\"\n"+cont+"\n\n"
+
 	of = tempfile.mktemp(".cpp", "", path)
 	w = file(of, "w")
 	w.write(result)
