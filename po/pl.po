@@ -4,14 +4,14 @@
 # pomóc w jego rozwijaniu i pielęgnowaniu, napisz do nas:
 # gnomepl@aviary.pl
 # -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-# Piotr Drąg <piotrdrag@gmail.com>, 2012.
-# Aviary.pl <gnomepl@aviary.pl>, 2012.
+# Piotr Drąg <piotrdrag@gmail.com>, 2012-2013.
+# Aviary.pl <gnomepl@aviary.pl>, 2012-2013.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnoduino\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-09-03 01:25+0200\n"
-"PO-Revision-Date: 2012-09-03 01:27+0200\n"
+"POT-Creation-Date: 2013-01-02 02:32+0100\n"
+"PO-Revision-Date: 2013-01-02 02:33+0100\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <gnomepl@aviary.pl>\n"
 "Language: pl\n"
@@ -88,7 +88,7 @@ msgstr ""
 "Jeżeli dokument nie zostanie zapisany, to zmiany zostaną bezpowrotnie "
 "utracone."
 
-#: ../src/serialio.py:92
+#: ../src/serialio.py:113
 msgid ""
 "Serial port not configured!\n"
 "Use Tools->Serial Port to configure port."
@@ -96,7 +96,7 @@ msgstr ""
 "Port szeregowy nie jest skonfigurowany.\n"
 "Należy użyć Narzędzia->Port szeregowy, aby go skonfigurować."
 
-#: ../src/srcview.py:149 ../src/srcview.py:159
+#: ../src/srcview.py:161 ../src/srcview.py:171
 #, python-format
 msgid "'%s' not found."
 msgstr "Nie odnaleziono \"%s\"."
@@ -138,48 +138,52 @@ msgid ""
 "The file already exists in \"%s\". Replacing it will overwrite its contents."
 msgstr "Plik już istnieje w \"%s\". Zastąpienie go nadpisze jego zawartość."
 
-#: ../src/ui.py:525
+#: ../src/ui.py:521
 msgid "Open Recent"
 msgstr "Otwórz ostatnie"
 
-#: ../src/ui.py:560 ../ui/main.ui.h:59
+#: ../src/ui.py:556 ../ui/main.ui.h:59
 msgid "Send"
 msgstr "Wyślij"
 
-#: ../src/ui.py:561
+#: ../src/ui.py:557
 msgid "Clear"
 msgstr "Wyczyść"
 
-#: ../src/ui.py:599
+#: ../src/ui.py:595
 #, python-format
 msgid "%s baud"
 msgstr "%s baudów"
 
-#: ../src/ui.py:719
+#: ../src/ui.py:745
 msgid "E_xamples"
 msgstr "_Przykłady"
 
-#: ../src/ui.py:725 ../ui/main.ui.h:55
+#: ../src/ui.py:766
+msgid "Import Library"
+msgstr "Zaimportuj bibliotekę"
+
+#: ../src/ui.py:772 ../ui/main.ui.h:55
 msgid "Upload"
 msgstr "Wyślij"
 
-#: ../src/ui.py:732
+#: ../src/ui.py:779
 msgid "Upload using programmer"
 msgstr "Wysyła używając programatora"
 
-#: ../src/ui.py:771 ../src/ui.py:777 ../src/ui.py:783
+#: ../src/ui.py:818 ../src/ui.py:824 ../src/ui.py:830
 msgid "System error"
 msgstr "Błąd systemu"
 
-#: ../src/ui.py:786
+#: ../src/ui.py:833
 msgid "Cannot load ui file"
 msgstr "Nie można wczytać pliku interfejsu użytkownika"
 
-#: ../src/ui.py:901
+#: ../src/ui.py:949
 msgid "--help    Print the command line options"
 msgstr "--help    Wyświetla opcje wiersza poleceń"
 
-#: ../src/ui.py:902
+#: ../src/ui.py:950
 msgid "--version Output version information and exit"
 msgstr "--version Wyświetla informacje o wersji i kończy działanie"
 
@@ -241,6 +245,12 @@ msgid "gnoduino"
 msgstr "gnoduino"
 
 #: ../ui/main.ui.h:4
+msgid "translator-credits"
+msgstr ""
+"Piotr Drąg <piotrdrag@gmail.com>, 2012-2013\n"
+"Aviary.pl <gnomepl@aviary.pl>, 2012-2013"
+
+#: ../ui/main.ui.h:5
 msgid ""
 " gnoduino - Python Arduino IDE implementation\n"
 " Copyright (C) 2010-2012  Lucian Langa\n"
@@ -260,7 +270,7 @@ msgid ""
 "Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, "
 "USA.\n"
 msgstr ""
-" gnoduino - Implementacja środowiska programistycznego Arduino w języku "
+" gnoduino - implementacja środowiska programistycznego Arduino w języku "
 "Python\n"
 " Copyright (C) 2010-2012  Lucian Langa\n"
 "\n"
@@ -281,51 +291,51 @@ msgstr ""
 "nie - proszę napisać do Free Software Foundation, Inc., 51 Franklin\n"
 "Street, Fifth Floor, Boston, MA 02110-130159 USA.\n"
 
-#: ../ui/main.ui.h:21
+#: ../ui/main.ui.h:22
 msgid "Search for:"
 msgstr "Wyszukiwanie:"
 
-#: ../ui/main.ui.h:22
+#: ../ui/main.ui.h:23
 msgid "Match entire word only"
 msgstr "Tylko całe wyrazy"
 
-#: ../ui/main.ui.h:23
+#: ../ui/main.ui.h:24
 msgid "Wrap around"
 msgstr "Automatyczny powrót do początku"
 
-#: ../ui/main.ui.h:24
+#: ../ui/main.ui.h:25
 msgid "Match case"
 msgstr "Rozróżnianie małych i wielkich liter"
 
-#: ../ui/main.ui.h:25
+#: ../ui/main.ui.h:26
 msgid "Search backwards"
 msgstr "Wyszukiwanie wstecz"
 
-#: ../ui/main.ui.h:26
+#: ../ui/main.ui.h:27
 msgid "Editor font size"
 msgstr "Rozmiar czcionki edytora"
 
-#: ../ui/main.ui.h:27
+#: ../ui/main.ui.h:28
 msgid "Console font size"
 msgstr "Rozmiar czcionki konsoli"
 
-#: ../ui/main.ui.h:28
+#: ../ui/main.ui.h:29
 msgid "Verbose build"
 msgstr "Bardziej szczegółowe budowanie"
 
-#: ../ui/main.ui.h:29
+#: ../ui/main.ui.h:30
 msgid "Verbose upload"
 msgstr "Bardziej szczegółowe wysyłanie"
 
-#: ../ui/main.ui.h:30
+#: ../ui/main.ui.h:31
 msgid "Show line numbers"
 msgstr "Wyświetlanie numerów wierszy"
 
-#: ../ui/main.ui.h:31
+#: ../ui/main.ui.h:32
 msgid "Sketchdir: "
 msgstr "Katalog szkiców: "
 
-#: ../ui/main.ui.h:32
+#: ../ui/main.ui.h:33
 msgid ""
 "Enter any supplementary path that compiler will check for, separate them by "
 "semicolons. (eg /usr/share/gnoduino;/usr/local/share/gnoduino)"
@@ -334,45 +344,41 @@ msgstr ""
 "kompilator, oddzielając je średnikiem (np. /usr/share/gnoduino;/usr/local/"
 "share/gnoduino)."
 
-#: ../ui/main.ui.h:33
+#: ../ui/main.ui.h:34
 msgid "Additional library paths:"
 msgstr "Dodatkowe ścieżki do bibliotek:"
 
-#: ../ui/main.ui.h:34
+#: ../ui/main.ui.h:35
 msgid "_File"
 msgstr "_Plik"
 
-#: ../ui/main.ui.h:35
+#: ../ui/main.ui.h:36
 msgid "Upload to I/O Board"
 msgstr "Wyślij do płyty wejścia/wyjścia"
 
-#: ../ui/main.ui.h:36
+#: ../ui/main.ui.h:37
 msgid "Preferences"
 msgstr "Preferencje"
 
-#: ../ui/main.ui.h:37
+#: ../ui/main.ui.h:38
 msgid "_Edit"
 msgstr "_Edycja"
 
-#: ../ui/main.ui.h:38
+#: ../ui/main.ui.h:39
 msgid "Find Next"
 msgstr "Znajdź następne"
 
-#: ../ui/main.ui.h:39
+#: ../ui/main.ui.h:40
 msgid "Sketch"
 msgstr "Szkic"
 
-#: ../ui/main.ui.h:40
+#: ../ui/main.ui.h:41
 msgid "Verify/Compile"
 msgstr "Sprawdź/skompiluj"
 
-#: ../ui/main.ui.h:41
+#: ../ui/main.ui.h:42
 msgid "Stop"
 msgstr "Zatrzymaj"
-
-#: ../ui/main.ui.h:42
-msgid "Import Library"
-msgstr "Zaimportuj bibliotekę"
 
 #: ../ui/main.ui.h:43
 msgid "Add File..."
