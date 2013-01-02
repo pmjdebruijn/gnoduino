@@ -113,11 +113,18 @@ def get_data_files():
     data_files = [
         ('share/gnoduino/ui', ['ui/main.ui', 'ui/arduino.xml']),
         ('share/gnoduino/', ['ChangeLog', 'NEWS', 'preferences.txt']),
-        ('share/gnoduino/pixmaps', glob.glob('pixmaps/*.png')),
+        ('share/gnoduino/pixmaps', ['pixmaps/48x48/gnoduino.png']),
         ('share/gnoduino/scripts', ['scripts/gen_boards.py', 'scripts/gen_programmers.py', 'scripts/gen-pixmaps.sh']),
         ('share/man/man1', ['data/gnoduino.1']),
         ('share/applications', ['data/gnoduino.desktop']),
         ('share/pixmaps', ['pixmaps/gnoduino.png']),
+        ('share/icons/hicolor/16x16/apps', ['pixmaps/16x16/gnoduino.png']),
+        ('share/icons/hicolor/22x22/apps', ['pixmaps/22x22/gnoduino.png']),
+        ('share/icons/hicolor/24x24/apps', ['pixmaps/24x24/gnoduino.png']),
+        ('share/icons/hicolor/32x32/apps', ['pixmaps/32x32/gnoduino.png']),
+        ('share/icons/hicolor/48x48/apps', ['pixmaps/48x48/gnoduino.png']),
+        ('share/icons/hicolor/64x64/apps', ['pixmaps/64x64/gnoduino.png']),
+        ('share/icons/hicolor/scalable/apps', ['pixmaps/gnoduino.svg']),
     ]
     for subdir in ("hardware", "libraries", "reference"):
         # We ship hardware/libraries/reference modules if not already installed
