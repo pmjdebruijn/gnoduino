@@ -39,6 +39,11 @@ def firstStatement(instr):
 def lastInclude(instr):
 	m = re.finditer(r"^#include\s+[\w+\".<>\-]+", instr, re.M)
 	return max(enumerate(m))[1].end()
+	try:
+		return max(enumerate(m))[1].end()
+	except:
+		return 0
+
 
 def findPrototype(instr):
 	pro = []
