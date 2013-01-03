@@ -117,9 +117,12 @@ def addHeaders(path, b):
 	fs = firstStatement(cont)
 	if fs != None:
 		proto = genPrototype(cont)
-		incl = lastInclude(cont)
-		result = cont[:fs:]+"\n#include \""+misc.getArduinoAPIFile()+"\"\n" \
-			+ cont[:incl:] + "\n" + proto + cont[fs+incl:]+"\n\n"
+		lastinc = lastInclude(cont)
+		incl = "\n#include \""+misc.getArduinoAPIFile()+"\"\n"
+		print fs
+		result = cont[:fs:] + incl + cont[fs:lastinc:] + "\n" \
+			 + proto + cont[lastinc:] + "\n\n"
+		print result
 	else:
 		result = "\n#include \""+misc.getArduinoAPIFile()+"\"\n"+cont+"\n\n"
 
