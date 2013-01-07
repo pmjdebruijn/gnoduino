@@ -1,0 +1,433 @@
+# Serbian translation for gnoduino.
+# Copyright (C) 2013 gnoduino's COPYRIGHT HOLDER
+# This file is distributed under the same license as the gnoduino package.
+# Мирослав Николић <miroslavnikolic@rocketmail.com>, 2013.
+msgid ""
+msgstr ""
+"Project-Id-Version: gnoduino master\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnodui"
+"no&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2013-01-03 22:46+0000\n"
+"PO-Revision-Date: 2013-01-07 10:54+0200\n"
+"Last-Translator: Мирослав Николић <miroslavnikolic@rocketmail.com>\n"
+"Language-Team: Serbian <gnom@prevod.org>\n"
+"Language: sr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n==1? 3 : n%10==1 && n%100!=11 ? 0 : "
+"n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Project-Style: gnome\n"
+
+#: ../src/compiler.py:137
+msgid "Compiling..."
+msgstr "Преводим..."
+
+#: ../src/compiler.py:156 ../src/compiler.py:162 ../src/compiler.py:168
+#: ../src/compiler.py:175 ../src/compiler.py:193 ../src/compiler.py:218
+msgid "Compile Error"
+msgstr "Грешка превођења"
+
+#: ../src/compiler.py:248
+msgid "Linking error"
+msgstr "Грешка повезивања"
+
+#: ../src/compiler.py:260 ../src/compiler.py:273
+msgid "Object error"
+msgstr "Грешка објекта"
+
+#: ../src/compiler.py:279
+msgid "Done compiling."
+msgstr "Превођење је обављено."
+
+#: ../src/compiler.py:283
+#, python-format
+msgid "Binary sketch size: %s bytes (of a %s bytes maximum)\n"
+msgstr "Величина бинарне скице: %s бајта (од %s бајта највише)\n"
+
+#: ../src/compiler.py:369 ../src/compiler.py:394
+msgid "Library Error"
+msgstr "Грешка библиотеке"
+
+#: ../src/misc.py:54
+#, python-format
+msgid ""
+"Unable to locate %s\n"
+"Arduino SDK missing or broken."
+msgstr ""
+"Не могу да пронађем „%s\n"
+"Недостаје или је оштећен Ардуино СДК."
+
+#: ../src/misc.py:148
+#, python-format
+msgid "Cannot load %s file. Exiting."
+msgstr "Не могу да учитам „%s“ датотеку. Излазим."
+
+#: ../src/misc.py:151
+#, python-format
+msgid "Error reading %s file. File is corrupt. Installation problem.\n"
+msgstr "Грешка читања „%s“ датотеке. Датотека је оштећена. Проблем инсталације.\n"
+
+#: ../src/misc.py:275
+msgid "Error compiling."
+msgstr "Грешка превођења."
+
+#: ../src/misc.py:346
+msgid "Close without Saving"
+msgstr "Затвори без чувања"
+
+#: ../src/misc.py:348
+msgid "If you don't save, changes will be permanently lost."
+msgstr "Ако не сачувате, измене ће бити трајно изгубљене."
+
+#: ../src/serialio.py:113
+msgid ""
+"Serial port not configured!\n"
+"Use Tools->Serial Port to configure port."
+msgstr ""
+"Серијски прикључник није подешен!\n"
+"Користите изборник „Алати—>Серијски прикључник“ да га подесите."
+
+#: ../src/srcview.py:161 ../src/srcview.py:171
+#, python-format
+msgid "'%s' not found."
+msgstr "Нисам пронашао „%s“."
+
+#: ../src/ui.py:66 ../src/ui.py:88 ../src/ui.py:106 ../src/ui.py:177
+#: ../src/ui.py:192
+msgid "Untitled"
+msgstr "Неименовано"
+
+#: ../src/ui.py:67
+msgid "Save document"
+msgstr "Сачувајте документ"
+
+#: ../src/ui.py:68
+#, python-format
+msgid ""
+"Save changes to document \"%s\"\n"
+" before closing?"
+msgstr ""
+"Да сачувам измене у документу „%s“\n"
+" пре затварања?"
+
+#: ../src/ui.py:186
+msgid "Save file"
+msgstr "Сачувај датотеку"
+
+#: ../src/ui.py:203
+msgid "Open file"
+msgstr "Отвори датотеку"
+
+#: ../src/ui.py:229
+#, python-format
+msgid "<b>A file named %s already exists. Do you want to replace it?</b>"
+msgstr ""
+"<b>Датотека под називом „%s“ већ постоји. Да ли желите да је замените?</b>"
+
+#: ../src/ui.py:230
+#, python-format
+msgid ""
+"The file already exists in \"%s\". Replacing it will overwrite its contents."
+msgstr ""
+"Датотека већ постоји у „%s“. Уколико је замените преписаћете њен садржај."
+
+#: ../src/ui.py:531
+msgid "Open Recent"
+msgstr "Отвори скорашње"
+
+#: ../src/ui.py:566 ../ui/main.ui.h:59
+msgid "Send"
+msgstr "Пошаљи"
+
+#: ../src/ui.py:567
+msgid "Clear"
+msgstr "Очисти"
+
+#: ../src/ui.py:605
+#, python-format
+msgid "%s baud"
+msgstr "%s бода"
+
+#: ../src/ui.py:755
+msgid "E_xamples"
+msgstr "_Примери"
+
+#: ../src/ui.py:776
+msgid "Import Library"
+msgstr "Увези библиотеку"
+
+#: ../src/ui.py:782 ../ui/main.ui.h:55
+msgid "Upload"
+msgstr "Отпреми"
+
+#: ../src/ui.py:789
+msgid "Upload using programmer"
+msgstr "Отпреми употребом програмера"
+
+#: ../src/ui.py:828 ../src/ui.py:834 ../src/ui.py:840
+msgid "System error"
+msgstr "Системска грешка"
+
+#: ../src/ui.py:843
+msgid "Cannot load ui file"
+msgstr "Не могу да учитам датотеку корисничког сучеља"
+
+#: ../src/ui.py:958
+msgid "--help    Print the command line options"
+msgstr "--help     Исписује опције линије наредби"
+
+#: ../src/ui.py:959
+msgid "--version Output version information and exit"
+msgstr "--version  Исписује податке о издању и излази"
+
+#: ../src/uploader.py:54
+msgid "Burning bootloader..."
+msgstr "Записујем покретач система..."
+
+#: ../src/uploader.py:67 ../src/uploader.py:101 ../src/uploader.py:149
+#: ../src/uploader.py:162
+msgid "Flashing error."
+msgstr "Грешка у надоградњи БИОС-а (flashing error)."
+
+#: ../src/uploader.py:92 ../src/uploader.py:123
+msgid "Burn Error"
+msgstr "Грешка записивања"
+
+#: ../src/uploader.py:92 ../src/uploader.py:123
+msgid "Burn ERROR."
+msgstr "ГРЕШКА записивања."
+
+#: ../src/uploader.py:126
+msgid "Burn complete."
+msgstr "Записивање је обављено."
+
+#: ../src/uploader.py:135
+msgid "Flashing..."
+msgstr "Надограђујем..."
+
+#: ../src/uploader.py:181
+msgid "Flashing Error"
+msgstr "Грешка у надоградњи"
+
+#: ../src/uploader.py:181
+msgid "Flash ERROR.\n"
+msgstr "ГРЕШКА надоградње БИОС-а.\n"
+
+#: ../src/uploader.py:184
+msgid "Flashing complete."
+msgstr "Надоградња је обављена."
+
+#: ../ui/arduino.xml.h:1
+msgid "Arduino"
+msgstr "Ардуино"
+
+#: ../ui/arduino.xml.h:2
+msgid "Arduino color scheme"
+msgstr "Шема боје Ардуина"
+
+#: ../ui/main.ui.h:1
+msgid "Lucian Langa <lucilanga@gnome.org>"
+msgstr "Лућан Ланга <lucilanga@gnome.org>"
+
+#: ../ui/main.ui.h:2
+msgid "GNOME Arduino IDE"
+msgstr "Гном Ардуино ИДЕ"
+
+#: ../ui/main.ui.h:3
+msgid "gnoduino"
+msgstr "гнодуино"
+
+#: ../ui/main.ui.h:4
+msgid "translator-credits"
+msgstr ""
+"  Мирослав Николић\n"
+"\n"
+"  http://prevod.org — превод на српски језик"
+
+#: ../ui/main.ui.h:5
+msgid ""
+" gnoduino - Python Arduino IDE implementation\n"
+" Copyright (C) 2010-2012  Lucian Langa\n"
+"\n"
+"This program is free software; you can redistribute it and/or\n"
+"modify it under the terms of the GNU General Public License\n"
+"as published by the Free Software Foundation; either version 2\n"
+"of the License, or (at your option) any later version.\n"
+"\n"
+"This program is distributed in the hope that it will be useful,\n"
+"but WITHOUT ANY WARRANTY; without even the implied warranty of\n"
+"MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n"
+"GNU General Public License for more details.\n"
+"\n"
+"You should have received a copy of the GNU General Public License\n"
+"along with this program; if not, write to the Free Software\n"
+"Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, "
+"USA.\n"
+msgstr ""
+" гнодуино — Питонова примена Ардуино ИДЕ-а\n"
+" Ауторска права (C) 2010-2012  Лућан Ланга\n"
+"\n"
+"Овај програм је слободан софтвер; можете га прослеђивати\n"
+"и/или мењати под условима ГНУ Опште јавне лиценце коју је\n"
+"објавила Задужбина слободног софтвера; верзије 2 лиценце\n"
+"или (по вашем избору) било које новије верзије.\n"
+"\n"
+"Овај програм се расподељује у нади да ће бити користан,\n"
+"али БЕЗ ИКАКВЕ ГАРАНЦИЈЕ; чак и без примењене гаранције\n"
+"ТРЖИШНЕ ВРЕДНОСТИ или ПРИЛАГОЂЕНОСТИ ОДРЕЂЕНОЈ НАМЕНИ.\n"
+"Погледајте ГНУ Општу јавну лиценцу за више детаља.\n"
+"\n"
+"Требали сте да примите примерак ГНУ Опште јавне лиценце\n"
+"уз овај програм; ако нисте, пишите Задужбини слободног\n"
+"софтва на адресу: Free Software Foundation, Inc.,\n"
+"51 Franklin Street, Fifth Floor, Boston, MA 02110-1301,\n"
+"USA.\n"
+
+#: ../ui/main.ui.h:22
+msgid "Search for:"
+msgstr "Потражи:"
+
+#: ../ui/main.ui.h:23
+msgid "Match entire word only"
+msgstr "Упореди само целе речи"
+
+#: ../ui/main.ui.h:24
+msgid "Wrap around"
+msgstr "Преламај унаоколо"
+
+#: ../ui/main.ui.h:25
+msgid "Match case"
+msgstr "Упореди величину слова"
+
+#: ../ui/main.ui.h:26
+msgid "Search backwards"
+msgstr "Тражи уназад"
+
+#: ../ui/main.ui.h:27
+msgid "Editor font size"
+msgstr "Величина слова уређивача"
+
+#: ../ui/main.ui.h:28
+msgid "Console font size"
+msgstr "Величина слова конзоле"
+
+#: ../ui/main.ui.h:29
+msgid "Verbose build"
+msgstr "Опширна изградња"
+
+#: ../ui/main.ui.h:30
+msgid "Verbose upload"
+msgstr "Опширно отпремање"
+
+#: ../ui/main.ui.h:31
+msgid "Show line numbers"
+msgstr "Прикажи бројеве редова"
+
+#: ../ui/main.ui.h:32
+msgid "Sketchdir: "
+msgstr "Директоријум скице:"
+
+#: ../ui/main.ui.h:33
+msgid ""
+"Enter any supplementary path that compiler will check for, separate them by "
+"semicolons. (eg /usr/share/gnoduino;/usr/local/share/gnoduino)"
+msgstr ""
+"Унесите још допунских путања које ће преводилац да провери, раздвојене "
+"запетачком. (eg /usr/share/gnoduino;/usr/local/share/gnoduino)"
+
+#: ../ui/main.ui.h:34
+msgid "Additional library paths:"
+msgstr "Путање додатне библиотеке:"
+
+#: ../ui/main.ui.h:35
+msgid "_File"
+msgstr "_Датотека"
+
+#: ../ui/main.ui.h:36
+msgid "Upload to I/O Board"
+msgstr "Отпреми на У/И таблу"
+
+#: ../ui/main.ui.h:37
+msgid "Preferences"
+msgstr "Поставке"
+
+#: ../ui/main.ui.h:38
+msgid "_Edit"
+msgstr "_Уређивање"
+
+#: ../ui/main.ui.h:39
+msgid "Find Next"
+msgstr "Нађи следеће"
+
+#: ../ui/main.ui.h:40
+msgid "Sketch"
+msgstr "Скица"
+
+#: ../ui/main.ui.h:41
+msgid "Verify/Compile"
+msgstr "Провери/преведи"
+
+#: ../ui/main.ui.h:42
+msgid "Stop"
+msgstr "Заустави"
+
+#: ../ui/main.ui.h:43
+msgid "Add File..."
+msgstr "Додај датотеку..."
+
+#: ../ui/main.ui.h:44
+msgid "Tools"
+msgstr "Алати"
+
+#: ../ui/main.ui.h:45
+msgid "Auto Format"
+msgstr "Сам обликуј"
+
+#: ../ui/main.ui.h:46
+msgid "Serial Monitor"
+msgstr "Серијски монитор"
+
+#: ../ui/main.ui.h:47
+msgid "Reset Board"
+msgstr "Поново постави таблу"
+
+#: ../ui/main.ui.h:48
+msgid "Board"
+msgstr "Табла"
+
+#: ../ui/main.ui.h:49
+msgid "Serial Port"
+msgstr "Серијски прикључник"
+
+#: ../ui/main.ui.h:50
+msgid "Programmer"
+msgstr "Програмер"
+
+#: ../ui/main.ui.h:51
+msgid "Burn Bootloader"
+msgstr "Запиши покретач система"
+
+#: ../ui/main.ui.h:52
+msgid "_Help"
+msgstr "По_моћ"
+
+#: ../ui/main.ui.h:53
+msgid "Reference"
+msgstr "Упуте"
+
+#: ../ui/main.ui.h:54
+msgid "Compile"
+msgstr "Преведи"
+
+#: ../ui/main.ui.h:56
+msgid "New"
+msgstr "Ново"
+
+#: ../ui/main.ui.h:57
+msgid "Open"
+msgstr "Отвори"
+
+#: ../ui/main.ui.h:58
+msgid "Save"
+msgstr "Сачувај"
