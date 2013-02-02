@@ -62,7 +62,9 @@ def genPrototype(instr):
 		t = re.findall("\w+\s+\w+", z)
 		for p in proto:
 			if p==t[0]: hdup=1
-		if hdup: continue
+		if hdup:
+			hdup=0
+			continue
 		q = re.findall("\w+\s+\w+\([^)]*\)", z)
 		hdr = hdr + q[0]+";\n"
 	return hdr
@@ -119,10 +121,8 @@ def addHeaders(path, b):
 		proto = genPrototype(cont)
 		lastinc = lastInclude(cont)
 		incl = "\n#include \""+misc.getArduinoAPIFile()+"\"\n"
-		print fs
 		result = cont[:fs:] + incl + cont[fs:lastinc:] + "\n" \
 			 + proto + cont[lastinc:] + "\n\n"
-		print result
 	else:
 		result = "\n#include \""+misc.getArduinoAPIFile()+"\"\n"+cont+"\n\n"
 
