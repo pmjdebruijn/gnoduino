@@ -1,93 +1,91 @@
 # Brazilian Portuguese translation for gnoduino.
-# Copyright (C) 2012 gnoduino's COPYRIGHT HOLDER
+# Copyright (C) 2013 gnoduino's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnoduino package.
 # Gabriel Speckhahn <gabspeck@gmail.com>, 2012.
+# Enrico Nicoletto <liverig@gmail.com>, 2013.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: gnoduino master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
 "product=gnoduino&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2012-02-22 17:17+0000\n"
-"PO-Revision-Date: 2012-02-23 09:41-0200\n"
-"Last-Translator: Gabriel Speckhahn <gabspeck@gmail.com>\n"
-"Language-Team: GNOME pt_BR\n"
+"POT-Creation-Date: 2013-02-05 09:46+0000\n"
+"PO-Revision-Date: 2013-02-09 23:48-0300\n"
+"Last-Translator: Enrico Nicoletto <liverig@gmail.com>\n"
+"Language-Team: Brazilian Portuguese <gnome-pt_br-list@gnome.org>\n"
+"Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: pt_BR\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Virtaal 0.7.1\n"
 "X-Project-Style: gnome\n"
 
-#: ../src/board.py:38
-msgid "Cannot load BOARDS file. Exiting."
-msgstr "Não foi possível carregar o arquivo BOARDS. Saindo."
+#: ../src/compiler.py:137
+msgid "Compiling..."
+msgstr "Compilando..."
 
-#: ../src/board.py:41
+#: ../src/compiler.py:156 ../src/compiler.py:162 ../src/compiler.py:168
+#: ../src/compiler.py:175 ../src/compiler.py:193 ../src/compiler.py:218
+msgid "Compile Error"
+msgstr "Erro de compilação"
+
+# Por se tratar de uma etapa de compilação, linking deve ser traduzido como linkedição.
+#: ../src/compiler.py:248
+msgid "Linking error"
+msgstr "Erro de linkedição"
+
+#: ../src/compiler.py:260 ../src/compiler.py:273
+msgid "Object error"
+msgstr "Erro de objeto"
+
+#: ../src/compiler.py:279
+msgid "Done compiling."
+msgstr "Compilação concluída."
+
+#: ../src/compiler.py:283
+#, python-format
+msgid "Binary sketch size: %s bytes (of a %s bytes maximum)\n"
+msgstr "Tamanho do sketch binário: %s bytes (de um máximo de %s bytes)\n"
+
+#: ../src/compiler.py:369 ../src/compiler.py:394
+msgid "Library Error"
+msgstr "Erro de biblioteca"
+
+#: ../src/misc.py:54
+#, python-format
+msgid ""
+"Unable to locate %s\n"
+"Arduino SDK missing or broken."
+msgstr ""
+"Não foi possível localizar %s\n"
+"O SDK do Arduino está quebrado ou faltando."
+
+#: ../src/misc.py:148
+#, python-format
+msgid "Cannot load %s file. Exiting."
+msgstr "Não foi possível carregar o arquivo %s. Saindo."
+
+#: ../src/misc.py:151
 #, python-format
 msgid "Error reading %s file. File is corrupt. Installation problem.\n"
 msgstr ""
 "Erro ao ler o arquivo %s. O arquivo está corrompido. Problema de "
 "instalação.\n"
 
-#: ../src/compiler.py:125
-msgid "Compiling..."
-msgstr "Compilando..."
-
-#: ../src/compiler.py:152 ../src/compiler.py:170 ../src/compiler.py:185
-#: ../src/compiler.py:207
-msgid "Compile Error"
-msgstr "Erro de compilação"
-
-#: ../src/compiler.py:233
-msgid "Linking error"
-msgstr "Erro de vinculação"
-
-#: ../src/compiler.py:245 ../src/compiler.py:258
-msgid "Object error"
-msgstr "Erro de objeto"
-
-#: ../src/compiler.py:264
-msgid "Done compilling."
-msgstr "Compilação concluída."
-
-#: ../src/compiler.py:268
-#, python-format
-msgid "Binary sketch size: %s bytes (of a %s bytes maximum)\n"
-msgstr "Tamanho do sketch binário: %s bytes (de um máximo de %s bytes)\n"
-
-#: ../src/compiler.py:322 ../src/compiler.py:345
-msgid "Library Error"
-msgstr "Erro de biblioteca"
-
-#: ../src/misc.py:52
-#, python-format
-msgid "Cannot find %s"
-msgstr "Não foi possível localizar %s"
-
-#: ../src/misc.py:185
-msgid "Error compilling."
+#: ../src/misc.py:275
+msgid "Error compiling."
 msgstr "Erro ao compilar."
 
-#: ../src/misc.py:255
+#: ../src/misc.py:346
 msgid "Close without Saving"
 msgstr "Fechar sem salvar"
 
-#: ../src/misc.py:257
+#: ../src/misc.py:348
 msgid "If you don't save, changes will be permanently lost."
 msgstr "Se você não salvar, as alterações serão permanentemente perdidas."
 
-#: ../src/programmer.py:39
-msgid "Cannot find PROGRAMMERS"
-msgstr "Não foi possível localizar PROGRAMMERS"
-
-#: ../src/programmer.py:42
-#, python-format
-msgid "Error reading %s file. File is corrupt. Installation problem."
-msgstr ""
-"Erro ao ler o arquivo %s. O arquivo está corrompido. Problema de instalação."
-
-#: ../src/serialio.py:92
+#: ../src/serialio.py:113
 msgid ""
 "Serial port not configured!\n"
 "Use Tools->Serial Port to configure port."
@@ -95,21 +93,21 @@ msgstr ""
 "Porta serial não configurada!\n"
 "Use Ferramentas->Porta serial para configurar a porta."
 
-#: ../src/srcview.py:148 ../src/srcview.py:158
+#: ../src/srcview.py:161 ../src/srcview.py:171
 #, python-format
 msgid "'%s' not found."
 msgstr "\"%s\" não encontrado."
 
-#: ../src/ui.py:67 ../src/ui.py:87 ../src/ui.py:100 ../src/ui.py:168
-#: ../src/ui.py:183
+#: ../src/ui.py:66 ../src/ui.py:88 ../src/ui.py:106 ../src/ui.py:177
+#: ../src/ui.py:192
 msgid "Untitled"
 msgstr "Sem título"
 
-#: ../src/ui.py:68
+#: ../src/ui.py:67
 msgid "Save document"
 msgstr "Salvar documento"
 
-#: ../src/ui.py:69
+#: ../src/ui.py:68
 #, python-format
 msgid ""
 "Save changes to document \"%s\"\n"
@@ -118,56 +116,72 @@ msgstr ""
 "Salvar alterações no docmento \"%s\"\n"
 " antes de fechar?"
 
-#: ../src/ui.py:177
+#: ../src/ui.py:186
 msgid "Save file"
 msgstr "Salvar arquivo"
 
-#: ../src/ui.py:194
+#: ../src/ui.py:203
 msgid "Open file"
 msgstr "Abrir arquivo"
 
-#: ../src/ui.py:220
+#: ../src/ui.py:229
 #, python-format
 msgid "<b>A file named %s already exists. Do you want to replace it?</b>"
 msgstr "<b>Já existe um arquivo com o nome %s. Você deseja substituí-lo?</b>"
 
-#: ../src/ui.py:221
+#: ../src/ui.py:230
 #, python-format
 msgid ""
 "The file already exists in \"%s\". Replacing it will overwrite its contents."
 msgstr ""
 "O arquivo já existe em \"%s\". Substituí-lo irá sobrescrever seu conteúdo."
 
-#: ../src/ui.py:505
+#: ../src/ui.py:531
 msgid "Open Recent"
 msgstr "Abrir recente"
 
-#: ../src/ui.py:540 ../ui/main.ui.h:56
+#: ../src/ui.py:566 ../ui/main.ui.h:59
 msgid "Send"
 msgstr "Enviar"
 
-#: ../src/ui.py:541
+#: ../src/ui.py:567
 msgid "Clear"
 msgstr "Limpar"
 
-#: ../src/ui.py:576
+#: ../src/ui.py:605
 #, python-format
 msgid "%s baud"
 msgstr "%s baud"
 
-#: ../src/ui.py:668 ../src/ui.py:674 ../src/ui.py:680
+#: ../src/ui.py:755
+msgid "E_xamples"
+msgstr "E_xemplos"
+
+#: ../src/ui.py:776
+msgid "Import Library"
+msgstr "Importar biblioteca"
+
+#: ../src/ui.py:782 ../ui/main.ui.h:55
+msgid "Upload"
+msgstr "Fazer upload"
+
+#: ../src/ui.py:789
+msgid "Upload using programmer"
+msgstr "Enviar usando o programador"
+
+#: ../src/ui.py:828 ../src/ui.py:834 ../src/ui.py:840
 msgid "System error"
 msgstr "Erro de sistema"
 
-#: ../src/ui.py:683
+#: ../src/ui.py:843
 msgid "Cannot load ui file"
 msgstr "Não foi possível carregar o arquivo de ui"
 
-#: ../src/ui.py:789
+#: ../src/ui.py:958
 msgid "--help    Print the command line options"
 msgstr "--help    Imprime as opções de linha de comando"
 
-#: ../src/ui.py:790
+#: ../src/ui.py:959
 msgid "--version Output version information and exit"
 msgstr "--version Imprime informações de versão e sai"
 
@@ -175,36 +189,36 @@ msgstr "--version Imprime informações de versão e sai"
 msgid "Burning bootloader..."
 msgstr "Gravando gerenciador de inicialização..."
 
-#: ../src/uploader.py:77 ../src/uploader.py:80 ../src/uploader.py:96
-#: ../src/uploader.py:99
-msgid "Burn Error"
-msgstr "Erro de gravação"
-
-#: ../src/uploader.py:80 ../src/uploader.py:99
-msgid "Burn ERROR."
-msgstr "ERRO de gravação."
-
-#: ../src/uploader.py:102
-msgid "Burn complete."
-msgstr "Gravação concluída."
-
-#: ../src/uploader.py:110
-msgid "Flashing..."
-msgstr "Gravando na memória flash..."
-
-#: ../src/uploader.py:115
+#: ../src/uploader.py:67 ../src/uploader.py:101 ../src/uploader.py:149
+#: ../src/uploader.py:162
 msgid "Flashing error."
 msgstr "Erro de gravação na memória flash."
 
+#: ../src/uploader.py:92 ../src/uploader.py:123
+msgid "Burn Error"
+msgstr "Erro de gravação"
+
+#: ../src/uploader.py:92 ../src/uploader.py:123
+msgid "Burn ERROR."
+msgstr "ERRO de gravação."
+
+#: ../src/uploader.py:126
+msgid "Burn complete."
+msgstr "Gravação concluída."
+
 #: ../src/uploader.py:135
+msgid "Flashing..."
+msgstr "Gravando na memória flash..."
+
+#: ../src/uploader.py:181
 msgid "Flashing Error"
 msgstr "Erro de gravação na memória flash"
 
-#: ../src/uploader.py:135
+#: ../src/uploader.py:181
 msgid "Flash ERROR.\n"
 msgstr "ERRO de gravação na memória flash.\n"
 
-#: ../src/uploader.py:138
+#: ../src/uploader.py:184
 msgid "Flashing complete."
 msgstr "Gravação na memória flash concluída."
 
@@ -222,91 +236,104 @@ msgstr "Lucian Langa <lucilanga@gnome.org>"
 
 #: ../ui/main.ui.h:2
 msgid "GNOME Arduino IDE"
-msgstr "IDE Arduino do GNOME"
+msgstr "Ambiente de desenvolvimento Arduino do GNOME"
 
 #: ../ui/main.ui.h:3
 msgid "gnoduino"
 msgstr "gnoduino"
 
 #: ../ui/main.ui.h:4
+msgid "translator-credits"
+msgstr ""
+"Gabriel Speckhahn <gabspeck@gmail.com>, 2012\n"
+"Enrico Nicoletto <liverig@gmail.com>, 2013"
+
+#: ../ui/main.ui.h:5
 msgid ""
-"# gnoduino - Python Arduino IDE implementation\n"
-"# Copyright (C) 2010  Lucian Langa\n"
-"#\n"
-"# This program is free software; you can redistribute it and/or\n"
-"# modify it under the terms of the GNU General Public License\n"
-"# as published by the Free Software Foundation; either version 2\n"
-"# of the License, or (at your option) any later version.\n"
-"#\n"
-"# This program is distributed in the hope that it will be useful,\n"
-"# but WITHOUT ANY WARRANTY; without even the implied warranty of\n"
-"# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n"
-"# GNU General Public License for more details.\n"
-"#\n"
-"# You should have received a copy of the GNU General Public License\n"
-"# along with this program; if not, write to the Free Software\n"
-"# Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, "
+" gnoduino - Python Arduino IDE implementation\n"
+" Copyright (C) 2010-2012  Lucian Langa\n"
+"\n"
+"This program is free software; you can redistribute it and/or\n"
+"modify it under the terms of the GNU General Public License\n"
+"as published by the Free Software Foundation; either version 2\n"
+"of the License, or (at your option) any later version.\n"
+"\n"
+"This program is distributed in the hope that it will be useful,\n"
+"but WITHOUT ANY WARRANTY; without even the implied warranty of\n"
+"MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n"
+"GNU General Public License for more details.\n"
+"\n"
+"You should have received a copy of the GNU General Public License\n"
+"along with this program; if not, write to the Free Software\n"
+"Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, "
 "USA.\n"
 msgstr ""
-"# gnoduino - Implementação Python do IDE do Arduino\n"
-"# Copyright (C) 2010  Lucian Langa\n"
-"#\n"
-"# Este programa é um software livre; você pode redistribuí-lo e/ou modificá-"
+" gnoduino - Implementação Python de ambiente de desenvolvimento do Arduino\n"
+" Copyright (C) 2010-2012  Lucian Langa\n"
+"\n"
+" Este programa é um software livre; você pode redistribuí-lo e/ou modificá-"
 "lo\n"
-"# sob os termos da Licença Pública Geral GNU publicada pela Free Software\n"
-"# Foundation; qualquer versão 2 da Licença, ou (a seu critério) outra "
-"versão\n"
-"# posterior.\n"
-"#\n"
-"# Este programa é distribuído na expectativa de que seja útil, mas SEM "
+" sob os termos da Licença Pública Geral GNU publicada pela Free Software\n"
+" Foundation; qualquer versão 2 da Licença, ou (a seu critério) outra versão\n"
+" posterior.\n"
+"\n"
+" Este programa é distribuído na expectativa de que seja útil, mas SEM "
 "NENHUMA\n"
-"# GARANTIA; sem mesmo implicar garantias de COMERCIABILIDADE ou ADAPTAÇÃO A "
+" GARANTIA; sem mesmo implicar garantias de COMERCIABILIDADE ou ADAPTAÇÃO A "
 "UM\n"
-"# PROPÓSITO PARTICULAR. Veja a Licença Pública Geral GNU (GPL) para mais\n"
-"# detalhes.\n"
-"#\n"
-"# Você deve ter recebido uma cópia da Licença Pública Geral GNU\n"
-"# junto com este programa; caso contrário, escreva para Free Software\n"
-"# Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301,\n"
-"# USA.\n"
+" PROPÓSITO PARTICULAR. Veja a Licença Pública Geral GNU (GPL) para mais\n"
+" detalhes.\n"
+"\n"
+" Você deve ter recebido uma cópia da Licença Pública Geral GNU\n"
+" junto com este programa; caso contrário, escreva para Free Software\n"
+" Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301,\n"
+" USA.\n"
 
-#: ../ui/main.ui.h:21
+#: ../ui/main.ui.h:22
 msgid "Search for:"
 msgstr "Pesquisar por:"
 
-#: ../ui/main.ui.h:22
+#: ../ui/main.ui.h:23
 msgid "Match entire word only"
 msgstr "Coincidir apenas palavras inteiras"
 
-#: ../ui/main.ui.h:23
+#: ../ui/main.ui.h:24
 msgid "Wrap around"
 msgstr "Voltar ao início"
 
-#: ../ui/main.ui.h:24
+#: ../ui/main.ui.h:25
 msgid "Match case"
 msgstr "Diferenciar maiúsculas de minúsculas"
 
-#: ../ui/main.ui.h:25
+#: ../ui/main.ui.h:26
 msgid "Search backwards"
 msgstr "Pesquisar para trás"
 
-#: ../ui/main.ui.h:26
+#: ../ui/main.ui.h:27
 msgid "Editor font size"
 msgstr "Tamanho da fonte do editor"
 
-#: ../ui/main.ui.h:27
+#: ../ui/main.ui.h:28
 msgid "Console font size"
 msgstr "Tamanho da fonte do console"
 
-#: ../ui/main.ui.h:28
+#: ../ui/main.ui.h:29
 msgid "Verbose build"
 msgstr "Compilação detalhada"
 
-#: ../ui/main.ui.h:29
+#: ../ui/main.ui.h:30
+msgid "Verbose upload"
+msgstr "Envio detalhado"
+
+#: ../ui/main.ui.h:31
 msgid "Show line numbers"
 msgstr "Mostrar números de linha"
 
-#: ../ui/main.ui.h:30
+#: ../ui/main.ui.h:32
+msgid "Sketchdir: "
+msgstr "Diretório de esboços:"
+
+#: ../ui/main.ui.h:33
 msgid ""
 "Enter any supplementary path that compiler will check for, separate them by "
 "semicolons. (eg /usr/share/gnoduino;/usr/local/share/gnoduino)"
@@ -315,102 +342,109 @@ msgstr ""
 "separe-os por pontos e vírgulas. (ex. /usr/share/gnoduino;/usr/local/share/"
 "gnoduino)"
 
-#: ../ui/main.ui.h:31
+#: ../ui/main.ui.h:34
 msgid "Additional library paths:"
 msgstr "Caminhos de biblioteca adicionais:"
 
-#: ../ui/main.ui.h:32
+#: ../ui/main.ui.h:35
 msgid "_File"
 msgstr "_Arquivo"
 
-#: ../ui/main.ui.h:33
+#: ../ui/main.ui.h:36
 msgid "Upload to I/O Board"
 msgstr "Fazer upload para a placa de E/S"
 
-#: ../ui/main.ui.h:34
+#: ../ui/main.ui.h:37
 msgid "Preferences"
 msgstr "Preferências"
 
-#: ../ui/main.ui.h:35
+#: ../ui/main.ui.h:38
 msgid "_Edit"
 msgstr "_Editar"
 
-#: ../ui/main.ui.h:36
+#: ../ui/main.ui.h:39
 msgid "Find Next"
 msgstr "Localizar próximo"
 
-#: ../ui/main.ui.h:37
+#: ../ui/main.ui.h:40
 msgid "Sketch"
 msgstr "Sketch"
 
-#: ../ui/main.ui.h:38
+#: ../ui/main.ui.h:41
 msgid "Verify/Compile"
 msgstr "Verificar/Compilar"
 
-#: ../ui/main.ui.h:39
+#: ../ui/main.ui.h:42
 msgid "Stop"
 msgstr "Parar"
 
-#: ../ui/main.ui.h:40
-msgid "Import Library"
-msgstr "Importar biblioteca"
-
-#: ../ui/main.ui.h:41
+#: ../ui/main.ui.h:43
 msgid "Add File..."
 msgstr "Adicionar arquivo..."
 
-#: ../ui/main.ui.h:42
+#: ../ui/main.ui.h:44
 msgid "Tools"
 msgstr "Ferramentas"
 
-#: ../ui/main.ui.h:43
+#: ../ui/main.ui.h:45
 msgid "Auto Format"
 msgstr "Formatar automaticamente"
 
-#: ../ui/main.ui.h:44
+#: ../ui/main.ui.h:46
 msgid "Serial Monitor"
 msgstr "Monitor serial"
 
-#: ../ui/main.ui.h:45
+#: ../ui/main.ui.h:47
 msgid "Reset Board"
 msgstr "Restaurar placa"
 
-#: ../ui/main.ui.h:46
+#: ../ui/main.ui.h:48
 msgid "Board"
 msgstr "Placa"
 
-#: ../ui/main.ui.h:47
+#: ../ui/main.ui.h:49
 msgid "Serial Port"
 msgstr "Porta serial"
 
-#: ../ui/main.ui.h:48
+#: ../ui/main.ui.h:50
+msgid "Programmer"
+msgstr "Programador"
+
+#: ../ui/main.ui.h:51
 msgid "Burn Bootloader"
 msgstr "Gravar gerenciador de inicialização"
 
-#: ../ui/main.ui.h:49
+#: ../ui/main.ui.h:52
 msgid "_Help"
 msgstr "_Ajuda"
 
-#: ../ui/main.ui.h:50
+#: ../ui/main.ui.h:53
 msgid "Reference"
 msgstr "Referência"
 
-#: ../ui/main.ui.h:51
+#: ../ui/main.ui.h:54
 msgid "Compile"
 msgstr "Compilar"
 
-#: ../ui/main.ui.h:52
+#: ../ui/main.ui.h:56
 msgid "New"
 msgstr "Novo"
 
-#: ../ui/main.ui.h:53
+#: ../ui/main.ui.h:57
 msgid "Open"
 msgstr "Abrir"
 
-#: ../ui/main.ui.h:54
+#: ../ui/main.ui.h:58
 msgid "Save"
 msgstr "Salvar"
 
-#: ../ui/main.ui.h:55
-msgid "Upload"
-msgstr "Fazer upload"
+#~ msgid "Cannot find %s"
+#~ msgstr "Não foi possível localizar %s"
+
+#~ msgid "Cannot find PROGRAMMERS"
+#~ msgstr "Não foi possível localizar PROGRAMMERS"
+
+#~ msgid "Error reading %s file. File is corrupt. Installation problem."
+#~ msgstr ""
+#~ "Erro ao ler o arquivo %s. O arquivo está corrompido. Problema de "
+#~ "instalação."
