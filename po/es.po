@@ -72,7 +72,7 @@ msgstr ""
 
 #: ../src/misc.py:275
 msgid "Error compiling."
-msgstr "Erro al compilar."
+msgstr "Error al compilar."
 
 #: ../src/misc.py:346
 msgid "Close without Saving"
