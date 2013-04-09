@@ -2,49 +2,50 @@
 # Copyright (C) 2011 gnoduino's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnoduino package.
 # Jorge González <jorgegonz@svn.gnome.org>, 2011.
-# Daniel Mustieles <daniel.mustieles@gmail.com>, 2011, 2012.
+# Daniel Mustieles <daniel.mustieles@gmail.com>, 2011, 2012, 2013.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnoduino master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
 "product=gnoduino&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2012-06-12 21:57+0000\n"
-"PO-Revision-Date: 2012-06-13 10:05+0200\n"
+"POT-Creation-Date: 2013-04-09 11:56+0000\n"
+"PO-Revision-Date: 2013-04-09 13:57+0200\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
 
-#: ../src/compiler.py:136
+#: ../src/compiler.py:137
 msgid "Compiling..."
 msgstr "Compilando…"
 
-#: ../src/compiler.py:155 ../src/compiler.py:161 ../src/compiler.py:167
-#: ../src/compiler.py:174 ../src/compiler.py:192 ../src/compiler.py:217
+#: ../src/compiler.py:156 ../src/compiler.py:162 ../src/compiler.py:168
+#: ../src/compiler.py:175 ../src/compiler.py:193 ../src/compiler.py:218
 msgid "Compile Error"
 msgstr "Error al compilar"
 
-#: ../src/compiler.py:247
+#: ../src/compiler.py:248
 msgid "Linking error"
 msgstr "Error al enlazar"
 
-#: ../src/compiler.py:259 ../src/compiler.py:272
+#: ../src/compiler.py:260 ../src/compiler.py:273
 msgid "Object error"
 msgstr "Error en el objeto"
 
-#: ../src/compiler.py:278
+#: ../src/compiler.py:279
 msgid "Done compiling."
 msgstr "Compilación terminada."
 
-#: ../src/compiler.py:282
+#: ../src/compiler.py:283
 #, python-format
 msgid "Binary sketch size: %s bytes (of a %s bytes maximum)\n"
 msgstr "Tamaño del esbozo del binario: %s bytes (de un máximo de %s)\n"
 
-#: ../src/compiler.py:363 ../src/compiler.py:388
+#: ../src/compiler.py:369 ../src/compiler.py:394
 msgid "Library Error"
 msgstr "Error en la biblioteca"
 
@@ -81,7 +82,7 @@ msgstr "Cerrar sin guardar"
 msgid "If you don't save, changes will be permanently lost."
 msgstr "Los cambios se perderán permanentemente si no los guarda."
 
-#: ../src/serialio.py:92
+#: ../src/serialio.py:113
 msgid ""
 "Serial port not configured!\n"
 "Use Tools->Serial Port to configure port."
@@ -89,13 +90,13 @@ msgstr ""
 "Puerto serie no configurado.\n"
 "Use Herramientas->Puerto serie para configurar el puerto."
 
-#: ../src/srcview.py:149 ../src/srcview.py:159
+#: ../src/srcview.py:161 ../src/srcview.py:171
 #, python-format
 msgid "'%s' not found."
 msgstr "«%s» no encontrado."
 
-#: ../src/ui.py:66 ../src/ui.py:86 ../src/ui.py:99 ../src/ui.py:167
-#: ../src/ui.py:182
+#: ../src/ui.py:66 ../src/ui.py:88 ../src/ui.py:106 ../src/ui.py:177
+#: ../src/ui.py:192
 msgid "Untitled"
 msgstr "Sin título"
 
@@ -112,68 +113,72 @@ msgstr ""
 "¿Guardar cambios del documento «%s»\n"
 "antes de cerrar?"
 
-#: ../src/ui.py:176
+#: ../src/ui.py:186
 msgid "Save file"
 msgstr "Guardar archivo"
 
-#: ../src/ui.py:193
+#: ../src/ui.py:203
 msgid "Open file"
 msgstr "Abrir archivo"
 
-#: ../src/ui.py:219
+#: ../src/ui.py:229
 #, python-format
 msgid "<b>A file named %s already exists. Do you want to replace it?</b>"
 msgstr "<b>El archivo %s ya existe. ¿Quiere reemplazarlo?</b>"
 
-#: ../src/ui.py:220
+#: ../src/ui.py:230
 #, python-format
 msgid ""
 "The file already exists in \"%s\". Replacing it will overwrite its contents."
 msgstr ""
 "El archivo ya existe en «%s». Si lo reemplaza sobreescribirá su contenido."
 
-#: ../src/ui.py:525
+#: ../src/ui.py:531
 msgid "Open Recent"
 msgstr "Abrir reciente"
 
-#: ../src/ui.py:560 ../ui/main.ui.h:59
+#: ../src/ui.py:566 ../ui/main.ui.h:59
 msgid "Send"
 msgstr "Enviar"
 
-#: ../src/ui.py:561
+#: ../src/ui.py:567
 msgid "Clear"
 msgstr "Limpiar"
 
-#: ../src/ui.py:599
+#: ../src/ui.py:605
 #, python-format
 msgid "%s baud"
 msgstr "%s baudios"
 
-#: ../src/ui.py:717
+#: ../src/ui.py:755
 msgid "E_xamples"
 msgstr "Eje_mplos"
 
-#: ../src/ui.py:723 ../ui/main.ui.h:55
+#: ../src/ui.py:776
+msgid "Import Library"
+msgstr "Importar biblioteca"
+
+#: ../src/ui.py:782 ../ui/main.ui.h:55
 msgid "Upload"
 msgstr "Subir"
 
-#: ../src/ui.py:730
+#: ../src/ui.py:789
 msgid "Upload using programmer"
 msgstr "Subir usando el programador"
 
-#: ../src/ui.py:769 ../src/ui.py:775 ../src/ui.py:781
+#: ../src/ui.py:828 ../src/ui.py:834 ../src/ui.py:840
 msgid "System error"
 msgstr "Error del sistema"
 
-#: ../src/ui.py:784
+#: ../src/ui.py:843
 msgid "Cannot load ui file"
 msgstr "No se puede cargar el archivo ui"
 
-#: ../src/ui.py:899
+#: ../src/ui.py:958
 msgid "--help    Print the command line options"
 msgstr "--help    Mostrar las opciones de la línea de comandos"
 
-#: ../src/ui.py:900
+#: ../src/ui.py:959
 msgid "--version Output version information and exit"
 msgstr "--version    Mostrar información de la versión y salir"
 
@@ -235,6 +240,10 @@ msgid "gnoduino"
 msgstr "gnoduino"
 
 #: ../ui/main.ui.h:4
+msgid "translator-credits"
+msgstr "Daniel Mustieles <daniel.mustieles@gmail.com>, 2013"
+
+#: ../ui/main.ui.h:5
 msgid ""
 " gnoduino - Python Arduino IDE implementation\n"
 " Copyright (C) 2010-2012  Lucian Langa\n"
@@ -274,51 +283,51 @@ msgstr ""
 "Inc.,\n"
 "# 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, EE. UU.\n"
 
-#: ../ui/main.ui.h:21
+#: ../ui/main.ui.h:22
 msgid "Search for:"
 msgstr "Buscar:"
 
-#: ../ui/main.ui.h:22
+#: ../ui/main.ui.h:23
 msgid "Match entire word only"
 msgstr "Coincidir sólo con la palabra completa"
 
-#: ../ui/main.ui.h:23
+#: ../ui/main.ui.h:24
 msgid "Wrap around"
 msgstr "Ajustar aproximadamente"
 
-#: ../ui/main.ui.h:24
+#: ../ui/main.ui.h:25
 msgid "Match case"
 msgstr "Coincidir con capitalización"
 
-#: ../ui/main.ui.h:25
+#: ../ui/main.ui.h:26
 msgid "Search backwards"
 msgstr "Buscar hacia atrás"
 
-#: ../ui/main.ui.h:26
+#: ../ui/main.ui.h:27
 msgid "Editor font size"
 msgstr "Tamaño de la tipografía del editor"
 
-#: ../ui/main.ui.h:27
+#: ../ui/main.ui.h:28
 msgid "Console font size"
 msgstr "Tamaño de la tipografía de la consola"
 
-#: ../ui/main.ui.h:28
+#: ../ui/main.ui.h:29
 msgid "Verbose build"
 msgstr "Construcción detallada"
 
-#: ../ui/main.ui.h:29
+#: ../ui/main.ui.h:30
 msgid "Verbose upload"
 msgstr "Subida detallada"
 
-#: ../ui/main.ui.h:30
+#: ../ui/main.ui.h:31
 msgid "Show line numbers"
 msgstr "Mostrar números de línea"
 
-#: ../ui/main.ui.h:31
+#: ../ui/main.ui.h:32
 msgid "Sketchdir: "
 msgstr "Carpeta de esbozos: "
 
-#: ../ui/main.ui.h:32
+#: ../ui/main.ui.h:33
 msgid ""
 "Enter any supplementary path that compiler will check for, separate them by "
 "semicolons. (eg /usr/share/gnoduino;/usr/local/share/gnoduino)"
@@ -327,45 +336,41 @@ msgstr ""
 "separadas por punto y coma. (ej /usr/share/gnoduino;/usr/local/share/"
 "gnoduino)"
 
-#: ../ui/main.ui.h:33
+#: ../ui/main.ui.h:34
 msgid "Additional library paths:"
 msgstr "Rutas de bibliotecas adicionales:"
 
-#: ../ui/main.ui.h:34
+#: ../ui/main.ui.h:35
 msgid "_File"
 msgstr "_Archivo"
 
-#: ../ui/main.ui.h:35
+#: ../ui/main.ui.h:36
 msgid "Upload to I/O Board"
 msgstr "Subir al tablero de E/S"
 
-#: ../ui/main.ui.h:36
+#: ../ui/main.ui.h:37
 msgid "Preferences"
 msgstr "Preferencias"
 
-#: ../ui/main.ui.h:37
+#: ../ui/main.ui.h:38
 msgid "_Edit"
 msgstr "_Editar"
 
-#: ../ui/main.ui.h:38
+#: ../ui/main.ui.h:39
 msgid "Find Next"
 msgstr "Buscar siguiente"
 
-#: ../ui/main.ui.h:39
+#: ../ui/main.ui.h:40
 msgid "Sketch"
 msgstr "Esbozo"
 
-#: ../ui/main.ui.h:40
+#: ../ui/main.ui.h:41
 msgid "Verify/Compile"
 msgstr "Verificar/Compilar"
 
-#: ../ui/main.ui.h:41
+#: ../ui/main.ui.h:42
 msgid "Stop"
 msgstr "Parar"
-
-#: ../ui/main.ui.h:42
-msgid "Import Library"
-msgstr "Importar biblioteca"
 
 #: ../ui/main.ui.h:43
 msgid "Add File..."
