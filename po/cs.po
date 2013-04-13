@@ -2,50 +2,51 @@
 # Copyright (C) 2011 gnoduino's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnoduino package.
 #
-# Marek Černocký <marek@manet.cz>, 2011, 2012.
+# Marek Černocký <marek@manet.cz>, 2011, 2012, 2013.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnoduino master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
 "product=gnoduino&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2012-06-12 21:57+0000\n"
-"PO-Revision-Date: 2012-09-01 00:53+0200\n"
+"POT-Creation-Date: 2013-04-09 11:56+0000\n"
+"PO-Revision-Date: 2013-04-13 22:09+0200\n"
 "Last-Translator: Marek Černocký <marek@manet.cz>\n"
 "Language-Team: Czech <gnome-cs-list@gnome.org>\n"
+"Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: cs\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Gtranslator 2.91.6\n"
 
-#: ../src/compiler.py:136
+#: ../src/compiler.py:137
 msgid "Compiling..."
 msgstr "Překládá se…"
 
-#: ../src/compiler.py:155 ../src/compiler.py:161 ../src/compiler.py:167
-#: ../src/compiler.py:174 ../src/compiler.py:192 ../src/compiler.py:217
+#: ../src/compiler.py:156 ../src/compiler.py:162 ../src/compiler.py:168
+#: ../src/compiler.py:175 ../src/compiler.py:193 ../src/compiler.py:218
 msgid "Compile Error"
 msgstr "Chyba překladu"
 
-#: ../src/compiler.py:247
+#: ../src/compiler.py:248
 msgid "Linking error"
 msgstr "Chyba sestavení"
 
-#: ../src/compiler.py:259 ../src/compiler.py:272
+#: ../src/compiler.py:260 ../src/compiler.py:273
 msgid "Object error"
 msgstr "Chyba objektu"
 
-#: ../src/compiler.py:278
+#: ../src/compiler.py:279
 msgid "Done compiling."
 msgstr "Překlad dokončen."
 
-#: ../src/compiler.py:282
+#: ../src/compiler.py:283
 #, python-format
 msgid "Binary sketch size: %s bytes (of a %s bytes maximum)\n"
 msgstr "Velikost binárního programu: %s bajtů (z maximálně možných %s bajtů)\n"
 
-#: ../src/compiler.py:363 ../src/compiler.py:388
+#: ../src/compiler.py:369 ../src/compiler.py:394
 msgid "Library Error"
 msgstr "Chyba knihovny"
 
@@ -81,7 +82,7 @@ msgstr "Zavřít bez uložení"
 msgid "If you don't save, changes will be permanently lost."
 msgstr "Pokud změny neuložíte, budou trvale ztraceny."
 
-#: ../src/serialio.py:92
+#: ../src/serialio.py:113
 msgid ""
 "Serial port not configured!\n"
 "Use Tools->Serial Port to configure port."
@@ -89,13 +90,13 @@ msgstr ""
 "Sériový port není nastaven.\n"
 "K nastavení použijte Nástroje ▸ Sériový port."
 
-#: ../src/srcview.py:149 ../src/srcview.py:159
+#: ../src/srcview.py:161 ../src/srcview.py:171
 #, python-format
 msgid "'%s' not found."
 msgstr "„%s“ nenalezeno."
 
-#: ../src/ui.py:66 ../src/ui.py:86 ../src/ui.py:99 ../src/ui.py:167
-#: ../src/ui.py:182
+#: ../src/ui.py:66 ../src/ui.py:88 ../src/ui.py:106 ../src/ui.py:177
+#: ../src/ui.py:192
 msgid "Untitled"
 msgstr "Nepojmenovaný"
 
@@ -112,67 +113,71 @@ msgstr ""
 "Uložit před zavření změny do\n"
 "dokumentu „%s“?"
 
-#: ../src/ui.py:176
+#: ../src/ui.py:186
 msgid "Save file"
 msgstr "Uložení souboru"
 
-#: ../src/ui.py:193
+#: ../src/ui.py:203
 msgid "Open file"
 msgstr "Otevření souboru"
 
-#: ../src/ui.py:219
+#: ../src/ui.py:229
 #, python-format
 msgid "<b>A file named %s already exists. Do you want to replace it?</b>"
 msgstr "<b>Soubor s názvem %s již existuje? Chcete jej nahradit?</b>"
 
-#: ../src/ui.py:220
+#: ../src/ui.py:230
 #, python-format
 msgid ""
 "The file already exists in \"%s\". Replacing it will overwrite its contents."
 msgstr "Soubor již existuje v „%s“. Při jeho nahrazení přepíšete jeho obsah."
 
-#: ../src/ui.py:525
+#: ../src/ui.py:531
 msgid "Open Recent"
 msgstr "Otevřít nedávné"
 
-#: ../src/ui.py:560 ../ui/main.ui.h:59
+#: ../src/ui.py:566 ../ui/main.ui.h:59
 msgid "Send"
 msgstr "Poslat"
 
-#: ../src/ui.py:561
+#: ../src/ui.py:567
 msgid "Clear"
 msgstr "Smazat"
 
-#: ../src/ui.py:599
+#: ../src/ui.py:605
 #, python-format
 msgid "%s baud"
 msgstr "%s b/s"
 
-#: ../src/ui.py:717
+#: ../src/ui.py:755
 msgid "E_xamples"
 msgstr "Příkla_dy"
 
-#: ../src/ui.py:723 ../ui/main.ui.h:55
+#: ../src/ui.py:776
+msgid "Import Library"
+msgstr "Importovat knihovnu"
+
+#: ../src/ui.py:782 ../ui/main.ui.h:55
 msgid "Upload"
 msgstr "Nahrát"
 
-#: ../src/ui.py:730
+#: ../src/ui.py:789
 msgid "Upload using programmer"
 msgstr "Nahrát pomocí programátoru"
 
-#: ../src/ui.py:769 ../src/ui.py:775 ../src/ui.py:781
+#: ../src/ui.py:828 ../src/ui.py:834 ../src/ui.py:840
 msgid "System error"
 msgstr "Systémová chyba"
 
-#: ../src/ui.py:784
+#: ../src/ui.py:843
 msgid "Cannot load ui file"
 msgstr "Nelze načíst soubor s uživatelským rozhraním"
 
-#: ../src/ui.py:899
+#: ../src/ui.py:958
 msgid "--help    Print the command line options"
 msgstr "--help    Vypsat přepínače příkazového řádku"
 
-#: ../src/ui.py:900
+#: ../src/ui.py:959
 msgid "--version Output version information and exit"
 msgstr "--version Vypsat informace o verzi a skončit"
 
@@ -234,6 +239,10 @@ msgid "gnoduino"
 msgstr "gnoduino"
 
 #: ../ui/main.ui.h:4
+msgid "translator-credits"
+msgstr "Marek Černocký <marek@manet.cz>"
+
+#: ../ui/main.ui.h:5
 msgid ""
 " gnoduino - Python Arduino IDE implementation\n"
 " Copyright (C) 2010-2012  Lucian Langa\n"
@@ -271,51 +280,51 @@ msgstr ""
 "# Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, \n"
 "# MA  02110-1301, USA.\n"
 
-#: ../ui/main.ui.h:21
+#: ../ui/main.ui.h:22
 msgid "Search for:"
 msgstr "Hledat:"
 
-#: ../ui/main.ui.h:22
+#: ../ui/main.ui.h:23
 msgid "Match entire word only"
 msgstr "Shoda pouze celých slov"
 
-#: ../ui/main.ui.h:23
+#: ../ui/main.ui.h:24
 msgid "Wrap around"
 msgstr "Přecházet přes okraj"
 
-#: ../ui/main.ui.h:24
+#: ../ui/main.ui.h:25
 msgid "Match case"
 msgstr "Shoda velikosti písmen"
 
-#: ../ui/main.ui.h:25
+#: ../ui/main.ui.h:26
 msgid "Search backwards"
 msgstr "Hledat od konce k začátku"
 
-#: ../ui/main.ui.h:26
+#: ../ui/main.ui.h:27
 msgid "Editor font size"
 msgstr "Velikost písma editoru"
 
-#: ../ui/main.ui.h:27
+#: ../ui/main.ui.h:28
 msgid "Console font size"
 msgstr "Velikost písma konzoly"
 
-#: ../ui/main.ui.h:28
+#: ../ui/main.ui.h:29
 msgid "Verbose build"
 msgstr "Podrobné informace při sestavení"
 
-#: ../ui/main.ui.h:29
+#: ../ui/main.ui.h:30
 msgid "Verbose upload"
 msgstr "Podrobné informace při nahrávání"
 
-#: ../ui/main.ui.h:30
+#: ../ui/main.ui.h:31
 msgid "Show line numbers"
 msgstr "Zobrazovat čísla řádků"
 
-#: ../ui/main.ui.h:31
+#: ../ui/main.ui.h:32
 msgid "Sketchdir: "
 msgstr "Složka programů:"
 
-#: ../ui/main.ui.h:32
+#: ../ui/main.ui.h:33
 msgid ""
 "Enter any supplementary path that compiler will check for, separate them by "
 "semicolons. (eg /usr/share/gnoduino;/usr/local/share/gnoduino)"
@@ -323,45 +332,41 @@ msgstr ""
 "Zadejte dodatečné cesty, které má překladač kontrolovat. K oddělení použijte "
 "středníky (např. /usr/share/gnoduino;/usr/local/share/gnoduino)."
 
-#: ../ui/main.ui.h:33
+#: ../ui/main.ui.h:34
 msgid "Additional library paths:"
 msgstr "Cesty k dodatečným knihovnám:"
 
-#: ../ui/main.ui.h:34
+#: ../ui/main.ui.h:35
 msgid "_File"
 msgstr "_Soubor"
 
-#: ../ui/main.ui.h:35
+#: ../ui/main.ui.h:36
 msgid "Upload to I/O Board"
 msgstr "Nahrát do V/V desky"
 
-#: ../ui/main.ui.h:36
+#: ../ui/main.ui.h:37
 msgid "Preferences"
 msgstr "Předvolby"
 
-#: ../ui/main.ui.h:37
+#: ../ui/main.ui.h:38
 msgid "_Edit"
 msgstr "_Upravit"
 
-#: ../ui/main.ui.h:38
+#: ../ui/main.ui.h:39
 msgid "Find Next"
 msgstr "Hledat následující"
 
-#: ../ui/main.ui.h:39
+#: ../ui/main.ui.h:40
 msgid "Sketch"
 msgstr "Program"
 
-#: ../ui/main.ui.h:40
+#: ../ui/main.ui.h:41
 msgid "Verify/Compile"
 msgstr "Ověřit/přeložit"
 
-#: ../ui/main.ui.h:41
+#: ../ui/main.ui.h:42
 msgid "Stop"
 msgstr "Zastavit"
-
-#: ../ui/main.ui.h:42
-msgid "Import Library"
-msgstr "Importovat knihovnu"
 
 #: ../ui/main.ui.h:43
 msgid "Add File..."
