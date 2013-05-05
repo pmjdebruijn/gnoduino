@@ -72,7 +72,7 @@ def genPrototype(instr):
 
 def findIncludes(instr, local=False):
 	res = ""
-	m = re.findall(r"^#include\s+[\w+\".<>\-]+", instr, re.M)
+	m = re.findall(r"^\s*#include\s+[\w+\".<>\-]+", instr, re.M)
 	l = [z.split()[1].strip('<>"') for z in m]
 	my = []
 	for z in l:
