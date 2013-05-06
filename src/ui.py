@@ -751,7 +751,7 @@ def populateExamples():
 			q = []
 			if os.path.isdir(os.path.join(p, "examples")):
 				q.append(p)
-		for c in sorted(q): populateExampleLine(c, submenu)
+				for c in sorted(q): populateExampleLine(c, submenu)
 	ex = gtk.MenuItem(_("E_xamples"), use_underline=True)
 	ex.set_submenu(submenu)
 	gui.get_object("filemenu").insert(ex, 2)
