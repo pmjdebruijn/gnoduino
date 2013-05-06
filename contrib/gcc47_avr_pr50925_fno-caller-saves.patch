@@ -1,0 +1,21 @@
+Description: patch to work around an obscure gcc 4.7 bug (pr50925)
+Author: Pascal de Bruijn <pmjdebruijn@pcode.nl>
+diff -Nurpd a/src/compiler.py b/src/compiler.py
+--- a/src/compiler.py	2013-01-04 18:47:02.000000000 +0100
++++ b/src/compiler.py	2013-01-14 21:27:48.206606929 +0100
+@@ -82,6 +82,7 @@ defc = [
+ 	"-Os",
+ 	"-ffunction-sections",
+ 	"-fdata-sections",
++	"-fno-caller-saves",
+ 	]
+ 
+ defcpp = [
+@@ -93,6 +94,7 @@ defcpp = [
+ 	"-fno-exceptions",
+ 	"-ffunction-sections",
+ 	"-fdata-sections",
++	"-fno-caller-saves",
+ 	]
+ 
+ defar = [
