@@ -317,7 +317,7 @@ def printLogMessageLn(message):
 
 def statusMessage(w, text):
 	w.push(1, text)
-	glib.timeout_add(1000, lambda x: w.pop(1), 0)
+	glib.timeout_add(5000, lambda x: w.pop(1), 0)
 
 def bufferModified(w, f):
 	buf = hashlib.sha224(w.get_text(w.get_start_iter(), w.get_end_iter())).hexdigest()
