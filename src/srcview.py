@@ -174,6 +174,120 @@ def findText(widget, event, data=None):
 		b.select_range(s, e)
 		view.scroll_to_iter(s,0)
 
+
+def replaceText(widget, event, data=None):
+	if event == -1 or (event.type == gtk.gdk.KEY_RELEASE and \
+	(gtk.gdk.keyval_name(event.keyval) == 'Return' or \
+	 gtk.gdk.keyval_name(event.keyval) == 'KP_Enter')):
+		page = ui.getCurrentPage()
+		view = page.get_data("view")
+		b = view.get_buffer()
+		mark = b.get_insert()
+		iter = b.get_iter_at_mark(mark)
+		search = widget.get_text()
+		flags = 0
+		if data[0].get_active() == False:
+			flags = gtksourceview2.SEARCH_CASE_INSENSITIVE
+		backwards = False
+		if data[2].get_active() == True:
+			backwards = True
+		warp = False
+		if data[3].get_active() == True:
+			warp = True
+		if config.cur_iter == -1:
+			config.cur_iter = iter
+		sb = ui.getGui().get_object("statusbar1")
+		if warp:
+			try:
+				if backwards:
+					s, e = gtksourceview2.iter_backward_search( \
+						config.cur_iter, search, flags, limit=None)
+					config.cur_iter = s
+				else:
+					s, e = gtksourceview2.iter_forward_search( \
+						config.cur_iter, search, flags, limit=None)
+					config.cur_iter = e
+			except:
+				if backwards:
+					iter = b.get_iter_at_offset(-1)
+					config.cur_iter = iter
+					try:
+						s, e = gtksourceview2.iter_backward_search( \
+							config.cur_iter, search, flags, limit=None)
+						config.cur_iter = s
+					except: return
+				else:
+					iter = b.get_iter_at_offset(0)
+					config.cur_iter = iter
+					try:
+						s, e = gtksourceview2.iter_forward_search( \
+							config.cur_iter, search, flags=0, limit=None)
+						config.cur_iter = e
+					except: return
+		else:
+			if backwards:
+				try:
+					s, e = gtksourceview2.iter_backward_search( \
+						config.cur_iter, search, flags, limit=None)
+					config.cur_iter = s
+				except:
+					s = e = b.get_start_iter()
+					b.select_range(s, e)
+					misc.statusMessage(sb, _("'%s' not found.") % search)
+					return
+			else:
+				try:
+					s, e = gtksourceview2.iter_forward_search( \
+						config.cur_iter, search, flags, limit=None)
+					config.cur_iter = e
+				except:
+					s = e = b.get_end_iter()
+					b.select_range(s, e)
+					misc.statusMessage(sb, _("'%s' not found.") % search)
+					return
+		b.place_cursor(s)
+		b.select_range(s, e)
+		b.delete_selection(False, True)
+		b.insert_at_cursor(data[5].get_text())
+
+def replaceAll(widget, data=None):
+	page = ui.getCurrentPage()
+	view = page.get_data("view")
+	b = view.get_buffer()
+	mark = b.get_insert()
+	iter = b.get_iter_at_mark(mark)
+	search = widget.get_text()
+	flags = 0
+	if data[0].get_active() == False:
+		flags = gtksourceview2.SEARCH_CASE_INSENSITIVE
+	if config.cur_iter == -1:
+		config.cur_iter = iter
+	sb = ui.getGui().get_object("statusbar1")
+	s = b.get_start_iter()
+	b.begin_user_action()
+	b.place_cursor(s)
+	rpls=0
+	while config.cur_iter < b.get_end_iter():
+		try:
+			s, e = gtksourceview2.iter_forward_search( \
+				config.cur_iter, search, flags, limit=None)
+			config.cur_iter = e
+		except:
+			iter = b.get_iter_at_offset(0)
+			config.cur_iter = iter
+			try:
+				s, e = gtksourceview2.iter_forward_search( \
+					config.cur_iter, search, flags=0, limit=None)
+				config.cur_iter = e
+			except:
+				misc.statusMessage(sb, _("A total of %s replacements made.") % rpls)
+				return
+		rpls = rpls + 1
+		b.select_range(s, e)
+		b.delete_selection(False, True)
+		b.insert_at_cursor(data[5].get_text())
+		b.end_user_action()
+
 def createsrcview(status, f=None):
 	sbuffer = gtksourceview2.Buffer()
 	if f:

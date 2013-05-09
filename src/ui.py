@@ -257,6 +257,22 @@ def find(widget, data=None):
 		srcview.findText(find_text, -1, [gui.get_object(i) for i in cbs])
 	find.hide()
 
+def srpl(widget, data=None):
+	sr = gui.get_object("srfind")
+	srfind_text = gui.get_object("srfind-text")
+	srreplace_text = gui.get_object("srreplace-text")
+	srfind_text.select_region(0, -1)
+	cbs = ["srcheckbutton1", "srcheckbutton2","srcheckbutton3", "srcheckbutton4", "srfind-text", "srreplace-text"]
+	srfind_text.connect("key-release-event", srcview.replaceText, [gui.get_object(i) for i in cbs])
+	srreplace_text.connect("key-release-event", srcview.replaceText, [gui.get_object(i) for i in cbs])
+	sr.set_default_response(gtk.RESPONSE_OK)
+	r =  sr.run()
+	if r == 1:
+		srcview.replaceText(srfind_text, -1, [gui.get_object(i) for i in cbs])
+	if r == 2:
+		srcview.replaceAll(srfind_text, [gui.get_object(i) for i in cbs])
+	sr.hide()
+
 def compile(widget, data=file):
 	cserial(None, 0, sctw)
 	page = getCurrentPage()
@@ -464,6 +480,7 @@ menus = [
 		("menu-save-as", csave_as, (ord('s'), gtk.gdk.CONTROL_MASK|gtk.gdk.SHIFT_MASK)),
 		("menu-quit", quit, (ord('q'), gtk.gdk.CONTROL_MASK)),
 		("menu-find", find, (ord('f'), gtk.gdk.CONTROL_MASK)),
+		("menu-replace", srpl, (ord('h'), gtk.gdk.CONTROL_MASK)),
 		("menu-undo", undo, (ord('z'), gtk.gdk.CONTROL_MASK)),
 		("menu-redo", redo, (ord('z'), gtk.gdk.CONTROL_MASK|gtk.gdk.SHIFT_MASK)),
 		("menu-cut", cut, (ord('x'), gtk.gdk.CONTROL_MASK)),
@@ -485,7 +502,6 @@ def menu(gui):
 		accel, i[2][0], i[2][1], 0) for i in menus if i[2][0] != None]
 	mainwin.add_accel_group(accel)
 	gui.get_object("menu-find-next").set_sensitive(False)
-	gui.get_object("menu-replace").set_sensitive(False)
 
 def setupSpinner():
 	if gtk.pygtk_version >= (2,22,00):
