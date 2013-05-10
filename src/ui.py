@@ -685,7 +685,7 @@ def importProcess(widget):
 
 def populateExampleLine(entry, menu):
 	subitem = gtk.Menu()
-	menuItem = gtk.MenuItem(os.path.basename(entry))
+	menuItem = gtk.MenuItem(os.path.basename(os.path.normpath(entry)))
 	ext = False
 	for i in sorted(os.listdir(entry)):
 		if os.path.isdir(os.path.join(entry,i)):
@@ -725,7 +725,7 @@ def populateExampleLine(entry, menu):
 
 def populateImportLine(entry, menu):
 	subitem = gtk.Menu()
-	menuItem = gtk.MenuItem(os.path.basename(entry))
+	menuItem = gtk.MenuItem(os.path.basename(os.path.normpath(entry)))
 	for i in sorted(os.listdir(entry)):
 		if os.path.isdir(os.path.join(entry,i)):
 			f = os.path.join(entry, i, i + ".h")
@@ -788,7 +788,7 @@ def populateImport():
 			q = []
 			if os.path.isdir(os.path.join(p, "examples")):
 				q.append(p)
-		for c in sorted(q): populateImportLine(c, submenu)
+				for c in sorted(q): populateImportLine(c, submenu)
 	ex = gtk.MenuItem(_("Import Library"), use_underline=True)
 	ex.set_submenu(submenu)
 	gui.get_object("sketchmenu").insert(ex, 2)
