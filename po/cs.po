@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: gnoduino master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
 "product=gnoduino&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-04-09 11:56+0000\n"
-"PO-Revision-Date: 2013-04-13 22:09+0200\n"
+"POT-Creation-Date: 2013-05-09 23:24+0000\n"
+"PO-Revision-Date: 2013-05-12 17:57+0200\n"
 "Last-Translator: Marek Černocký <marek@manet.cz>\n"
 "Language-Team: Czech <gnome-cs-list@gnome.org>\n"
 "Language: cs\n"
@@ -90,10 +90,16 @@ msgstr ""
 "Sériový port není nastaven.\n"
 "K nastavení použijte Nástroje ▸ Sériový port."
 
-#: ../src/srcview.py:161 ../src/srcview.py:171
+#: ../src/srcview.py:161 ../src/srcview.py:171 ../src/srcview.py:236
+#: ../src/srcview.py:246
 #, python-format
 msgid "'%s' not found."
 msgstr "„%s“ nenalezeno."
+
+#: ../src/srcview.py:283
+#, python-format
+msgid "A total of %s replacements made."
+msgstr "Celkem provedeno %s náhrad."
 
 #: ../src/ui.py:66 ../src/ui.py:88 ../src/ui.py:106 ../src/ui.py:177
 #: ../src/ui.py:192
@@ -132,52 +138,52 @@ msgid ""
 "The file already exists in \"%s\". Replacing it will overwrite its contents."
 msgstr "Soubor již existuje v „%s“. Při jeho nahrazení přepíšete jeho obsah."
 
-#: ../src/ui.py:531
+#: ../src/ui.py:547
 msgid "Open Recent"
 msgstr "Otevřít nedávné"
 
-#: ../src/ui.py:566 ../ui/main.ui.h:59
+#: ../src/ui.py:582 ../ui/main.ui.h:61
 msgid "Send"
 msgstr "Poslat"
 
-#: ../src/ui.py:567
+#: ../src/ui.py:583
 msgid "Clear"
 msgstr "Smazat"
 
-#: ../src/ui.py:605
+#: ../src/ui.py:621
 #, python-format
 msgid "%s baud"
 msgstr "%s b/s"
 
-#: ../src/ui.py:755
+#: ../src/ui.py:771
 msgid "E_xamples"
 msgstr "Příkla_dy"
 
-#: ../src/ui.py:776
+#: ../src/ui.py:792
 msgid "Import Library"
 msgstr "Importovat knihovnu"
 
-#: ../src/ui.py:782 ../ui/main.ui.h:55
+#: ../src/ui.py:798 ../ui/main.ui.h:57
 msgid "Upload"
 msgstr "Nahrát"
 
-#: ../src/ui.py:789
+#: ../src/ui.py:805
 msgid "Upload using programmer"
 msgstr "Nahrát pomocí programátoru"
 
-#: ../src/ui.py:828 ../src/ui.py:834 ../src/ui.py:840
+#: ../src/ui.py:844 ../src/ui.py:850 ../src/ui.py:856
 msgid "System error"
 msgstr "Systémová chyba"
 
-#: ../src/ui.py:843
+#: ../src/ui.py:859
 msgid "Cannot load ui file"
 msgstr "Nelze načíst soubor s uživatelským rozhraním"
 
-#: ../src/ui.py:958
+#: ../src/ui.py:974
 msgid "--help    Print the command line options"
 msgstr "--help    Vypsat přepínače příkazového řádku"
 
-#: ../src/ui.py:959
+#: ../src/ui.py:975
 msgid "--version Output version information and exit"
 msgstr "--version Vypsat informace o verzi a skončit"
 
@@ -239,10 +245,6 @@ msgid "gnoduino"
 msgstr "gnoduino"
 
 #: ../ui/main.ui.h:4
-msgid "translator-credits"
-msgstr "Marek Černocký <marek@manet.cz>"
-
-#: ../ui/main.ui.h:5
 msgid ""
 " gnoduino - Python Arduino IDE implementation\n"
 " Copyright (C) 2010-2012  Lucian Langa\n"
@@ -279,6 +281,10 @@ msgstr ""
 "# programem. Pokud se tak nestalo, můžete poslat žádost na Free\n"
 "# Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, \n"
 "# MA  02110-1301, USA.\n"
+
+#: ../ui/main.ui.h:21
+msgid "translator-credits"
+msgstr "Marek Černocký <marek@manet.cz>"
 
 #: ../ui/main.ui.h:22
 msgid "Search for:"
@@ -337,93 +343,101 @@ msgid "Additional library paths:"
 msgstr "Cesty k dodatečným knihovnám:"
 
 #: ../ui/main.ui.h:35
+msgid "Replace All"
+msgstr "Nahradit vše"
+
+#: ../ui/main.ui.h:36
+msgid "Replace with:"
+msgstr "Nahradit za:"
+
+#: ../ui/main.ui.h:37
 msgid "_File"
 msgstr "_Soubor"
 
-#: ../ui/main.ui.h:36
+#: ../ui/main.ui.h:38
 msgid "Upload to I/O Board"
 msgstr "Nahrát do V/V desky"
 
-#: ../ui/main.ui.h:37
+#: ../ui/main.ui.h:39
 msgid "Preferences"
 msgstr "Předvolby"
 
-#: ../ui/main.ui.h:38
+#: ../ui/main.ui.h:40
 msgid "_Edit"
 msgstr "_Upravit"
 
-#: ../ui/main.ui.h:39
+#: ../ui/main.ui.h:41
 msgid "Find Next"
 msgstr "Hledat následující"
 
-#: ../ui/main.ui.h:40
+#: ../ui/main.ui.h:42
 msgid "Sketch"
 msgstr "Program"
 
-#: ../ui/main.ui.h:41
+#: ../ui/main.ui.h:43
 msgid "Verify/Compile"
 msgstr "Ověřit/přeložit"
 
-#: ../ui/main.ui.h:42
+#: ../ui/main.ui.h:44
 msgid "Stop"
 msgstr "Zastavit"
 
-#: ../ui/main.ui.h:43
+#: ../ui/main.ui.h:45
 msgid "Add File..."
 msgstr "Přidat soubor…"
 
-#: ../ui/main.ui.h:44
+#: ../ui/main.ui.h:46
 msgid "Tools"
 msgstr "Nástroje"
 
-#: ../ui/main.ui.h:45
+#: ../ui/main.ui.h:47
 msgid "Auto Format"
 msgstr "Automaticky formátovat"
 
-#: ../ui/main.ui.h:46
+#: ../ui/main.ui.h:48
 msgid "Serial Monitor"
 msgstr "Sledování sériového portu"
 
-#: ../ui/main.ui.h:47
+#: ../ui/main.ui.h:49
 msgid "Reset Board"
 msgstr "Resetovat desku"
 
-#: ../ui/main.ui.h:48
+#: ../ui/main.ui.h:50
 msgid "Board"
 msgstr "Deska"
 
-#: ../ui/main.ui.h:49
+#: ../ui/main.ui.h:51
 msgid "Serial Port"
 msgstr "Sériový port"
 
-#: ../ui/main.ui.h:50
+#: ../ui/main.ui.h:52
 msgid "Programmer"
 msgstr "Programátor"
 
-#: ../ui/main.ui.h:51
+#: ../ui/main.ui.h:53
 msgid "Burn Bootloader"
 msgstr "Vypálit zavaděč"
 
-#: ../ui/main.ui.h:52
+#: ../ui/main.ui.h:54
 msgid "_Help"
 msgstr "_Nápověda"
 
-#: ../ui/main.ui.h:53
+#: ../ui/main.ui.h:55
 msgid "Reference"
 msgstr "Referenční příručka"
 
-#: ../ui/main.ui.h:54
+#: ../ui/main.ui.h:56
 msgid "Compile"
 msgstr "Přeložit"
 
-#: ../ui/main.ui.h:56
+#: ../ui/main.ui.h:58
 msgid "New"
 msgstr "Nový"
 
-#: ../ui/main.ui.h:57
+#: ../ui/main.ui.h:59
 msgid "Open"
 msgstr "Otevřít"
 
-#: ../ui/main.ui.h:58
+#: ../ui/main.ui.h:60
 msgid "Save"
 msgstr "Uložit"
