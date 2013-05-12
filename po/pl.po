@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnoduino\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-01-02 02:32+0100\n"
-"PO-Revision-Date: 2013-01-02 02:33+0100\n"
+"POT-Creation-Date: 2013-05-12 23:14+0200\n"
+"PO-Revision-Date: 2013-05-12 23:15+0200\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <gnomepl@aviary.pl>\n"
 "Language: pl\n"
@@ -96,13 +96,19 @@ msgstr ""
 "Port szeregowy nie jest skonfigurowany.\n"
 "Należy użyć Narzędzia->Port szeregowy, aby go skonfigurować."
 
-#: ../src/srcview.py:161 ../src/srcview.py:171
+#: ../src/srcview.py:161 ../src/srcview.py:171 ../src/srcview.py:236
+#: ../src/srcview.py:246
 #, python-format
 msgid "'%s' not found."
 msgstr "Nie odnaleziono \"%s\"."
 
-#: ../src/ui.py:66 ../src/ui.py:86 ../src/ui.py:99 ../src/ui.py:167
-#: ../src/ui.py:182
+#: ../src/srcview.py:283
+#, python-format
+msgid "A total of %s replacements made."
+msgstr "Wprowadzono razem %s zastąpień."
+
+#: ../src/ui.py:66 ../src/ui.py:88 ../src/ui.py:106 ../src/ui.py:177
+#: ../src/ui.py:192
 msgid "Untitled"
 msgstr "Bez tytułu"
 
@@ -119,71 +125,71 @@ msgstr ""
 "Zapisać zmiany w dokumencie \"%s\"\n"
 " przed zamknięciem?"
 
-#: ../src/ui.py:176
+#: ../src/ui.py:186
 msgid "Save file"
 msgstr "Zapisz plik"
 
-#: ../src/ui.py:193
+#: ../src/ui.py:203
 msgid "Open file"
 msgstr "Otwórz plik"
 
-#: ../src/ui.py:219
+#: ../src/ui.py:229
 #, python-format
 msgid "<b>A file named %s already exists. Do you want to replace it?</b>"
 msgstr "<b>Plik o nazwie %s już istnieje. Zastąpić go?</b>"
 
-#: ../src/ui.py:220
+#: ../src/ui.py:230
 #, python-format
 msgid ""
 "The file already exists in \"%s\". Replacing it will overwrite its contents."
 msgstr "Plik już istnieje w \"%s\". Zastąpienie go nadpisze jego zawartość."
 
-#: ../src/ui.py:521
+#: ../src/ui.py:547
 msgid "Open Recent"
 msgstr "Otwórz ostatnie"
 
-#: ../src/ui.py:556 ../ui/main.ui.h:59
+#: ../src/ui.py:582 ../ui/main.ui.h:61
 msgid "Send"
 msgstr "Wyślij"
 
-#: ../src/ui.py:557
+#: ../src/ui.py:583
 msgid "Clear"
 msgstr "Wyczyść"
 
-#: ../src/ui.py:595
+#: ../src/ui.py:621
 #, python-format
 msgid "%s baud"
 msgstr "%s baudów"
 
-#: ../src/ui.py:745
+#: ../src/ui.py:771
 msgid "E_xamples"
 msgstr "_Przykłady"
 
-#: ../src/ui.py:766
+#: ../src/ui.py:792
 msgid "Import Library"
 msgstr "Zaimportuj bibliotekę"
 
-#: ../src/ui.py:772 ../ui/main.ui.h:55
+#: ../src/ui.py:798 ../ui/main.ui.h:57
 msgid "Upload"
 msgstr "Wyślij"
 
-#: ../src/ui.py:779
+#: ../src/ui.py:805
 msgid "Upload using programmer"
 msgstr "Wysyła używając programatora"
 
-#: ../src/ui.py:818 ../src/ui.py:824 ../src/ui.py:830
+#: ../src/ui.py:844 ../src/ui.py:850 ../src/ui.py:856
 msgid "System error"
 msgstr "Błąd systemu"
 
-#: ../src/ui.py:833
+#: ../src/ui.py:859
 msgid "Cannot load ui file"
 msgstr "Nie można wczytać pliku interfejsu użytkownika"
 
-#: ../src/ui.py:949
+#: ../src/ui.py:974
 msgid "--help    Print the command line options"
 msgstr "--help    Wyświetla opcje wiersza poleceń"
 
-#: ../src/ui.py:950
+#: ../src/ui.py:975
 msgid "--version Output version information and exit"
 msgstr "--version Wyświetla informacje o wersji i kończy działanie"
 
@@ -245,12 +251,6 @@ msgid "gnoduino"
 msgstr "gnoduino"
 
 #: ../ui/main.ui.h:4
-msgid "translator-credits"
-msgstr ""
-"Piotr Drąg <piotrdrag@gmail.com>, 2012-2013\n"
-"Aviary.pl <gnomepl@aviary.pl>, 2012-2013"
-
-#: ../ui/main.ui.h:5
 msgid ""
 " gnoduino - Python Arduino IDE implementation\n"
 " Copyright (C) 2010-2012  Lucian Langa\n"
@@ -290,6 +290,12 @@ msgstr ""
 "Powszechnej Licencji Publicznej GNU (GNU General Public License); jeśli\n"
 "nie - proszę napisać do Free Software Foundation, Inc., 51 Franklin\n"
 "Street, Fifth Floor, Boston, MA 02110-130159 USA.\n"
+
+#: ../ui/main.ui.h:21
+msgid "translator-credits"
+msgstr ""
+"Piotr Drąg <piotrdrag@gmail.com>, 2012-2013\n"
+"Aviary.pl <gnomepl@aviary.pl>, 2012-2013"
 
 #: ../ui/main.ui.h:22
 msgid "Search for:"
@@ -349,93 +355,101 @@ msgid "Additional library paths:"
 msgstr "Dodatkowe ścieżki do bibliotek:"
 
 #: ../ui/main.ui.h:35
+msgid "Replace All"
+msgstr "Zmień wszystkie"
+
+#: ../ui/main.ui.h:36
+msgid "Replace with:"
+msgstr "Zmiana na:"
+
+#: ../ui/main.ui.h:37
 msgid "_File"
 msgstr "_Plik"
 
-#: ../ui/main.ui.h:36
+#: ../ui/main.ui.h:38
 msgid "Upload to I/O Board"
 msgstr "Wyślij do płyty wejścia/wyjścia"
 
-#: ../ui/main.ui.h:37
+#: ../ui/main.ui.h:39
 msgid "Preferences"
 msgstr "Preferencje"
 
-#: ../ui/main.ui.h:38
+#: ../ui/main.ui.h:40
 msgid "_Edit"
 msgstr "_Edycja"
 
-#: ../ui/main.ui.h:39
+#: ../ui/main.ui.h:41
 msgid "Find Next"
 msgstr "Znajdź następne"
 
-#: ../ui/main.ui.h:40
+#: ../ui/main.ui.h:42
 msgid "Sketch"
 msgstr "Szkic"
 
-#: ../ui/main.ui.h:41
+#: ../ui/main.ui.h:43
 msgid "Verify/Compile"
 msgstr "Sprawdź/skompiluj"
 
-#: ../ui/main.ui.h:42
+#: ../ui/main.ui.h:44
 msgid "Stop"
 msgstr "Zatrzymaj"
 
-#: ../ui/main.ui.h:43
+#: ../ui/main.ui.h:45
 msgid "Add File..."
 msgstr "Dodaj plik..."
 
-#: ../ui/main.ui.h:44
+#: ../ui/main.ui.h:46
 msgid "Tools"
 msgstr "Narzędzia"
 
-#: ../ui/main.ui.h:45
+#: ../ui/main.ui.h:47
 msgid "Auto Format"
 msgstr "Automatyczne formatowanie"
 
-#: ../ui/main.ui.h:46
+#: ../ui/main.ui.h:48
 msgid "Serial Monitor"
 msgstr "Monitor szeregowy"
 
-#: ../ui/main.ui.h:47
+#: ../ui/main.ui.h:49
 msgid "Reset Board"
 msgstr "Resetuj płytę"
 
-#: ../ui/main.ui.h:48
+#: ../ui/main.ui.h:50
 msgid "Board"
 msgstr "Płyta"
 
-#: ../ui/main.ui.h:49
+#: ../ui/main.ui.h:51
 msgid "Serial Port"
 msgstr "Port szeregowy"
 
-#: ../ui/main.ui.h:50
+#: ../ui/main.ui.h:52
 msgid "Programmer"
 msgstr "Programator"
 
-#: ../ui/main.ui.h:51
+#: ../ui/main.ui.h:53
 msgid "Burn Bootloader"
 msgstr "Nagraj program startowy"
 
-#: ../ui/main.ui.h:52
+#: ../ui/main.ui.h:54
 msgid "_Help"
 msgstr "Pomo_c"
 
-#: ../ui/main.ui.h:53
+#: ../ui/main.ui.h:55
 msgid "Reference"
 msgstr "Odniesienie"
 
-#: ../ui/main.ui.h:54
+#: ../ui/main.ui.h:56
 msgid "Compile"
 msgstr "Skompiluj"
 
-#: ../ui/main.ui.h:56
+#: ../ui/main.ui.h:58
 msgid "New"
 msgstr "Nowy"
 
-#: ../ui/main.ui.h:57
+#: ../ui/main.ui.h:59
 msgid "Open"
 msgstr "Otwórz"
 
-#: ../ui/main.ui.h:58
+#: ../ui/main.ui.h:60
 msgid "Save"
 msgstr "Zapisz"
