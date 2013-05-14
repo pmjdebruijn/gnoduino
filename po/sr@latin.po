@@ -7,8 +7,8 @@ msgstr ""
 "Project-Id-Version: gnoduino master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnodui"
 "no&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-01-03 22:46+0000\n"
-"PO-Revision-Date: 2013-01-07 10:54+0200\n"
+"POT-Creation-Date: 2013-05-09 23:24+0000\n"
+"PO-Revision-Date: 2013-05-14 11:57+0200\n"
 "Last-Translator: Miroslav Nikolić <miroslavnikolic@rocketmail.com>\n"
 "Language-Team: Serbian <gnom@prevod.org>\n"
 "Language: sr\n"
@@ -66,7 +66,8 @@ msgstr "Ne mogu da učitam „%s“ datoteku. Izlazim."
 #: ../src/misc.py:151
 #, python-format
 msgid "Error reading %s file. File is corrupt. Installation problem.\n"
-msgstr "Greška čitanja „%s“ datoteke. Datoteka je oštećena. Problem instalacije.\n"
+msgstr ""
+"Greška čitanja „%s“ datoteke. Datoteka je oštećena. Problem instalacije.\n"
 
 #: ../src/misc.py:275
 msgid "Error compiling."
@@ -88,10 +89,16 @@ msgstr ""
 "Serijski priključnik nije podešen!\n"
 "Koristite izbornik „Alati—>Serijski priključnik“ da ga podesite."
 
-#: ../src/srcview.py:161 ../src/srcview.py:171
+#: ../src/srcview.py:161 ../src/srcview.py:171 ../src/srcview.py:236
+#: ../src/srcview.py:246
 #, python-format
 msgid "'%s' not found."
 msgstr "Nisam pronašao „%s“."
+
+#: ../src/srcview.py:283
+#, python-format
+msgid "A total of %s replacements made."
+msgstr "Urađeno je ukupno %s zamene."
 
 #: ../src/ui.py:66 ../src/ui.py:88 ../src/ui.py:106 ../src/ui.py:177
 #: ../src/ui.py:192
@@ -132,52 +139,52 @@ msgid ""
 msgstr ""
 "Datoteka već postoji u „%s“. Ukoliko je zamenite prepisaćete njen sadržaj."
 
-#: ../src/ui.py:531
+#: ../src/ui.py:547
 msgid "Open Recent"
 msgstr "Otvori skorašnje"
 
-#: ../src/ui.py:566 ../ui/main.ui.h:59
+#: ../src/ui.py:582 ../ui/main.ui.h:61
 msgid "Send"
 msgstr "Pošalji"
 
-#: ../src/ui.py:567
+#: ../src/ui.py:583
 msgid "Clear"
 msgstr "Očisti"
 
-#: ../src/ui.py:605
+#: ../src/ui.py:621
 #, python-format
 msgid "%s baud"
 msgstr "%s boda"
 
-#: ../src/ui.py:755
+#: ../src/ui.py:771
 msgid "E_xamples"
 msgstr "_Primeri"
 
-#: ../src/ui.py:776
+#: ../src/ui.py:792
 msgid "Import Library"
 msgstr "Uvezi biblioteku"
 
-#: ../src/ui.py:782 ../ui/main.ui.h:55
+#: ../src/ui.py:798 ../ui/main.ui.h:57
 msgid "Upload"
 msgstr "Otpremi"
 
-#: ../src/ui.py:789
+#: ../src/ui.py:805
 msgid "Upload using programmer"
 msgstr "Otpremi upotrebom programera"
 
-#: ../src/ui.py:828 ../src/ui.py:834 ../src/ui.py:840
+#: ../src/ui.py:844 ../src/ui.py:850 ../src/ui.py:856
 msgid "System error"
 msgstr "Sistemska greška"
 
-#: ../src/ui.py:843
+#: ../src/ui.py:859
 msgid "Cannot load ui file"
 msgstr "Ne mogu da učitam datoteku korisničkog sučelja"
 
-#: ../src/ui.py:958
+#: ../src/ui.py:974
 msgid "--help    Print the command line options"
 msgstr "--help     Ispisuje opcije linije naredbi"
 
-#: ../src/ui.py:959
+#: ../src/ui.py:975
 msgid "--version Output version information and exit"
 msgstr "--version  Ispisuje podatke o izdanju i izlazi"
 
@@ -188,7 +195,7 @@ msgstr "Zapisujem pokretač sistema..."
 #: ../src/uploader.py:67 ../src/uploader.py:101 ../src/uploader.py:149
 #: ../src/uploader.py:162
 msgid "Flashing error."
-msgstr "Greška u nadogradnji BIOS-a (flashing error)."
+msgstr "Greška u nadogradnji BIOS-a."
 
 #: ../src/uploader.py:92 ../src/uploader.py:123
 msgid "Burn Error"
@@ -239,13 +246,6 @@ msgid "gnoduino"
 msgstr "gnoduino"
 
 #: ../ui/main.ui.h:4
-msgid "translator-credits"
-msgstr ""
-"  Miroslav Nikolić\n"
-"\n"
-"  http://prevod.org — prevod na srpski jezik"
-
-#: ../ui/main.ui.h:5
 msgid ""
 " gnoduino - Python Arduino IDE implementation\n"
 " Copyright (C) 2010-2012  Lucian Langa\n"
@@ -283,6 +283,13 @@ msgstr ""
 "softva na adresu: Free Software Foundation, Inc.,\n"
 "51 Franklin Street, Fifth Floor, Boston, MA 02110-1301,\n"
 "USA.\n"
+
+#: ../ui/main.ui.h:21
+msgid "translator-credits"
+msgstr ""
+"  Miroslav Nikolić\n"
+"\n"
+"  http://prevod.org — prevod na srpski jezik"
 
 #: ../ui/main.ui.h:22
 msgid "Search for:"
@@ -341,93 +348,101 @@ msgid "Additional library paths:"
 msgstr "Putanje dodatne biblioteke:"
 
 #: ../ui/main.ui.h:35
+msgid "Replace All"
+msgstr "Zameni sve"
+
+#: ../ui/main.ui.h:36
+msgid "Replace with:"
+msgstr "Zameni sa:"
+
+#: ../ui/main.ui.h:37
 msgid "_File"
 msgstr "_Datoteka"
 
-#: ../ui/main.ui.h:36
+#: ../ui/main.ui.h:38
 msgid "Upload to I/O Board"
 msgstr "Otpremi na U/I tablu"
 
-#: ../ui/main.ui.h:37
+#: ../ui/main.ui.h:39
 msgid "Preferences"
 msgstr "Postavke"
 
-#: ../ui/main.ui.h:38
+#: ../ui/main.ui.h:40
 msgid "_Edit"
 msgstr "_Uređivanje"
 
-#: ../ui/main.ui.h:39
+#: ../ui/main.ui.h:41
 msgid "Find Next"
 msgstr "Nađi sledeće"
 
-#: ../ui/main.ui.h:40
+#: ../ui/main.ui.h:42
 msgid "Sketch"
 msgstr "Skica"
 
-#: ../ui/main.ui.h:41
+#: ../ui/main.ui.h:43
 msgid "Verify/Compile"
 msgstr "Proveri/prevedi"
 
-#: ../ui/main.ui.h:42
+#: ../ui/main.ui.h:44
 msgid "Stop"
 msgstr "Zaustavi"
 
-#: ../ui/main.ui.h:43
+#: ../ui/main.ui.h:45
 msgid "Add File..."
 msgstr "Dodaj datoteku..."
 
-#: ../ui/main.ui.h:44
+#: ../ui/main.ui.h:46
 msgid "Tools"
 msgstr "Alati"
 
-#: ../ui/main.ui.h:45
+#: ../ui/main.ui.h:47
 msgid "Auto Format"
 msgstr "Sam oblikuj"
 
-#: ../ui/main.ui.h:46
+#: ../ui/main.ui.h:48
 msgid "Serial Monitor"
 msgstr "Serijski monitor"
 
-#: ../ui/main.ui.h:47
+#: ../ui/main.ui.h:49
 msgid "Reset Board"
 msgstr "Ponovo postavi tablu"
 
-#: ../ui/main.ui.h:48
+#: ../ui/main.ui.h:50
 msgid "Board"
 msgstr "Tabla"
 
-#: ../ui/main.ui.h:49
+#: ../ui/main.ui.h:51
 msgid "Serial Port"
 msgstr "Serijski priključnik"
 
-#: ../ui/main.ui.h:50
+#: ../ui/main.ui.h:52
 msgid "Programmer"
 msgstr "Programer"
 
-#: ../ui/main.ui.h:51
+#: ../ui/main.ui.h:53
 msgid "Burn Bootloader"
 msgstr "Zapiši pokretač sistema"
 
-#: ../ui/main.ui.h:52
+#: ../ui/main.ui.h:54
 msgid "_Help"
 msgstr "Po_moć"
 
-#: ../ui/main.ui.h:53
+#: ../ui/main.ui.h:55
 msgid "Reference"
 msgstr "Upute"
 
-#: ../ui/main.ui.h:54
+#: ../ui/main.ui.h:56
 msgid "Compile"
 msgstr "Prevedi"
 
-#: ../ui/main.ui.h:56
+#: ../ui/main.ui.h:58
 msgid "New"
 msgstr "Novo"
 
-#: ../ui/main.ui.h:57
+#: ../ui/main.ui.h:59
 msgid "Open"
 msgstr "Otvori"
 
-#: ../ui/main.ui.h:58
+#: ../ui/main.ui.h:60
 msgid "Save"
 msgstr "Sačuvaj"
