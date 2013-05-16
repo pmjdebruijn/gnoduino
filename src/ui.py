@@ -16,10 +16,12 @@
 # Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 
 import os
+import hashlib
 import sys
 import glib
 import gobject
 import gtk
+import re
 import subprocess
 import select
 import shutil
@@ -625,6 +627,56 @@ def createBaudCombo(w, port):
 		gui.set_data("baudWidget", b)
 		hb.show_all()
 
+def getSerialPorts():
+	ports = ser.scan()
+	if config.serial_ports_d != hashlib.sha224(','.join(sorted(ports))).hexdigest():
+		if config.serial_ports != -1:
+			try:
+				newp =  list(set(ports) - set(config.serial_ports))[0]
+				misc.statusMessage(sb, _("New device found on '%s'.") % newp)
+			except: pass
+		populateSerialPortMenu()
+		config.serial_ports = ports
+		config.serial_ports_d = hashlib.sha224(','.join(sorted(ports))).hexdigest()
+	return True
+
+def populateSerialPortMenu():
+	sub = gtk.Menu()
+	maingroup = gtk.RadioMenuItem(None, None)
+	defport = p.getValue("serial.port")
+	validport = False
+	activePort = False
+	"""validate serial ports - this should really be moved to serialio"""
+	ports = ser.scan()
+	for i in ports:
+		if i == defport:
+			validport = True
+
+	for i in ports:
+		menuItem = gtk.RadioMenuItem(maingroup, i)
+		if defport and validport:
+			if i == defport:
+				menuItem.set_active(True)
+				if config.cur_serial_port == -1:
+					config.cur_serial_port = i
+				setSerial(None, i)
+		else:
+			if config.cur_serial_port == -1:
+				config.cur_serial_port = i
+			try:
+				s = ser.tryPort(i)
+				s.close()
+			except: continue
+			menuItem.set_active(True)
+			setSerial(None, i)
+		menuItem.connect('activate', setSerial, i)
+		sub.append(menuItem)
+		activePort = True
+
+	gui.get_object("serial_port").set_submenu(sub)
+	gui.get_object("serial_port").set_sensitive(activePort)
+	mainwin.show_all()
+
 def selectBoard(w, id):
 	b.setBoard(id)
 
@@ -894,42 +946,11 @@ def run():
 		misc.setConsoleTags(tw)
 
 		"""setup default serial port"""
-		sub = gtk.Menu()
-		maingroup = gtk.RadioMenuItem(None, None)
-		defport = p.getValue("serial.port")
-		validport = False
-		activePort = False
-		"""validate serial ports - this should really be moved to serialio"""
-		for i in ser.scan():
-			if i == defport:
-				validport = True
-
-		for i in ser.scan():
-			menuItem = gtk.RadioMenuItem(maingroup, i)
-			if defport and validport:
-				if i == defport:
-					menuItem.set_active(True)
-					if config.cur_serial_port == -1:
-						config.cur_serial_port = i
-					setSerial(None, i)
-			else:
-				if config.cur_serial_port == -1:
-					config.cur_serial_port = i
-				try:
-					s = ser.tryPort(i)
-					s.close()
-				except: continue
-				menuItem.set_active(True)
-				setSerial(None, i)
-			menuItem.connect('activate', setSerial, i)
-			sub.append(menuItem)
-			activePort = True
-
+		getSerialPorts()
+		populateSerialPortMenu()
+		sertime = glib.timeout_add(1000, getSerialPorts)
 		if config.serial_baud_rate == -1:
 			config.serial_baud_rate = p.getSafeValue("serial.debug_rate", p.getDefaultValue("serial.debug_rate"))
-
-		gui.get_object("serial_port").set_submenu(sub)
-		gui.get_object("serial_port").set_sensitive(activePort)
 		createRecentMenu()
 		populateExamples()
 		populateImport()
