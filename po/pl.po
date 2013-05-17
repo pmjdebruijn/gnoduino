@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnoduino\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-05-12 23:14+0200\n"
-"PO-Revision-Date: 2013-05-12 23:15+0200\n"
+"POT-Creation-Date: 2013-05-17 19:30+0200\n"
+"PO-Revision-Date: 2013-05-17 19:31+0200\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <gnomepl@aviary.pl>\n"
 "Language: pl\n"
@@ -107,16 +107,16 @@ msgstr "Nie odnaleziono \"%s\"."
 msgid "A total of %s replacements made."
 msgstr "Wprowadzono razem %s zastąpień."
 
-#: ../src/ui.py:66 ../src/ui.py:88 ../src/ui.py:106 ../src/ui.py:177
-#: ../src/ui.py:192
+#: ../src/ui.py:68 ../src/ui.py:90 ../src/ui.py:108 ../src/ui.py:179
+#: ../src/ui.py:194
 msgid "Untitled"
 msgstr "Bez tytułu"
 
-#: ../src/ui.py:67
+#: ../src/ui.py:69
 msgid "Save document"
 msgstr "Zapisz dokument"
 
-#: ../src/ui.py:68
+#: ../src/ui.py:70
 #, python-format
 msgid ""
 "Save changes to document \"%s\"\n"
@@ -125,71 +125,76 @@ msgstr ""
 "Zapisać zmiany w dokumencie \"%s\"\n"
 " przed zamknięciem?"
 
-#: ../src/ui.py:186
+#: ../src/ui.py:188
 msgid "Save file"
 msgstr "Zapisz plik"
 
-#: ../src/ui.py:203
+#: ../src/ui.py:205
 msgid "Open file"
 msgstr "Otwórz plik"
 
-#: ../src/ui.py:229
+#: ../src/ui.py:231
 #, python-format
 msgid "<b>A file named %s already exists. Do you want to replace it?</b>"
 msgstr "<b>Plik o nazwie %s już istnieje. Zastąpić go?</b>"
 
-#: ../src/ui.py:230
+#: ../src/ui.py:232
 #, python-format
 msgid ""
 "The file already exists in \"%s\". Replacing it will overwrite its contents."
 msgstr "Plik już istnieje w \"%s\". Zastąpienie go nadpisze jego zawartość."
 
-#: ../src/ui.py:547
+#: ../src/ui.py:549
 msgid "Open Recent"
 msgstr "Otwórz ostatnie"
 
-#: ../src/ui.py:582 ../ui/main.ui.h:61
+#: ../src/ui.py:584 ../ui/main.ui.h:61
 msgid "Send"
 msgstr "Wyślij"
 
-#: ../src/ui.py:583
+#: ../src/ui.py:585
 msgid "Clear"
 msgstr "Wyczyść"
 
-#: ../src/ui.py:621
+#: ../src/ui.py:623
 #, python-format
 msgid "%s baud"
 msgstr "%s baudów"
 
-#: ../src/ui.py:771
+#: ../src/ui.py:636
+#, python-format
+msgid "New device found on '%s'."
+msgstr "Odnaleziono nowe urządzenie w \"%s\"."
+
+#: ../src/ui.py:823
 msgid "E_xamples"
 msgstr "_Przykłady"
 
-#: ../src/ui.py:792
+#: ../src/ui.py:844
 msgid "Import Library"
 msgstr "Zaimportuj bibliotekę"
 
-#: ../src/ui.py:798 ../ui/main.ui.h:57
+#: ../src/ui.py:850 ../ui/main.ui.h:57
 msgid "Upload"
 msgstr "Wyślij"
 
-#: ../src/ui.py:805
+#: ../src/ui.py:857
 msgid "Upload using programmer"
 msgstr "Wysyła używając programatora"
 
-#: ../src/ui.py:844 ../src/ui.py:850 ../src/ui.py:856
+#: ../src/ui.py:896 ../src/ui.py:902 ../src/ui.py:908
 msgid "System error"
 msgstr "Błąd systemu"
 
-#: ../src/ui.py:859
+#: ../src/ui.py:911
 msgid "Cannot load ui file"
 msgstr "Nie można wczytać pliku interfejsu użytkownika"
 
-#: ../src/ui.py:974
+#: ../src/ui.py:995
 msgid "--help    Print the command line options"
 msgstr "--help    Wyświetla opcje wiersza poleceń"
 
-#: ../src/ui.py:975
+#: ../src/ui.py:996
 msgid "--version Output version information and exit"
 msgstr "--version Wyświetla informacje o wersji i kończy działanie"
 
