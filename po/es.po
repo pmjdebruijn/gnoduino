@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: gnoduino master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
 "product=gnoduino&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-05-09 23:24+0000\n"
-"PO-Revision-Date: 2013-05-13 12:35+0200\n"
+"POT-Creation-Date: 2013-05-16 22:52+0000\n"
+"PO-Revision-Date: 2013-05-17 13:33+0200\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "Language: \n"
@@ -101,16 +101,16 @@ msgstr "«%s» no encontrado."
 msgid "A total of %s replacements made."
 msgstr "Se han hecho un total de %s reemplazamientos."
 
-#: ../src/ui.py:66 ../src/ui.py:88 ../src/ui.py:106 ../src/ui.py:177
-#: ../src/ui.py:192
+#: ../src/ui.py:68 ../src/ui.py:90 ../src/ui.py:108 ../src/ui.py:179
+#: ../src/ui.py:194
 msgid "Untitled"
 msgstr "Sin título"
 
-#: ../src/ui.py:67
+#: ../src/ui.py:69
 msgid "Save document"
 msgstr "Guardar documento"
 
-#: ../src/ui.py:68
+#: ../src/ui.py:70
 #, python-format
 msgid ""
 "Save changes to document \"%s\"\n"
@@ -119,72 +119,77 @@ msgstr ""
 "¿Guardar cambios del documento «%s»\n"
 "antes de cerrar?"
 
-#: ../src/ui.py:186
+#: ../src/ui.py:188
 msgid "Save file"
 msgstr "Guardar archivo"
 
-#: ../src/ui.py:203
+#: ../src/ui.py:205
 msgid "Open file"
 msgstr "Abrir archivo"
 
-#: ../src/ui.py:229
+#: ../src/ui.py:231
 #, python-format
 msgid "<b>A file named %s already exists. Do you want to replace it?</b>"
 msgstr "<b>El archivo %s ya existe. ¿Quiere reemplazarlo?</b>"
 
-#: ../src/ui.py:230
+#: ../src/ui.py:232
 #, python-format
 msgid ""
 "The file already exists in \"%s\". Replacing it will overwrite its contents."
 msgstr ""
 "El archivo ya existe en «%s». Si lo reemplaza sobreescribirá su contenido."
 
-#: ../src/ui.py:547
+#: ../src/ui.py:549
 msgid "Open Recent"
 msgstr "Abrir reciente"
 
-#: ../src/ui.py:582 ../ui/main.ui.h:61
+#: ../src/ui.py:584 ../ui/main.ui.h:61
 msgid "Send"
 msgstr "Enviar"
 
-#: ../src/ui.py:583
+#: ../src/ui.py:585
 msgid "Clear"
 msgstr "Limpiar"
 
-#: ../src/ui.py:621
+#: ../src/ui.py:623
 #, python-format
 msgid "%s baud"
 msgstr "%s baudios"
 
-#: ../src/ui.py:771
+#: ../src/ui.py:636
+#, python-format
+msgid "New device found on '%s'."
+msgstr "Encontrado nuevo dispositivo en «%s»."
+
+#: ../src/ui.py:823
 msgid "E_xamples"
 msgstr "Eje_mplos"
 
-#: ../src/ui.py:792
+#: ../src/ui.py:844
 msgid "Import Library"
 msgstr "Importar biblioteca"
 
-#: ../src/ui.py:798 ../ui/main.ui.h:57
+#: ../src/ui.py:850 ../ui/main.ui.h:57
 msgid "Upload"
 msgstr "Subir"
 
-#: ../src/ui.py:805
+#: ../src/ui.py:857
 msgid "Upload using programmer"
 msgstr "Subir usando el programador"
 
-#: ../src/ui.py:844 ../src/ui.py:850 ../src/ui.py:856
+#: ../src/ui.py:896 ../src/ui.py:902 ../src/ui.py:908
 msgid "System error"
 msgstr "Error del sistema"
 
-#: ../src/ui.py:859
+#: ../src/ui.py:911
 msgid "Cannot load ui file"
 msgstr "No se puede cargar el archivo ui"
 
-#: ../src/ui.py:974
+#: ../src/ui.py:995
 msgid "--help    Print the command line options"
 msgstr "--help    Mostrar las opciones de la línea de comandos"
 
-#: ../src/ui.py:975
+#: ../src/ui.py:996
 msgid "--version Output version information and exit"
 msgstr "--version    Mostrar información de la versión y salir"
 
