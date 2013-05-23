@@ -138,31 +138,36 @@ def upload(obj, serial, output, notify):
 	protocol = b.getPGM(b.getBoard())
 	# avrdude wants "stk500v1" to distinguish it from stk500v2
 	if protocol == "stk500": protocol = "stk500v1"
+	# if we do not get any protocol back probably means board doesn't
+	# enforce any particular programmer
 	if protocol == "" or config.force_protocol is True:
+		#try selected programmer (via menu)
 		protocol =  pgm.getProtocol(pgm.getProgrammer())
 		try:
 			comm = pgm.getCommunication(pgm.getProgrammer())
-			if comm == "serial":
-				port = serial.getConfigSerialPort(notify, output)
-				if port == -1:
-					notify.pop(context)
-					notify.push(context, _("Flashing error."))
-					return
-				serial.resetBoard()
-				compline.append("-P" + port)
-			else: compline.append("-P" + comm)
-			try:
-				compline.append("-b" + pgm.getSpeed(pgm.getProgrammer()))
-			except: pass
+			if comm:
+				if comm == "serial":
+					port = serial.getConfigSerialPort(notify, output)
+					if port == -1:
+						notify.pop(context)
+						notify.push(context, _("Flashing error."))
+						return
+					serial.resetBoard()
+					compline.append("-P" + port)
+				else: compline.append("-P" + comm)
+				try:
+					compline.append("-b" + pgm.getSpeed(pgm.getProgrammer()))
+				except: pass
 		except: pass
 	else:
-		port = serial.getConfigSerialPort(notify, output)
-		if port == -1:
-			notify.pop(context)
-			notify.push(context, _("Flashing error."))
-			return
-		compline.append("-P" + port)
-		serial.resetBoard(b.getPath(b.getBoard()))
+		if protocol != "usbtinty":	#usbtiny works via spi, need to do some device parsing here
+			port = serial.getConfigSerialPort(notify, output)
+			if port == -1:
+				notify.pop(context)
+				notify.push(context, _("Flashing error."))
+				return
+			compline.append("-P" + port)
+			serial.resetBoard(b.getPath(b.getBoard()))
 	compline.append("-c" + protocol)
 	try:
 		compline.append("-b" + b.getPGMSpeed(b.getBoard()))
