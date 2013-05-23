@@ -160,7 +160,7 @@ def upload(obj, serial, output, notify):
 				except: pass
 		except: pass
 	else:
-		if protocol != "usbtinty":	#usbtiny works via spi, need to do some device parsing here
+		if protocol != "usbtiny":	#usbtiny works via spi, need to do some device parsing here
 			port = serial.getConfigSerialPort(notify, output)
 			if port == -1:
 				notify.pop(context)
