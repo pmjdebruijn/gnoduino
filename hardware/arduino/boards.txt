@@ -146,24 +146,24 @@ mega.build.variant=mega
 
 ##############################################################
 
-leonardo.name=Arduino Leonardo
-leonardo.upload.protocol=avr109
-leonardo.upload.maximum_size=28672
-leonardo.upload.speed=57600
-leonardo.upload.disable_flushing=true
-leonardo.bootloader.low_fuses=0xff
-leonardo.bootloader.high_fuses=0xd8
-leonardo.bootloader.extended_fuses=0xcb
-leonardo.bootloader.path=caterina
-leonardo.bootloader.file=Caterina-Leonardo.hex
-leonardo.bootloader.unlock_bits=0x3F
-leonardo.bootloader.lock_bits=0x2F
-leonardo.build.mcu=atmega32u4
-leonardo.build.f_cpu=16000000L
-leonardo.build.vid=0x2341
-leonardo.build.pid=0x8036
-leonardo.build.core=arduino
-leonardo.build.variant=leonardo
+#leonardo.name=Arduino Leonardo
+#leonardo.upload.protocol=avr109
+#leonardo.upload.maximum_size=28672
+#leonardo.upload.speed=57600
+#leonardo.upload.disable_flushing=true
+#leonardo.bootloader.low_fuses=0xff
+#leonardo.bootloader.high_fuses=0xd8
+#leonardo.bootloader.extended_fuses=0xcb
+#leonardo.bootloader.path=caterina
+#leonardo.bootloader.file=Caterina-Leonardo.hex
+#leonardo.bootloader.unlock_bits=0x3F
+#leonardo.bootloader.lock_bits=0x2F
+#leonardo.build.mcu=atmega32u4
+#leonardo.build.f_cpu=16000000L
+#leonardo.build.vid=0x2341
+#leonardo.build.pid=0x8036
+#leonardo.build.core=arduino
+#leonardo.build.variant=leonardo
 
 ##############################################################
 
@@ -188,24 +188,24 @@ leonardo.build.variant=leonardo
 
 ##############################################################
 
-micro.name=Arduino Micro
-micro.upload.protocol=avr109
-micro.upload.maximum_size=28672
-micro.upload.speed=57600
-micro.upload.disable_flushing=true
-micro.bootloader.low_fuses=0xff
-micro.bootloader.high_fuses=0xd8
-micro.bootloader.extended_fuses=0xcb
-micro.bootloader.path=caterina
-micro.bootloader.file=Caterina-Micro.hex
-micro.bootloader.unlock_bits=0x3F
-micro.bootloader.lock_bits=0x2F
-micro.build.mcu=atmega32u4
-micro.build.f_cpu=16000000L
-micro.build.vid=0x2341
-micro.build.pid=0x8037
-micro.build.core=arduino
-micro.build.variant=micro
+#micro.name=Arduino Micro
+#micro.upload.protocol=avr109
+#micro.upload.maximum_size=28672
+#micro.upload.speed=57600
+#micro.upload.disable_flushing=true
+#micro.bootloader.low_fuses=0xff
+#micro.bootloader.high_fuses=0xd8
+#micro.bootloader.extended_fuses=0xcb
+#micro.bootloader.path=caterina
+#micro.bootloader.file=Caterina-Micro.hex
+#micro.bootloader.unlock_bits=0x3F
+#micro.bootloader.lock_bits=0x2F
+#micro.build.mcu=atmega32u4
+#micro.build.f_cpu=16000000L
+#micro.build.vid=0x2341
+#micro.build.pid=0x8037
+#micro.build.core=arduino
+#micro.build.variant=micro
 
 ##############################################################
 
@@ -337,24 +337,24 @@ bt.build.variant=eightanaloginputs
 
 ##############################################################
 
-LilyPadUSB.name=LilyPad Arduino USB
-LilyPadUSB.upload.protocol=avr109
-LilyPadUSB.upload.maximum_size=28672
-LilyPadUSB.upload.speed=57600
-LilyPadUSB.upload.disable_flushing=true
-LilyPadUSB.bootloader.low_fuses=0xff
-LilyPadUSB.bootloader.high_fuses=0xd8
-LilyPadUSB.bootloader.extended_fuses=0xce
-LilyPadUSB.bootloader.path=caterina-LilyPadUSB
-LilyPadUSB.bootloader.file=Caterina-LilyPadUSB.hex
-LilyPadUSB.bootloader.unlock_bits=0x3F
-LilyPadUSB.bootloader.lock_bits=0x2F
-LilyPadUSB.build.mcu=atmega32u4
-LilyPadUSB.build.f_cpu=8000000L
-LilyPadUSB.build.vid=0x1B4F
-LilyPadUSB.build.pid=0x9208
-LilyPadUSB.build.core=arduino
-LilyPadUSB.build.variant=leonardo
+#LilyPadUSB.name=LilyPad Arduino USB
+#LilyPadUSB.upload.protocol=avr109
+#LilyPadUSB.upload.maximum_size=28672
+#LilyPadUSB.upload.speed=57600
+#LilyPadUSB.upload.disable_flushing=true
+#LilyPadUSB.bootloader.low_fuses=0xff
+#LilyPadUSB.bootloader.high_fuses=0xd8
+#LilyPadUSB.bootloader.extended_fuses=0xce
+#LilyPadUSB.bootloader.path=caterina-LilyPadUSB
+#LilyPadUSB.bootloader.file=Caterina-LilyPadUSB.hex
+#LilyPadUSB.bootloader.unlock_bits=0x3F
+#LilyPadUSB.bootloader.lock_bits=0x2F
+#LilyPadUSB.build.mcu=atmega32u4
+#LilyPadUSB.build.f_cpu=8000000L
+#LilyPadUSB.build.vid=0x1B4F
+#LilyPadUSB.build.pid=0x9208
+#LilyPadUSB.build.core=arduino
+#LilyPadUSB.build.variant=leonardo
 
 ##############################################################
 
