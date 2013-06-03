@@ -7,31 +7,27 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnoduino master\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnoduino&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-05-09 23:24+0000\n"
-"PO-Revision-Date: 2013-05-13 16:10+0100\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
+"product=gnoduino&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2013-05-31 20:55+0000\n"
+"PO-Revision-Date: 2013-06-03 21:53+0100\n"
 "Last-Translator: Matej Urbančič <mateju@svn.gnome.org>\n"
 "Language-Team: Slovenščina <gnome-si@googlegroups.com>\n"
 "Language: sl_SI\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n%100==4 ? 3 : 0);\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
+"%100==4 ? 3 : 0);\n"
 "X-Poedit-SourceCharset: utf-8\n"
 "X-Generator: Poedit 1.5.4\n"
-"X-Poedit-Language: Slovenian\n"
-"X-Poedit-Country: SLOVENIA\n"
 
 #: ../src/compiler.py:137
 msgid "Compiling..."
 msgstr "Poteka kodno prevajanje ..."
 
-#: ../src/compiler.py:156
-#: ../src/compiler.py:162
-#: ../src/compiler.py:168
-#: ../src/compiler.py:175
-#: ../src/compiler.py:193
-#: ../src/compiler.py:218
+#: ../src/compiler.py:156 ../src/compiler.py:162 ../src/compiler.py:168
+#: ../src/compiler.py:175 ../src/compiler.py:193 ../src/compiler.py:218
 msgid "Compile Error"
 msgstr "Napaka kodnega prevajanja"
 
@@ -39,8 +35,7 @@ msgstr "Napaka kodnega prevajanja"
 msgid "Linking error"
 msgstr "Napaka povezovanja"
 
-#: ../src/compiler.py:260
-#: ../src/compiler.py:273
+#: ../src/compiler.py:260 ../src/compiler.py:273
 msgid "Object error"
 msgstr "Napaka predmeta"
 
@@ -53,8 +48,7 @@ msgstr "Kodno prevajanje je končano!"
 msgid "Binary sketch size: %s bytes (of a %s bytes maximum)\n"
 msgstr "Velikost dvojiške skice: %s bajtov (od največ %s bajtov)\n"
 
-#: ../src/compiler.py:369
-#: ../src/compiler.py:394
+#: ../src/compiler.py:369 ../src/compiler.py:394
 msgid "Library Error"
 msgstr "Napaka knjižnice"
 
@@ -75,7 +69,9 @@ msgstr "Ni mogoče naložiti datoteke %s. Opravilo je predčasno končano."
 #: ../src/misc.py:151
 #, python-format
 msgid "Error reading %s file. File is corrupt. Installation problem.\n"
-msgstr "Napaka branja datoteke %s. Datoteka je pokvarjena in predstavlja napako namestitve.\n"
+msgstr ""
+"Napaka branja datoteke %s. Datoteka je pokvarjena in predstavlja napako "
+"namestitve.\n"
 
 #: ../src/misc.py:275
 msgid "Error compiling."
@@ -97,9 +93,7 @@ msgstr ""
 "Zaporedna vrata niso nastavljena!\n"
 "Uporabite Orodja->Zaporedna vrata na nastavljanje."
 
-#: ../src/srcview.py:161
-#: ../src/srcview.py:171
-#: ../src/srcview.py:236
+#: ../src/srcview.py:161 ../src/srcview.py:171 ../src/srcview.py:236
 #: ../src/srcview.py:246
 #, python-format
 msgid "'%s' not found."
@@ -110,19 +104,16 @@ msgstr "'%s' ni mogoče najti."
 msgid "A total of %s replacements made."
 msgstr "Opravljenih je %s zamenjav."
 
-#: ../src/ui.py:66
-#: ../src/ui.py:88
-#: ../src/ui.py:106
-#: ../src/ui.py:177
-#: ../src/ui.py:192
+#: ../src/ui.py:68 ../src/ui.py:90 ../src/ui.py:108 ../src/ui.py:179
+#: ../src/ui.py:194
 msgid "Untitled"
 msgstr "Neimenovano"
 
-#: ../src/ui.py:67
+#: ../src/ui.py:69
 msgid "Save document"
 msgstr "Shrani dokument"
 
-#: ../src/ui.py:68
+#: ../src/ui.py:70
 #, python-format
 msgid ""
 "Save changes to document \"%s\"\n"
@@ -131,74 +122,77 @@ msgstr ""
 "Ali želite shraniti spremembe v dokumentu\n"
 "\"%s\", preden se zapre?"
 
-#: ../src/ui.py:186
+#: ../src/ui.py:188
 msgid "Save file"
 msgstr "Shrani datoteko"
 
-#: ../src/ui.py:203
+#: ../src/ui.py:205
 msgid "Open file"
 msgstr "Odpri datoteko"
 
-#: ../src/ui.py:229
+#: ../src/ui.py:231
 #, python-format
 msgid "<b>A file named %s already exists. Do you want to replace it?</b>"
 msgstr "<b>Datoteka z imenom %s že obstaja. Ali jo želite zamenjati?</b>"
 
-#: ../src/ui.py:230
+#: ../src/ui.py:232
 #, python-format
-msgid "The file already exists in \"%s\". Replacing it will overwrite its contents."
-msgstr "Datoteka že obstaja v mapi \"%s\". S prepisom bo njena vsebina izgubljena."
+msgid ""
+"The file already exists in \"%s\". Replacing it will overwrite its contents."
+msgstr ""
+"Datoteka že obstaja v mapi \"%s\". S prepisom bo njena vsebina izgubljena."
 
-#: ../src/ui.py:547
+#: ../src/ui.py:549
 msgid "Open Recent"
 msgstr "Odpri nedavno"
 
-#: ../src/ui.py:582
-#: ../ui/main.ui.h:61
+#: ../src/ui.py:584 ../ui/main.ui.h:61
 msgid "Send"
 msgstr "Pošlji"
 
-#: ../src/ui.py:583
+#: ../src/ui.py:585
 msgid "Clear"
 msgstr "Počisti"
 
-#: ../src/ui.py:621
+#: ../src/ui.py:623
 #, python-format
 msgid "%s baud"
 msgstr "%s baud"
 
-#: ../src/ui.py:771
+#: ../src/ui.py:636
+#, python-format
+msgid "New device found on '%s'."
+msgstr "Najdena je nova naprava na '%s'"
+
+#: ../src/ui.py:823
 msgid "E_xamples"
 msgstr "_Primeri"
 
-#: ../src/ui.py:792
+#: ../src/ui.py:844
 msgid "Import Library"
 msgstr "Uvozi knjižnico"
 
-#: ../src/ui.py:798
-#: ../ui/main.ui.h:57
+#: ../src/ui.py:850 ../ui/main.ui.h:57
 msgid "Upload"
 msgstr "Pošlji"
 
-#: ../src/ui.py:805
+#: ../src/ui.py:857
 msgid "Upload using programmer"
 msgstr "Naloži z uporabo programerja"
 
-#: ../src/ui.py:844
-#: ../src/ui.py:850
-#: ../src/ui.py:856
+#: ../src/ui.py:896 ../src/ui.py:902 ../src/ui.py:908
 msgid "System error"
 msgstr "Sistemska napaka"
 
-#: ../src/ui.py:859
+#: ../src/ui.py:911
 msgid "Cannot load ui file"
 msgstr "Datoteke uporabniškega vmesnika ni mogoče naložiti."
 
-#: ../src/ui.py:974
+#: ../src/ui.py:995
 msgid "--help    Print the command line options"
 msgstr "--help    Izpiši možnosti ukazne vrstice"
 
-#: ../src/ui.py:975
+#: ../src/ui.py:996
 msgid "--version Output version information and exit"
 msgstr "--version Izpiši podrobnosti različice in končaj"
 
@@ -206,20 +200,16 @@ msgstr "--version Izpiši podrobnosti različice in končaj"
 msgid "Burning bootloader..."
 msgstr "Zapisovanje zagonskega nalagalnika ..."
 
-#: ../src/uploader.py:67
-#: ../src/uploader.py:101
-#: ../src/uploader.py:149
-#: ../src/uploader.py:162
+#: ../src/uploader.py:67 ../src/uploader.py:101 ../src/uploader.py:153
+#: ../src/uploader.py:167
 msgid "Flashing error."
 msgstr "Napaka zaključevanja."
 
-#: ../src/uploader.py:92
-#: ../src/uploader.py:123
+#: ../src/uploader.py:92 ../src/uploader.py:123
 msgid "Burn Error"
 msgstr "Napaka zapisovanja"
 
-#: ../src/uploader.py:92
-#: ../src/uploader.py:123
+#: ../src/uploader.py:92 ../src/uploader.py:123
 msgid "Burn ERROR."
 msgstr "Napaka zapisovanja."
 
@@ -231,15 +221,15 @@ msgstr "Zapisovanje je končano."
 msgid "Flashing..."
 msgstr "Zaključevanje ..."
 
-#: ../src/uploader.py:181
+#: ../src/uploader.py:186
 msgid "Flashing Error"
 msgstr "Napaka zaključevanja."
 
-#: ../src/uploader.py:181
+#: ../src/uploader.py:186
 msgid "Flash ERROR.\n"
 msgstr "Napaka Zaključevanja.\n"
 
-#: ../src/uploader.py:184
+#: ../src/uploader.py:189
 msgid "Flashing complete."
 msgstr "Zaključevanje je končano."
 
@@ -280,7 +270,8 @@ msgid ""
 "\n"
 "You should have received a copy of the GNU General Public License\n"
 "along with this program; if not, write to the Free Software\n"
-"Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.\n"
+"Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, "
+"USA.\n"
 msgstr ""
 "gnoduino - vgradnja združenega razvojnega okolja Python Arduino\n"
 "Avtorske pravice (C) 2010-2012  Lucian Langa\n"
@@ -297,7 +288,8 @@ msgstr ""
 "\n"
 "Kopijo Splošnega Javnega dovoljenja GNU bi morali prejeti\n"
 "s tem programom; če je niste, pišite na naslov Free Software\n"
-"Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.\n"
+"Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, "
+"USA.\n"
 
 #: ../ui/main.ui.h:21
 msgid "translator-credits"
@@ -348,8 +340,12 @@ msgid "Sketchdir: "
 msgstr "Skicirna mapa:"
 
 #: ../ui/main.ui.h:33
-msgid "Enter any supplementary path that compiler will check for, separate them by semicolons. (eg /usr/share/gnoduino;/usr/local/share/gnoduino)"
-msgstr "Vnesite dodatne poti, ki jih bo kodni prevajalnik preiskal, ločene s podpičji (npr. usr/share/gnoduino;/usr/local/share/gnoduino)."
+msgid ""
+"Enter any supplementary path that compiler will check for, separate them by "
+"semicolons. (eg /usr/share/gnoduino;/usr/local/share/gnoduino)"
+msgstr ""
+"Vnesite dodatne poti, ki jih bo kodni prevajalnik preiskal, ločene s "
+"podpičji (npr. usr/share/gnoduino;/usr/local/share/gnoduino)."
 
 #: ../ui/main.ui.h:34
 msgid "Additional library paths:"
@@ -454,4 +450,3 @@ msgstr "Odpri"
 #: ../ui/main.ui.h:60
 msgid "Save"
 msgstr "Shrani"
-
