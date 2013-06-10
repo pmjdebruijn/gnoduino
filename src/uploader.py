@@ -53,14 +53,14 @@ def burnBootloader(serial, output, notify, id):
 	notify.pop(context)
 	notify.push(context, _("Burning bootloader..."))
 	b = board.Board()
-	port = serial.getConfigSerialPort(notify, output)
-	if port != -1:
-		serial.resetBoard()
-	pgm = programmer.Programmer()
-	"""De-fuse and erase board"""
 	compline=[i for i in avr_bl]
-	compline.append("-c" + pgm.getProtocol(id))
+	pgm = programmer.Programmer()
 	if pgm.getCommunication(id) == 'serial':
+        	port = serial.getConfigSerialPort(notify, output)
+	        if port != -1:
+        	        serial.resetBoard()
+        	"""De-fuse and erase board"""
+
 		port = serial.getConfigSerialPort(notify, output)
 		if port == -1:
 			notify.pop(context)
@@ -71,6 +71,7 @@ def burnBootloader(serial, output, notify, id):
 			compline.append("-b" + pgm.getSpeed(id))
 	elif pgm.getCommunication(id) == 'usb':
 		compline.append("-Pusb")
+	compline.append("-c" + pgm.getProtocol(id))
 	compline.append("-p" + b.getBoardMCU(b.getBoard()))
 	compline.append("-e")
 	if pgm.getForce(id) == 'true':
