@@ -128,7 +128,7 @@ def burnBootloader(serial, output, notify, id):
 	misc.printMessageLn(output, \
 		"Burn OK.");
 
-def upload(obj, serial, output, notify):
+def upload(obj, serial, output, notify, force_protocol):
 	p = prefs.preferences()
 	pgm = programmer.Programmer()
 	context = notify.get_context_id("main")
@@ -141,7 +141,7 @@ def upload(obj, serial, output, notify):
 	if protocol == "stk500": protocol = "stk500v1"
 	# if we do not get any protocol back probably means board doesn't
 	# enforce any particular programmer
-	if protocol == "" or config.force_protocol is True:
+	if protocol == "" or force_protocol is True:
 		#try selected programmer (via menu)
 		protocol =  pgm.getProtocol(pgm.getProgrammer())
 		try:

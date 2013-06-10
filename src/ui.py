@@ -284,12 +284,14 @@ def compile(widget, data=file):
 	return obj
 
 def upload(widget, serial, data=file):
+	# we need to save the state of config.force_protocol when this function is invoked
+	force_protocol = config.force_protocol
 	obj = compile(widget, data)
 	if obj == -1: return
 	while (gtk.events_pending()):
 		gtk.main_iteration()
 	startSpinner()
-	uploader.upload(obj, serial, tw, sb)
+	uploader.upload(obj, serial, tw, sb, force_protocol)
 	stopSpinner()
 
 def butSave(widget, data=None):
