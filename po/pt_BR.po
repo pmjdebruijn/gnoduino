@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: gnoduino master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
 "product=gnoduino&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-05-09 23:24+0000\n"
-"PO-Revision-Date: 2013-05-10 00:04-0300\n"
+"POT-Creation-Date: 2013-06-11 06:56+0000\n"
+"PO-Revision-Date: 2013-06-04 21:53-0300\n"
 "Last-Translator: Rafael Ferreira <rafael.f.f1@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <gnome-pt_br-list@gnome.org>\n"
 "Language: pt_BR\n"
@@ -104,16 +104,16 @@ msgstr "\"%s\" não encontrado."
 msgid "A total of %s replacements made."
 msgstr "Um total de %s substituições foram feitas."
 
-#: ../src/ui.py:66 ../src/ui.py:88 ../src/ui.py:106 ../src/ui.py:177
-#: ../src/ui.py:192
+#: ../src/ui.py:68 ../src/ui.py:90 ../src/ui.py:108 ../src/ui.py:179
+#: ../src/ui.py:194
 msgid "Untitled"
 msgstr "Sem título"
 
-#: ../src/ui.py:67
+#: ../src/ui.py:69
 msgid "Save document"
 msgstr "Salvar documento"
 
-#: ../src/ui.py:68
+#: ../src/ui.py:70
 #, python-format
 msgid ""
 "Save changes to document \"%s\"\n"
@@ -122,72 +122,77 @@ msgstr ""
 "Salvar alterações no docmento \"%s\"\n"
 " antes de fechar?"
 
-#: ../src/ui.py:186
+#: ../src/ui.py:188
 msgid "Save file"
 msgstr "Salvar arquivo"
 
-#: ../src/ui.py:203
+#: ../src/ui.py:205
 msgid "Open file"
 msgstr "Abrir arquivo"
 
-#: ../src/ui.py:229
+#: ../src/ui.py:231
 #, python-format
 msgid "<b>A file named %s already exists. Do you want to replace it?</b>"
 msgstr "<b>Já existe um arquivo com o nome %s. Você deseja substituí-lo?</b>"
 
-#: ../src/ui.py:230
+#: ../src/ui.py:232
 #, python-format
 msgid ""
 "The file already exists in \"%s\". Replacing it will overwrite its contents."
 msgstr ""
 "O arquivo já existe em \"%s\". Substituí-lo irá sobrescrever seu conteúdo."
 
-#: ../src/ui.py:547
+#: ../src/ui.py:551
 msgid "Open Recent"
 msgstr "Abrir recente"
 
-#: ../src/ui.py:582 ../ui/main.ui.h:61
+#: ../src/ui.py:586 ../ui/main.ui.h:61
 msgid "Send"
 msgstr "Enviar"
 
-#: ../src/ui.py:583
+#: ../src/ui.py:587
 msgid "Clear"
 msgstr "Limpar"
 
-#: ../src/ui.py:621
+#: ../src/ui.py:625
 #, python-format
 msgid "%s baud"
 msgstr "%s baud"
 
-#: ../src/ui.py:771
+#: ../src/ui.py:638
+#, python-format
+msgid "New device found on '%s'."
+msgstr "Novo dispositivo localizado em \"%s\"."
+
+#: ../src/ui.py:825
 msgid "E_xamples"
 msgstr "E_xemplos"
 
-#: ../src/ui.py:792
+#: ../src/ui.py:846
 msgid "Import Library"
 msgstr "Importar biblioteca"
 
-#: ../src/ui.py:798 ../ui/main.ui.h:57
+#: ../src/ui.py:852 ../ui/main.ui.h:57
 msgid "Upload"
 msgstr "Fazer upload"
 
-#: ../src/ui.py:805
+#: ../src/ui.py:859
 msgid "Upload using programmer"
 msgstr "Enviar usando o programador"
 
-#: ../src/ui.py:844 ../src/ui.py:850 ../src/ui.py:856
+#: ../src/ui.py:898 ../src/ui.py:904 ../src/ui.py:910
 msgid "System error"
 msgstr "Erro de sistema"
 
-#: ../src/ui.py:859
+#: ../src/ui.py:913
 msgid "Cannot load ui file"
 msgstr "Não foi possível carregar o arquivo de ui"
 
-#: ../src/ui.py:974
+#: ../src/ui.py:997
 msgid "--help    Print the command line options"
 msgstr "--help    Imprime as opções de linha de comando"
 
-#: ../src/ui.py:975
+#: ../src/ui.py:998
 msgid "--version Output version information and exit"
 msgstr "--version Imprime informações de versão e sai"
 
@@ -195,36 +200,36 @@ msgstr "--version Imprime informações de versão e sai"
 msgid "Burning bootloader..."
 msgstr "Gravando gerenciador de inicialização..."
 
-#: ../src/uploader.py:67 ../src/uploader.py:101 ../src/uploader.py:149
-#: ../src/uploader.py:162
+#: ../src/uploader.py:67 ../src/uploader.py:102 ../src/uploader.py:154
+#: ../src/uploader.py:168
 msgid "Flashing error."
 msgstr "Erro de gravação na memória flash."
 
-#: ../src/uploader.py:92 ../src/uploader.py:123
+#: ../src/uploader.py:93 ../src/uploader.py:124
 msgid "Burn Error"
 msgstr "Erro de gravação"
 
-#: ../src/uploader.py:92 ../src/uploader.py:123
+#: ../src/uploader.py:93 ../src/uploader.py:124
 msgid "Burn ERROR."
 msgstr "ERRO de gravação."
 
-#: ../src/uploader.py:126
+#: ../src/uploader.py:127
 msgid "Burn complete."
 msgstr "Gravação concluída."
 
-#: ../src/uploader.py:135
+#: ../src/uploader.py:136
 msgid "Flashing..."
 msgstr "Gravando na memória flash..."
 
-#: ../src/uploader.py:181
+#: ../src/uploader.py:187
 msgid "Flashing Error"
 msgstr "Erro de gravação na memória flash"
 
-#: ../src/uploader.py:181
+#: ../src/uploader.py:187
 msgid "Flash ERROR.\n"
 msgstr "ERRO de gravação na memória flash.\n"
 
-#: ../src/uploader.py:184
+#: ../src/uploader.py:190
 msgid "Flashing complete."
 msgstr "Gravação na memória flash concluída."
 
