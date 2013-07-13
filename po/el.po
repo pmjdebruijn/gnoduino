@@ -2,20 +2,23 @@
 # Copyright (C) 2012 gnoduino's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnoduino package.
 # Efstathios Iosifidis <iosifidis@opensuse.org>, 2012.
-#
+# Dimitris Spingos (Δημήτρης Σπίγγος) <dmtrs32@gmail.com>, 2013.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnoduino master\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
-"product=gnoduino&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2012-08-27 09:29+0000\n"
-"PO-Revision-Date: 2012-09-15 13:00+0200\n"
-"Last-Translator: Tom Tryfonidis <tomtryf@gmail.com>\n"
-"Language-Team: Ελληνικά, Σύγχρονα <opensuse-translation-el@opensuse.org>\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnodui"
+"no&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2013-05-16 22:52+0000\n"
+"PO-Revision-Date: 2013-07-13 16:39+0300\n"
+"Last-Translator: Dimitris Spingos (Δημήτρης Σπίγγος) <dmtrs32@gmail.com>\n"
+"Language-Team: team@gnome.gr\n"
+"Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Virtaal 0.7.1\n"
+"X-Project-Style: gnome\n"
 
 #: ../src/compiler.py:137
 msgid "Compiling..."
@@ -41,7 +44,7 @@ msgstr "Ολοκλήρωση μεταγλώττισης."
 #: ../src/compiler.py:283
 #, python-format
 msgid "Binary sketch size: %s bytes (of a %s bytes maximum)\n"
-msgstr ""
+msgstr "Δυαδικό μέγεθος σχεδίασης: %s ψηφιολέξεις (από μέγιστο %s ψηφιολέξεων)\n"
 
 #: ../src/compiler.py:369 ../src/compiler.py:394
 msgid "Library Error"
@@ -80,7 +83,7 @@ msgstr "Έξοδος χωρίς αποθήκευση"
 msgid "If you don't save, changes will be permanently lost."
 msgstr "Εάν δεν αποθηκεύσετε, οι αλλαγές θα χαθούν μόνιμα."
 
-#: ../src/serialio.py:92
+#: ../src/serialio.py:113
 msgid ""
 "Serial port not configured!\n"
 "Use Tools->Serial Port to configure port."
@@ -88,44 +91,50 @@ msgstr ""
 "Δεν ρυθμίστηκε η σειριακή πόρτα!\n"
 "Χρησιμοποιήστε τα Εργαλεία->Σειριακή πόρτα για να τη ρυθμίσετε."
 
-#: ../src/srcview.py:149 ../src/srcview.py:159
+#: ../src/srcview.py:161 ../src/srcview.py:171 ../src/srcview.py:236
+#: ../src/srcview.py:246
 #, python-format
 msgid "'%s' not found."
 msgstr "Δεν βρέθηκε το '%s'"
 
-#: ../src/ui.py:66 ../src/ui.py:86 ../src/ui.py:99 ../src/ui.py:167
-#: ../src/ui.py:182
+#: ../src/srcview.py:283
+#, python-format
+msgid "A total of %s replacements made."
+msgstr "Έγιναν συνολικά %s αντικαταστάσεις."
+
+#: ../src/ui.py:68 ../src/ui.py:90 ../src/ui.py:108 ../src/ui.py:179
+#: ../src/ui.py:194
 msgid "Untitled"
 msgstr "Ανώνυμο"
 
-#: ../src/ui.py:67
+#: ../src/ui.py:69
 msgid "Save document"
 msgstr "Αποθήκευση εγγράφου"
 
-#: ../src/ui.py:68
+#: ../src/ui.py:70
 #, python-format
 msgid ""
 "Save changes to document \"%s\"\n"
 " before closing?"
 msgstr ""
-"Αποθήκευση αλλαγών στο έγγραφο  \"%s\"\n"
+"Αποθήκευση αλλαγών στο έγγραφο \"%s\"\n"
 " πριν την έξοδο;"
 
-#: ../src/ui.py:176
+#: ../src/ui.py:188
 msgid "Save file"
 msgstr "Αποθήκευση αρχείου"
 
-#: ../src/ui.py:193
+#: ../src/ui.py:205
 msgid "Open file"
 msgstr "Άνοιγμα αρχείου"
 
-#: ../src/ui.py:219
+#: ../src/ui.py:231
 #, python-format
 msgid "<b>A file named %s already exists. Do you want to replace it?</b>"
 msgstr ""
 "<b>Υπάρχει ήδη ένα αρχείο με όνομα %s. Θέλετε να το αντικαταστήσετε;</b>"
 
-#: ../src/ui.py:220
+#: ../src/ui.py:232
 #, python-format
 msgid ""
 "The file already exists in \"%s\". Replacing it will overwrite its contents."
@@ -133,59 +142,68 @@ msgstr ""
 "Το αρχείο υπάρχει ήδη στο \"%s\". Η αντικατάσταση του θα αλλάξει τα "
 "περιεχόμενα του."
 
-#: ../src/ui.py:525
+#: ../src/ui.py:549
 msgid "Open Recent"
 msgstr "Άνοιγμα πρόσφατων"
 
-#: ../src/ui.py:560 ../ui/main.ui.h:59
+#: ../src/ui.py:584 ../ui/main.ui.h:61
 msgid "Send"
 msgstr "Αποστολή"
 
-#: ../src/ui.py:561
+#: ../src/ui.py:585
 msgid "Clear"
 msgstr "Εκκαθάριση"
 
-#: ../src/ui.py:599
+#: ../src/ui.py:623
 #, python-format
 msgid "%s baud"
 msgstr "%s baud"
 
-#: ../src/ui.py:719
+#: ../src/ui.py:636
+#, python-format
+msgid "New device found on '%s'."
+msgstr "Εύρεση νέας συσκευής στο '%s'."
+
+#: ../src/ui.py:823
 msgid "E_xamples"
 msgstr "Π_αραδείγματα"
 
-#: ../src/ui.py:725 ../ui/main.ui.h:55
+#: ../src/ui.py:844
+msgid "Import Library"
+msgstr "Εισαγωγή βιβλιοθήκης"
+
+#: ../src/ui.py:850 ../ui/main.ui.h:57
 msgid "Upload"
 msgstr "Αποστολή"
 
-#: ../src/ui.py:732
+#: ../src/ui.py:857
 msgid "Upload using programmer"
 msgstr "Αποστολή χρησιμοποιώντας τον προγραμματιστή"
 
-#: ../src/ui.py:771 ../src/ui.py:777 ../src/ui.py:783
+#: ../src/ui.py:896 ../src/ui.py:902 ../src/ui.py:908
 msgid "System error"
 msgstr "Σφάλμα συστήματος"
 
-#: ../src/ui.py:786
+#: ../src/ui.py:911
 msgid "Cannot load ui file"
 msgstr "Αδυναμία φόρτωσης ui αρχείου"
 
-#: ../src/ui.py:901
+#: ../src/ui.py:995
 msgid "--help    Print the command line options"
 msgstr "--help    Εκτύπωση επιλογών του τερματικού"
 
-#: ../src/ui.py:902
+#: ../src/ui.py:996
 msgid "--version Output version information and exit"
-msgstr "--version Προβολή έκδοσης και έξοδος"
+msgstr "--version Έξοδος πληροφοριών έκδοσης και έξοδος"
 
 #: ../src/uploader.py:54
 msgid "Burning bootloader..."
-msgstr "Εγγραφή bootloader..."
+msgstr "Εγγραφή φορτωτή εκκίνησης..."
 
 #: ../src/uploader.py:67 ../src/uploader.py:101 ../src/uploader.py:149
 #: ../src/uploader.py:162
 msgid "Flashing error."
-msgstr ""
+msgstr "Σφάλμα αντικατάστασης."
 
 #: ../src/uploader.py:92 ../src/uploader.py:123
 msgid "Burn Error"
@@ -201,19 +219,19 @@ msgstr "Η εγγραφή ολοκληρώθηκε."
 
 #: ../src/uploader.py:135
 msgid "Flashing..."
-msgstr ""
+msgstr "Αντικατάσταση..."
 
 #: ../src/uploader.py:181
 msgid "Flashing Error"
-msgstr ""
+msgstr "Σφάλμα αντικατάστασης"
 
 #: ../src/uploader.py:181
 msgid "Flash ERROR.\n"
-msgstr ""
+msgstr "ΣΦΑΛΜΑ αντικατάστασης.\n"
 
 #: ../src/uploader.py:184
 msgid "Flashing complete."
-msgstr ""
+msgstr "Ολοκλήρωση αντικατάστασης."
 
 #: ../ui/arduino.xml.h:1
 msgid "Arduino"
@@ -221,7 +239,7 @@ msgstr "Arduino"
 
 #: ../ui/arduino.xml.h:2
 msgid "Arduino color scheme"
-msgstr "Σχήμα χρώματος του arduino"
+msgstr "Συνδυασμός χρώματος του arduino"
 
 #: ../ui/main.ui.h:1
 msgid "Lucian Langa <lucilanga@gnome.org>"
@@ -258,164 +276,180 @@ msgstr ""
 " gnoduino - Υλοποίηση Python Arduino IDE\n"
 " Πνευματικά δικαιώματα (C) 2010-2012  Lucian Langa\n"
 "\n"
-"Το Gnome Subtitles διανέμεται με την ελπίδα ότι θα αποδεχθεί χρήσιμο,\n"
+"Αυτό το πρόγραμμα είναι ελεύθερο λογισμικό· μπορείτε να το\n"
+"αναδιανείμετε και/ή να το τροποποιήσετε κάτω από τους όρους της\n"
+"Γενικής Δημόσιας Άδειας GNU όπως δημοσιεύεται από το Ίδρυμα ελεύθερου\n"
+"λογισμικού· είτε έκδοσης 2 ή οποιασδήποτε μεταγενέστερης έκδοσης.\n"
+"\n"
+"Αυτό το πρόγραμμα διανέμεται με την ελπίδα ότι θα αποδεχθεί χρήσιμο,\n"
 "παρόλα αυτά ΧΩΡΙΣ ΚΑΜΜΙΑ ΕΓΓΥΗΣΗ, χωρίς ούτε και την σιωπηρή εγγύηση\n"
 "ΕΜΠΟΡΕΥΣΙΜΟΤΗΤΑΣ ή ΚΑΤΑΛΛΗΛΟΤΗΤΑΣ ΓΙΑ ΕΙΔΙΚΟ ΣΚΟΠΟ. Για περισσότερες\n"
 "λεπτομέρειες ανατρέξτε στη Γενική Άδεια Δημόσιας Χρήσης GNU.\n"
 "\n"
-"Θα πρέπει να έχετε λάβει αντίγραφο της Γενικής Άδειας Δημόσιας Χρήσης GNU\n"
-"μαζίμε το πρόγραμμα. Αν όχι, γράψτε στο Free Software\n"
+"Θα πρέπει να έχετε λάβει αντίγραφο της Γενικής Άδειας Δημόσιας Χρήσης\n"
+"GNU μαζί με το πρόγραμμα. Αν όχι, γράψτε στο Free Software\n"
 "Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA\n"
 
 #: ../ui/main.ui.h:21
+msgid "translator-credits"
+msgstr ""
+"Ελληνική μεταφραστική ομάδα του GNOME\n"
+" Δημήτρης Σπίγγος <dmtrs32@gmail.com>\n"
+"Για περισσότερα δείτε: http://gnome.gr"
+
+#: ../ui/main.ui.h:22
 msgid "Search for:"
 msgstr "Αναζήτηση για:"
 
-#: ../ui/main.ui.h:22
+#: ../ui/main.ui.h:23
 msgid "Match entire word only"
 msgstr "Ταίριασμα μόνο ολόκληρης της λέξης"
 
-#: ../ui/main.ui.h:23
-msgid "Wrap around"
-msgstr ""
-
 #: ../ui/main.ui.h:24
-msgid "Match case"
-msgstr ""
+msgid "Wrap around"
+msgstr "Αναδίπλωση ολόγυρα"
 
 #: ../ui/main.ui.h:25
+msgid "Match case"
+msgstr "Συμφωνία πεζών-κεφαλαίων"
+
+#: ../ui/main.ui.h:26
 msgid "Search backwards"
 msgstr "Αναζήτηση προς τα πίσω"
 
-#: ../ui/main.ui.h:26
+#: ../ui/main.ui.h:27
 msgid "Editor font size"
 msgstr "Επεξεργαστής μεγέθους γραμματοσειράς"
 
-#: ../ui/main.ui.h:27
-msgid "Console font size"
-msgstr "Μέγεθος γραμματοσειράς τερματικού"
-
 #: ../ui/main.ui.h:28
-msgid "Verbose build"
-msgstr ""
+msgid "Console font size"
+msgstr "Μέγεθος γραμματοσειράς κονσόλας"
 
 #: ../ui/main.ui.h:29
-msgid "Verbose upload"
-msgstr ""
+msgid "Verbose build"
+msgstr "Αναλυτική δόμηση"
 
 #: ../ui/main.ui.h:30
+msgid "Verbose upload"
+msgstr "Αναλυτικό ανέβασμα"
+
+#: ../ui/main.ui.h:31
 msgid "Show line numbers"
 msgstr "Εμφάνιση αριθμών γραμμών"
 
-#: ../ui/main.ui.h:31
+#: ../ui/main.ui.h:32
 msgid "Sketchdir: "
 msgstr "Κατάλογος σχεδίασης:"
 
-#: ../ui/main.ui.h:32
+#: ../ui/main.ui.h:33
 msgid ""
 "Enter any supplementary path that compiler will check for, separate them by "
 "semicolons. (eg /usr/share/gnoduino;/usr/local/share/gnoduino)"
 msgstr ""
 "Πληκτρολογήστε οποιαδήποτε συμπληρωματική διαδρομή για να ελέγξει ο "
-"μεταγλωττιστής, διαχωρισμένες με ερωτηματικά. (π.χ /usr/share/gnoduino;/usr/"
-"local/share/gnoduino)"
-
-#: ../ui/main.ui.h:33
-msgid "Additional library paths:"
-msgstr "Επιπρόσθετες διαδρομών βιβλιοθηκών:"
+"μεταγλωττιστής, διαχωρισμένες με ερωτηματικά. (π.χ "
+"/usr/share/gnoduino;/usr/local/share/gnoduino)"
 
 #: ../ui/main.ui.h:34
+msgid "Additional library paths:"
+msgstr "Πρόσθετες διαδρομές βιβλιοθηκών:"
+
+#: ../ui/main.ui.h:35
+msgid "Replace All"
+msgstr "Αντικατάσταση όλων"
+
+#: ../ui/main.ui.h:36
+msgid "Replace with:"
+msgstr "Αντικατάσταση με:"
+
+#: ../ui/main.ui.h:37
 msgid "_File"
 msgstr "_Αρχείο"
 
-#: ../ui/main.ui.h:35
+#: ../ui/main.ui.h:38
 msgid "Upload to I/O Board"
 msgstr "Αποστολή στην πλακέτα I/O"
 
-#: ../ui/main.ui.h:36
+#: ../ui/main.ui.h:39
 msgid "Preferences"
 msgstr "Ιδιότητες"
 
-#: ../ui/main.ui.h:37
+#: ../ui/main.ui.h:40
 msgid "_Edit"
 msgstr "_Επεξεργασία"
 
-#: ../ui/main.ui.h:38
+#: ../ui/main.ui.h:41
 msgid "Find Next"
 msgstr "Εύρεση επόμενου"
 
-#: ../ui/main.ui.h:39
+#: ../ui/main.ui.h:42
 msgid "Sketch"
 msgstr "Σχεδίαση"
 
-#: ../ui/main.ui.h:40
+#: ../ui/main.ui.h:43
 msgid "Verify/Compile"
 msgstr "Επιβεβαίωση/Μεταγλώττιση"
 
-#: ../ui/main.ui.h:41
+#: ../ui/main.ui.h:44
 msgid "Stop"
 msgstr "Διακοπή"
 
-#: ../ui/main.ui.h:42
-msgid "Import Library"
-msgstr "Εισαγωγή βιβλιοθήκης"
-
-#: ../ui/main.ui.h:43
+#: ../ui/main.ui.h:45
 msgid "Add File..."
 msgstr "Πρσθήκη αρχείου..."
 
-#: ../ui/main.ui.h:44
+#: ../ui/main.ui.h:46
 msgid "Tools"
 msgstr "Εργαλεία"
 
-#: ../ui/main.ui.h:45
-msgid "Auto Format"
-msgstr ""
-
-#: ../ui/main.ui.h:46
-msgid "Serial Monitor"
-msgstr ""
-
 #: ../ui/main.ui.h:47
+msgid "Auto Format"
+msgstr "Αυτόματη μορφοποίηση"
+
+#: ../ui/main.ui.h:48
+msgid "Serial Monitor"
+msgstr "Σειριακή παρακολούθηση"
+
+#: ../ui/main.ui.h:49
 msgid "Reset Board"
 msgstr "Επαναφορά πλακέτας"
 
-#: ../ui/main.ui.h:48
+#: ../ui/main.ui.h:50
 msgid "Board"
 msgstr "Πλακέτα"
 
-#: ../ui/main.ui.h:49
+#: ../ui/main.ui.h:51
 msgid "Serial Port"
 msgstr "Σειριακή θύρα"
 
-#: ../ui/main.ui.h:50
+#: ../ui/main.ui.h:52
 msgid "Programmer"
 msgstr "Προγραμματιστής"
 
-#: ../ui/main.ui.h:51
+#: ../ui/main.ui.h:53
 msgid "Burn Bootloader"
-msgstr "Εγγραφή bootloader"
+msgstr "Εγγραφή φορτωτή εκκίνησης"
 
-#: ../ui/main.ui.h:52
+#: ../ui/main.ui.h:54
 msgid "_Help"
 msgstr "_Βοήθεια"
 
-#: ../ui/main.ui.h:53
+#: ../ui/main.ui.h:55
 msgid "Reference"
 msgstr "Αναφορά"
 
-#: ../ui/main.ui.h:54
+#: ../ui/main.ui.h:56
 msgid "Compile"
 msgstr "Μεταγλώττιση"
 
-#: ../ui/main.ui.h:56
+#: ../ui/main.ui.h:58
 msgid "New"
 msgstr "Νέο"
 
-#: ../ui/main.ui.h:57
+#: ../ui/main.ui.h:59
 msgid "Open"
 msgstr "Άνοιγμα"
 
-#: ../ui/main.ui.h:58
+#: ../ui/main.ui.h:60
 msgid "Save"
 msgstr "Αποθήκευση"
