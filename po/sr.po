@@ -7,8 +7,8 @@ msgstr ""
 "Project-Id-Version: gnoduino master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnodui"
 "no&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-05-09 23:24+0000\n"
-"PO-Revision-Date: 2013-05-14 11:57+0200\n"
+"POT-Creation-Date: 2013-08-27 23:21+0000\n"
+"PO-Revision-Date: 2013-09-08 08:20+0200\n"
 "Last-Translator: Мирослав Николић <miroslavnikolic@rocketmail.com>\n"
 "Language-Team: Serbian <gnom@prevod.org>\n"
 "Language: sr\n"
@@ -100,16 +100,16 @@ msgstr "Нисам пронашао „%s“."
 msgid "A total of %s replacements made."
 msgstr "Урађено је укупно %s замене."
 
-#: ../src/ui.py:66 ../src/ui.py:88 ../src/ui.py:106 ../src/ui.py:177
-#: ../src/ui.py:192
+#: ../src/ui.py:68 ../src/ui.py:90 ../src/ui.py:108 ../src/ui.py:179
+#: ../src/ui.py:194
 msgid "Untitled"
 msgstr "Неименовано"
 
-#: ../src/ui.py:67
+#: ../src/ui.py:69
 msgid "Save document"
 msgstr "Сачувајте документ"
 
-#: ../src/ui.py:68
+#: ../src/ui.py:70
 #, python-format
 msgid ""
 "Save changes to document \"%s\"\n"
@@ -118,73 +118,78 @@ msgstr ""
 "Да сачувам измене у документу „%s“\n"
 " пре затварања?"
 
-#: ../src/ui.py:186
+#: ../src/ui.py:188
 msgid "Save file"
 msgstr "Сачувај датотеку"
 
-#: ../src/ui.py:203
+#: ../src/ui.py:205
 msgid "Open file"
 msgstr "Отвори датотеку"
 
-#: ../src/ui.py:229
+#: ../src/ui.py:231
 #, python-format
 msgid "<b>A file named %s already exists. Do you want to replace it?</b>"
 msgstr ""
 "<b>Датотека под називом „%s“ већ постоји. Да ли желите да је замените?</b>"
 
-#: ../src/ui.py:230
+#: ../src/ui.py:232
 #, python-format
 msgid ""
 "The file already exists in \"%s\". Replacing it will overwrite its contents."
 msgstr ""
 "Датотека већ постоји у „%s“. Уколико је замените преписаћете њен садржај."
 
-#: ../src/ui.py:547
+#: ../src/ui.py:551
 msgid "Open Recent"
 msgstr "Отвори скорашње"
 
-#: ../src/ui.py:582 ../ui/main.ui.h:61
+#: ../src/ui.py:586 ../ui/main.ui.h:61
 msgid "Send"
 msgstr "Пошаљи"
 
-#: ../src/ui.py:583
+#: ../src/ui.py:587
 msgid "Clear"
 msgstr "Очисти"
 
-#: ../src/ui.py:621
+#: ../src/ui.py:625
 #, python-format
 msgid "%s baud"
 msgstr "%s бода"
 
-#: ../src/ui.py:771
+#: ../src/ui.py:638
+#, python-format
+msgid "New device found on '%s'."
+msgstr "Пронашао сам нови уређај на „%s“."
+
+#: ../src/ui.py:825
 msgid "E_xamples"
 msgstr "_Примери"
 
-#: ../src/ui.py:792
+#: ../src/ui.py:846
 msgid "Import Library"
 msgstr "Увези библиотеку"
 
-#: ../src/ui.py:798 ../ui/main.ui.h:57
+#: ../src/ui.py:852 ../ui/main.ui.h:57
 msgid "Upload"
 msgstr "Отпреми"
 
-#: ../src/ui.py:805
+#: ../src/ui.py:859
 msgid "Upload using programmer"
 msgstr "Отпреми употребом програмера"
 
-#: ../src/ui.py:844 ../src/ui.py:850 ../src/ui.py:856
+#: ../src/ui.py:898 ../src/ui.py:904 ../src/ui.py:910
 msgid "System error"
 msgstr "Системска грешка"
 
-#: ../src/ui.py:859
+#: ../src/ui.py:913
 msgid "Cannot load ui file"
 msgstr "Не могу да учитам датотеку корисничког сучеља"
 
-#: ../src/ui.py:974
+#: ../src/ui.py:997
 msgid "--help    Print the command line options"
 msgstr "--help     Исписује опције линије наредби"
 
-#: ../src/ui.py:975
+#: ../src/ui.py:998
 msgid "--version Output version information and exit"
 msgstr "--version  Исписује податке о издању и излази"
 
@@ -192,36 +197,36 @@ msgstr "--version  Исписује податке о издању и излаз
 msgid "Burning bootloader..."
 msgstr "Записујем покретач система..."
 
-#: ../src/uploader.py:67 ../src/uploader.py:101 ../src/uploader.py:149
-#: ../src/uploader.py:162
+#: ../src/uploader.py:67 ../src/uploader.py:102 ../src/uploader.py:154
+#: ../src/uploader.py:168
 msgid "Flashing error."
 msgstr "Грешка у надоградњи БИОС-а."
 
-#: ../src/uploader.py:92 ../src/uploader.py:123
+#: ../src/uploader.py:93 ../src/uploader.py:124
 msgid "Burn Error"
 msgstr "Грешка записивања"
 
-#: ../src/uploader.py:92 ../src/uploader.py:123
+#: ../src/uploader.py:93 ../src/uploader.py:124
 msgid "Burn ERROR."
 msgstr "ГРЕШКА записивања."
 
-#: ../src/uploader.py:126
+#: ../src/uploader.py:127
 msgid "Burn complete."
 msgstr "Записивање је обављено."
 
-#: ../src/uploader.py:135
+#: ../src/uploader.py:136
 msgid "Flashing..."
 msgstr "Надограђујем..."
 
-#: ../src/uploader.py:181
+#: ../src/uploader.py:187
 msgid "Flashing Error"
 msgstr "Грешка у надоградњи"
 
-#: ../src/uploader.py:181
+#: ../src/uploader.py:187
 msgid "Flash ERROR.\n"
 msgstr "ГРЕШКА надоградње БИОС-а.\n"
 
-#: ../src/uploader.py:184
+#: ../src/uploader.py:190
 msgid "Flashing complete."
 msgstr "Надоградња је обављена."
 
