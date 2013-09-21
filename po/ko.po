@@ -1,89 +1,86 @@
 # Korean translation for gnoduino.
 # Copyright (C) 2012 gnoduino's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnoduino package.
-# Seong-ho Cho <darkcircle.0426@gmail.com>, 2012.
+# Seong-ho Cho <darkcircle.0426@gmail.com>, 2012, 2013.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnoduino master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
 "product=gnoduino&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2012-03-11 21:08+0000\n"
-"PO-Revision-Date: 2012-03-13 02:41+0900\n"
+"POT-Creation-Date: 2013-09-08 06:24+0000\n"
+"PO-Revision-Date: 2013-09-18 01:49+0900\n"
 "Last-Translator: Seong-ho Cho <darkcircle.0426@gmail.com>\n"
 "Language-Team: Korean <gnome-kr@googlegroups.com>\n"
+"Language: ko\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ko\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 1.5.5\n"
 
-#: ../src/board.py:48
-msgid "Cannot load BOARDS file. Exiting."
-msgstr "BOARDS 파일을 불러올 수 없습니다. 끝냅니다."
+#: ../src/compiler.py:137
+msgid "Compiling..."
+msgstr "컴파일 중..."
 
-#: ../src/board.py:51
+#: ../src/compiler.py:156 ../src/compiler.py:162 ../src/compiler.py:168
+#: ../src/compiler.py:175 ../src/compiler.py:193 ../src/compiler.py:218
+msgid "Compile Error"
+msgstr "컴파일 오류"
+
+#: ../src/compiler.py:248
+msgid "Linking error"
+msgstr "링킹 오류"
+
+#: ../src/compiler.py:260 ../src/compiler.py:273
+msgid "Object error"
+msgstr "오브젝트 오류"
+
+#: ../src/compiler.py:279
+msgid "Done compiling."
+msgstr "컴파일 완료."
+
+#: ../src/compiler.py:283
+#, python-format
+msgid "Binary sketch size: %s bytes (of a %s bytes maximum)\n"
+msgstr "바이너리 스케치 크기: %s 바이트(최대 %s 바이트 중)\n"
+
+#: ../src/compiler.py:369 ../src/compiler.py:394
+msgid "Library Error"
+msgstr "라이브러리 오류"
+
+#: ../src/misc.py:54
+#, python-format
+msgid ""
+"Unable to locate %s\n"
+"Arduino SDK missing or broken."
+msgstr ""
+"%s 위치 지정을 할 수 없습니다\n"
+"아두이노 SDK가 빠져있거나 깨졌습니다."
+
+#: ../src/misc.py:148
+#, python-format
+msgid "Cannot load %s file. Exiting."
+msgstr "%s 파일을 불러올 수 없습니다. 끝냅니다."
+
+#: ../src/misc.py:151
 #, python-format
 msgid "Error reading %s file. File is corrupt. Installation problem.\n"
 msgstr "%s 파일을 읽는 중 오류 발생. 파일이 깨졌습니다. 설치 문제입니다.\n"
 
-#: ../src/compiler.py:136
-msgid "Compiling..."
-msgstr "컴파일 중..."
+#: ../src/misc.py:275
+msgid "Error compiling."
+msgstr "컴파일 오류."
 
-#: ../src/compiler.py:153 ../src/compiler.py:159 ../src/compiler.py:165
-#: ../src/compiler.py:172 ../src/compiler.py:190 ../src/compiler.py:213
-msgid "Compile Error"
-msgstr "컴파일 오류"
-
-#: ../src/compiler.py:240
-msgid "Linking error"
-msgstr "링킹 오류"
-
-#: ../src/compiler.py:252 ../src/compiler.py:265
-msgid "Object error"
-msgstr "오브젝트 오류"
-
-#: ../src/compiler.py:271
-msgid "Done compilling."
-msgstr "컴파일 완료."
-
-#: ../src/compiler.py:275
-#, python-format
-msgid "Binary sketch size: %s bytes (of a %s bytes maximum)\n"
-msgstr "바이너리 스케치 크기: %s 바이트 (최대 %s 바이트 중)\n"
-
-#: ../src/compiler.py:352 ../src/compiler.py:375
-msgid "Library Error"
-msgstr "라이브러리 오류"
-
-#: ../src/misc.py:53
-#, python-format
-msgid "Cannot find %s"
-msgstr "%s을(를) 찾을 수 없습니다"
-
-#: ../src/misc.py:217
-msgid "Error compilling."
-msgstr "컴파일 중 오류."
-
-#: ../src/misc.py:287
+#: ../src/misc.py:346
 msgid "Close without Saving"
 msgstr "저장하지 않고 닫기"
 
-#: ../src/misc.py:289
+#: ../src/misc.py:348
 msgid "If you don't save, changes will be permanently lost."
-msgstr "저장하지 않으면, 바뀐 사항을 영원히 잃을 것입니다."
+msgstr "저장하지 않으면, 바뀐 내용은 영원히 잃게 됩니다."
 
-#: ../src/programmer.py:39
-msgid "Cannot find PROGRAMMERS"
-msgstr "프로그래머를 찾을 수 없습니다"
-
-#: ../src/programmer.py:42
-#, python-format
-msgid "Error reading %s file. File is corrupt. Installation problem."
-msgstr "%s 파일을 읽는 중 오류 발생. 파일이 깨졌습니다. 설치 문제입니다."
-
-#: ../src/serialio.py:92
+#: ../src/serialio.py:113
 msgid ""
 "Serial port not configured!\n"
 "Use Tools->Serial Port to configure port."
@@ -91,13 +88,19 @@ msgstr ""
 "직렬 포트를 설정하지 않았습니다!\n"
 "포트를 설정하려면 도구 -> 직렬 포트 를 사용하십시오."
 
-#: ../src/srcview.py:148 ../src/srcview.py:158
+#: ../src/srcview.py:161 ../src/srcview.py:171 ../src/srcview.py:236
+#: ../src/srcview.py:246
 #, python-format
 msgid "'%s' not found."
 msgstr "'%s'이(가) 없습니다."
 
-#: ../src/ui.py:68 ../src/ui.py:88 ../src/ui.py:101 ../src/ui.py:169
-#: ../src/ui.py:184
+#: ../src/srcview.py:283
+#, python-format
+msgid "A total of %s replacements made."
+msgstr "총 %s개를 바꾸었습니다."
+
+#: ../src/ui.py:68 ../src/ui.py:90 ../src/ui.py:108 ../src/ui.py:179
+#: ../src/ui.py:194
 msgid "Untitled"
 msgstr "제목 없음"
 
@@ -114,60 +117,77 @@ msgstr ""
 "닫기 전에 \"%s\" 문서를\n"
 "저장하시겠습니까?"
 
-#: ../src/ui.py:178
+#: ../src/ui.py:188
 msgid "Save file"
 msgstr "파일 저장"
 
-#: ../src/ui.py:195
+#: ../src/ui.py:205
 msgid "Open file"
 msgstr "파일 열기"
 
-#: ../src/ui.py:221
+#: ../src/ui.py:231
 #, python-format
 msgid "<b>A file named %s already exists. Do you want to replace it?</b>"
 msgstr "<b>%s 파일이 이미 존재합니다. 바꾸시겠습니까?</b>"
 
-#: ../src/ui.py:222
+#: ../src/ui.py:232
 #, python-format
 msgid ""
 "The file already exists in \"%s\". Replacing it will overwrite its contents."
 msgstr ""
 "\"%s\"에 파일이 이미 존재합니다. 이를 대체하면 이 내용을 덮어 쓸 것입니다."
 
-#: ../src/ui.py:506
+#: ../src/ui.py:551
 msgid "Open Recent"
 msgstr "최근 목록 열기"
 
-#: ../src/ui.py:541 ../ui/main.ui.h:56
+#: ../src/ui.py:586 ../ui/main.ui.h:61
 msgid "Send"
 msgstr "보내기"
 
-#: ../src/ui.py:542
+#: ../src/ui.py:587
 msgid "Clear"
 msgstr "지우기"
 
-#: ../src/ui.py:581
+#: ../src/ui.py:625
 #, python-format
 msgid "%s baud"
 msgstr "%s baud"
 
-#: ../src/ui.py:676
+#: ../src/ui.py:638
+#, python-format
+msgid "New device found on '%s'."
+msgstr "'%s'에서 새 장치를 찾았습니다."
+
+#: ../src/ui.py:825
 msgid "E_xamples"
 msgstr "예제(_X)"
 
-#: ../src/ui.py:716 ../src/ui.py:722 ../src/ui.py:728
+#: ../src/ui.py:846
+msgid "Import Library"
+msgstr "라이브러리 가져오기"
+
+#: ../src/ui.py:852 ../ui/main.ui.h:57
+msgid "Upload"
+msgstr "업로드"
+
+#: ../src/ui.py:859
+msgid "Upload using programmer"
+msgstr "프로그래머를 사용하여 업로드"
+
+#: ../src/ui.py:898 ../src/ui.py:904 ../src/ui.py:910
 msgid "System error"
 msgstr "시스템 오류"
 
-#: ../src/ui.py:731
+#: ../src/ui.py:913
 msgid "Cannot load ui file"
 msgstr "ui 파일을 불러올 수 없습니다"
 
-#: ../src/ui.py:838
+#: ../src/ui.py:997
 msgid "--help    Print the command line options"
 msgstr "--help    명령 줄 옵션을 출력합니다"
 
-#: ../src/ui.py:839
+#: ../src/ui.py:998
 msgid "--version Output version information and exit"
 msgstr "--version 버전 정보를 출력하고 끝냅니다"
 
@@ -175,36 +195,36 @@ msgstr "--version 버전 정보를 출력하고 끝냅니다"
 msgid "Burning bootloader..."
 msgstr "부트로더 굽는중..."
 
-#: ../src/uploader.py:67 ../src/uploader.py:100 ../src/uploader.py:137
+#: ../src/uploader.py:67 ../src/uploader.py:102 ../src/uploader.py:154
+#: ../src/uploader.py:168
 msgid "Flashing error."
 msgstr "플래싱 오류."
 
-#: ../src/uploader.py:88 ../src/uploader.py:91 ../src/uploader.py:118
-#: ../src/uploader.py:121
+#: ../src/uploader.py:93 ../src/uploader.py:124
 msgid "Burn Error"
 msgstr "굽기 오류"
 
-#: ../src/uploader.py:91 ../src/uploader.py:121
+#: ../src/uploader.py:93 ../src/uploader.py:124
 msgid "Burn ERROR."
 msgstr "굽기 오류."
 
-#: ../src/uploader.py:124
+#: ../src/uploader.py:127
 msgid "Burn complete."
 msgstr "굽기 완료."
 
-#: ../src/uploader.py:132
+#: ../src/uploader.py:136
 msgid "Flashing..."
 msgstr "플래싱..."
 
-#: ../src/uploader.py:157
+#: ../src/uploader.py:187
 msgid "Flashing Error"
 msgstr "플래싱 오류"
 
-#: ../src/uploader.py:157
+#: ../src/uploader.py:187
 msgid "Flash ERROR.\n"
 msgstr "플래시 오류.\n"
 
-#: ../src/uploader.py:160
+#: ../src/uploader.py:190
 msgid "Flashing complete."
 msgstr "플래싱 완료."
 
@@ -230,79 +250,88 @@ msgstr "그노두이노"
 
 #: ../ui/main.ui.h:4
 msgid ""
-"# gnoduino - Python Arduino IDE implementation\n"
-"# Copyright (C) 2010  Lucian Langa\n"
-"#\n"
-"# This program is free software; you can redistribute it and/or\n"
-"# modify it under the terms of the GNU General Public License\n"
-"# as published by the Free Software Foundation; either version 2\n"
-"# of the License, or (at your option) any later version.\n"
-"#\n"
-"# This program is distributed in the hope that it will be useful,\n"
-"# but WITHOUT ANY WARRANTY; without even the implied warranty of\n"
-"# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n"
-"# GNU General Public License for more details.\n"
-"#\n"
-"# You should have received a copy of the GNU General Public License\n"
-"# along with this program; if not, write to the Free Software\n"
-"# Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, "
+" gnoduino - Python Arduino IDE implementation\n"
+" Copyright (C) 2010-2012  Lucian Langa\n"
+"\n"
+"This program is free software; you can redistribute it and/or\n"
+"modify it under the terms of the GNU General Public License\n"
+"as published by the Free Software Foundation; either version 2\n"
+"of the License, or (at your option) any later version.\n"
+"\n"
+"This program is distributed in the hope that it will be useful,\n"
+"but WITHOUT ANY WARRANTY; without even the implied warranty of\n"
+"MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n"
+"GNU General Public License for more details.\n"
+"\n"
+"You should have received a copy of the GNU General Public License\n"
+"along with this program; if not, write to the Free Software\n"
+"Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, "
 "USA.\n"
 msgstr ""
-"# gnoduino - Python Arduino IDE implementation\n"
-"# Copyright (C) 2010  Lucian Langa\n"
-"#\n"
-"# This program is free software; you can redistribute it and/or\n"
-"# modify it under the terms of the GNU General Public License\n"
-"# as published by the Free Software Foundation; either version 2\n"
-"# of the License, or (at your option) any later version.\n"
-"#\n"
-"# This program is distributed in the hope that it will be useful,\n"
-"# but WITHOUT ANY WARRANTY; without even the implied warranty of\n"
-"# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n"
-"# GNU General Public License for more details.\n"
-"#\n"
-"# You should have received a copy of the GNU General Public License\n"
-"# along with this program; if not, write to the Free Software\n"
-"# Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, "
-"USA.\n"
+"그노두이노 - 파이선 아두이노 통합 개발 도구 구현체\n"
+"Copyright (C) 2010  Lucian Langa\n"
+"\n"
+"이 프로그램은 자유 소프트웨어 입니다. 자유 소프트웨어 재단이 공표한\n"
+"GNU 일반 공중 사용 허가서 버전 2(또는 여러분의 취향에 따라) 그 이상\n"
+"의 조항에 따라 이 프로그램을 재배포 또는 수정할 수 있습니다.\n"
+"\n"
+"이 프로그램을 쓸모있게 사용되길 바라며 배포하지만,어떤 보증도 하지 않으며\n"
+"심지어는 상업성 또는 특정 목적의 적합성에 대한 암시적 보증도 없습니다.\n"
+"더 자세한 내용은 GNU 일반 공중 사용 허가서를 보십시오.\n"
+"\n"
+"이 프로그램과 함께 GNU 일반 공중 사용허가서 사본을 받아야 합니다.\n"
+"만약 받지 못했다면 Free Software Foundation, Inc., 51 Franklin Street,\n"
+"Fifth Floor, Boston, MA  02110-1301, USA로 요청하십시오.\n"
 
 #: ../ui/main.ui.h:21
+msgid "translator-credits"
+msgstr "조성호 <darkcircle.0426@gmail.com>"
+
+#: ../ui/main.ui.h:22
 msgid "Search for:"
 msgstr "검색 문자열:"
 
-#: ../ui/main.ui.h:22
+#: ../ui/main.ui.h:23
 msgid "Match entire word only"
 msgstr "전체가 맞는 단어만"
 
-#: ../ui/main.ui.h:23
+#: ../ui/main.ui.h:24
 msgid "Wrap around"
 msgstr "끝까지 가면 처음부터"
 
-#: ../ui/main.ui.h:24
+#: ../ui/main.ui.h:25
 msgid "Match case"
 msgstr "대소문자 일치"
 
-#: ../ui/main.ui.h:25
+#: ../ui/main.ui.h:26
 msgid "Search backwards"
 msgstr "뒤로 검색"
 
-#: ../ui/main.ui.h:26
+#: ../ui/main.ui.h:27
 msgid "Editor font size"
 msgstr "편집기 글꼴 크기"
 
-#: ../ui/main.ui.h:27
+#: ../ui/main.ui.h:28
 msgid "Console font size"
 msgstr "콘솔 글꼴 크기"
 
-#: ../ui/main.ui.h:28
+#: ../ui/main.ui.h:29
 msgid "Verbose build"
 msgstr "빌드 자세히 보이기"
 
-#: ../ui/main.ui.h:29
+#: ../ui/main.ui.h:30
+msgid "Verbose upload"
+msgstr "업로드 자세히 보이기"
+
+#: ../ui/main.ui.h:31
 msgid "Show line numbers"
 msgstr "줄 번호 보이기"
 
-#: ../ui/main.ui.h:30
+#: ../ui/main.ui.h:32
+msgid "Sketchdir: "
+msgstr "스케치 디렉터리:"
+
+#: ../ui/main.ui.h:33
 msgid ""
 "Enter any supplementary path that compiler will check for, separate them by "
 "semicolons. (eg /usr/share/gnoduino;/usr/local/share/gnoduino)"
@@ -310,102 +339,115 @@ msgstr ""
 "컴파일러가 확인할 추가 경로를 세미콜론으로 구분하여 입력합니다. (예: /usr/"
 "share/gnoduino;/usr/local/share/gnoduino)"
 
-#: ../ui/main.ui.h:31
+#: ../ui/main.ui.h:34
 msgid "Additional library paths:"
 msgstr "추가 라이브러리 경로:"
 
-#: ../ui/main.ui.h:32
+#: ../ui/main.ui.h:35
+msgid "Replace All"
+msgstr "모두 바꾸기"
+
+#: ../ui/main.ui.h:36
+msgid "Replace with:"
+msgstr "다음으로 바꾸기:"
+
+#: ../ui/main.ui.h:37
 msgid "_File"
 msgstr "파일(_F)"
 
-#: ../ui/main.ui.h:33
+#: ../ui/main.ui.h:38
 msgid "Upload to I/O Board"
 msgstr "I/O 보드에 업로드"
 
-#: ../ui/main.ui.h:34
+#: ../ui/main.ui.h:39
 msgid "Preferences"
 msgstr "기본 설정"
 
-#: ../ui/main.ui.h:35
+#: ../ui/main.ui.h:40
 msgid "_Edit"
 msgstr "편집(_E)"
 
-#: ../ui/main.ui.h:36
+#: ../ui/main.ui.h:41
 msgid "Find Next"
 msgstr "다음 찾기"
 
-#: ../ui/main.ui.h:37
+#: ../ui/main.ui.h:42
 msgid "Sketch"
 msgstr "스케치"
 
-#: ../ui/main.ui.h:38
+#: ../ui/main.ui.h:43
 msgid "Verify/Compile"
 msgstr "검증/컴파일"
 
-#: ../ui/main.ui.h:39
+#: ../ui/main.ui.h:44
 msgid "Stop"
 msgstr "중지"
 
-#: ../ui/main.ui.h:40
-msgid "Import Library"
-msgstr "라이브러리 가져오기"
-
-#: ../ui/main.ui.h:41
+#: ../ui/main.ui.h:45
 msgid "Add File..."
 msgstr "파일 추가..."
 
-#: ../ui/main.ui.h:42
+#: ../ui/main.ui.h:46
 msgid "Tools"
 msgstr "도구"
 
-#: ../ui/main.ui.h:43
+#: ../ui/main.ui.h:47
 msgid "Auto Format"
 msgstr "자동 포맷"
 
-#: ../ui/main.ui.h:44
+#: ../ui/main.ui.h:48
 msgid "Serial Monitor"
 msgstr "직렬 모니터"
 
-#: ../ui/main.ui.h:45
+#: ../ui/main.ui.h:49
 msgid "Reset Board"
 msgstr "보드 리셋"
 
-#: ../ui/main.ui.h:46
+#: ../ui/main.ui.h:50
 msgid "Board"
 msgstr "보드"
 
-#: ../ui/main.ui.h:47
+#: ../ui/main.ui.h:51
 msgid "Serial Port"
 msgstr "직렬 포트"
 
-#: ../ui/main.ui.h:48
+#: ../ui/main.ui.h:52
+msgid "Programmer"
+msgstr "프로그래머"
+
+#: ../ui/main.ui.h:53
 msgid "Burn Bootloader"
 msgstr "부트로더 굽기"
 
-#: ../ui/main.ui.h:49
+#: ../ui/main.ui.h:54
 msgid "_Help"
 msgstr "도움말(_H)"
 
-#: ../ui/main.ui.h:50
+#: ../ui/main.ui.h:55
 msgid "Reference"
 msgstr "참조"
 
-#: ../ui/main.ui.h:51
+#: ../ui/main.ui.h:56
 msgid "Compile"
 msgstr "컴파일"
 
-#: ../ui/main.ui.h:52
+#: ../ui/main.ui.h:58
 msgid "New"
 msgstr "새로 만들기"
 
-#: ../ui/main.ui.h:53
+#: ../ui/main.ui.h:59
 msgid "Open"
 msgstr "열기"
 
-#: ../ui/main.ui.h:54
+#: ../ui/main.ui.h:60
 msgid "Save"
 msgstr "저장"
 
-#: ../ui/main.ui.h:55
-msgid "Upload"
-msgstr "업로드"
+#~ msgid "Cannot find %s"
+#~ msgstr "%s을(를) 찾을 수 없습니다"
+
+#~ msgid "Cannot find PROGRAMMERS"
+#~ msgstr "프로그래머를 찾을 수 없습니다"
+
+#~ msgid "Error reading %s file. File is corrupt. Installation problem."
+#~ msgstr "%s 파일을 읽는 중 오류 발생. 파일이 깨졌습니다. 설치 문제입니다."
