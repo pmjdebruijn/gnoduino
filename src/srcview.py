@@ -179,12 +179,13 @@ def replaceText(widget, event, data=None):
 	if event == -1 or (event.type == gtk.gdk.KEY_RELEASE and \
 	(gtk.gdk.keyval_name(event.keyval) == 'Return' or \
 	 gtk.gdk.keyval_name(event.keyval) == 'KP_Enter')):
+		a = config.cur_iter
 		page = ui.getCurrentPage()
 		view = page.get_data("view")
 		b = view.get_buffer()
 		mark = b.get_insert()
 		iter = b.get_iter_at_mark(mark)
-		search = widget.get_text()
+		search = data[4].get_text()
 		flags = 0
 		if data[0].get_active() == False:
 			flags = gtksourceview2.SEARCH_CASE_INSENSITIVE
@@ -215,15 +216,19 @@ def replaceText(widget, event, data=None):
 						s, e = gtksourceview2.iter_backward_search( \
 							config.cur_iter, search, flags, limit=None)
 						config.cur_iter = s
-					except: return
+					except:
+						config.cur_iter = a
+						return
 				else:
-					iter = b.get_iter_at_offset(0)
+					iter = b.get_iter_at_line(0)
 					config.cur_iter = iter
 					try:
 						s, e = gtksourceview2.iter_forward_search( \
 							config.cur_iter, search, flags=0, limit=None)
 						config.cur_iter = e
-					except: return
+					except:
+						config.cur_iter = a
+						return
 		else:
 			if backwards:
 				try:
@@ -234,6 +239,7 @@ def replaceText(widget, event, data=None):
 					s = e = b.get_start_iter()
 					b.select_range(s, e)
 					misc.statusMessage(sb, _("'%s' not found.") % search)
+					config.cur_iter = a
 					return
 			else:
 				try:
@@ -244,6 +250,7 @@ def replaceText(widget, event, data=None):
 					s = e = b.get_end_iter()
 					b.select_range(s, e)
 					misc.statusMessage(sb, _("'%s' not found.") % search)
+					config.cur_iter = a
 					return
 		b.place_cursor(s)
 		b.select_range(s, e)
@@ -258,6 +265,7 @@ def replaceAll(widget, data=None):
 	iter = b.get_iter_at_mark(mark)
 	search = widget.get_text()
 	flags = 0
+	repls=[]
 	if data[0].get_active() == False:
 		flags = gtksourceview2.SEARCH_CASE_INSENSITIVE
 	if config.cur_iter == -1:
@@ -267,26 +275,30 @@ def replaceAll(widget, data=None):
 	b.begin_user_action()
 	b.place_cursor(s)
 	rpls=0
-	while config.cur_iter < b.get_end_iter():
+	config.cur_iter = b.get_iter_at_line(0)
+	while config.cur_iter <= b.get_end_iter():
 		try:
 			s, e = gtksourceview2.iter_forward_search( \
 				config.cur_iter, search, flags, limit=None)
-			config.cur_iter = e
+			e.forward_line()
 		except:
 			iter = b.get_iter_at_offset(0)
 			config.cur_iter = iter
 			try:
 				s, e = gtksourceview2.iter_forward_search( \
 					config.cur_iter, search, flags=0, limit=None)
-				config.cur_iter = e
+				e.forward_line()
 			except:
 				misc.statusMessage(sb, _("A total of %s replacements made.") % rpls)
 				return
-		rpls = rpls + 1
-		b.select_range(s, e)
-		b.delete_selection(False, True)
-		b.insert_at_cursor(data[5].get_text())
-		b.end_user_action()
+		if s.get_line() not in repls:
+			repls.append(s.get_line())
+			rpls = rpls + 1
+			b.delete(s, e)
+			b.insert(s, data[5].get_text()+"\n")
+			config.cur_iter = s
+	b.end_user_action()
+	misc.statusMessage(sb, _("A total of %s replacements made.") % rpls)
 
 def createsrcview(status, f=None):
 	sbuffer = gtksourceview2.Buffer()
