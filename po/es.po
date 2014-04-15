@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: gnoduino master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
 "product=gnoduino&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-05-16 22:52+0000\n"
+"POT-Creation-Date: 2013-12-18 19:42+0000\n"
 "PO-Revision-Date: 2013-05-17 13:33+0200\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
@@ -90,13 +90,13 @@ msgstr ""
 "Puerto serie no configurado.\n"
 "Use Herramientas->Puerto serie para configurar el puerto."
 
-#: ../src/srcview.py:161 ../src/srcview.py:171 ../src/srcview.py:236
-#: ../src/srcview.py:246
+#: ../src/srcview.py:161 ../src/srcview.py:171 ../src/srcview.py:241
+#: ../src/srcview.py:252
 #, python-format
 msgid "'%s' not found."
 msgstr "«%s» no encontrado."
 
-#: ../src/srcview.py:283
+#: ../src/srcview.py:292 ../src/srcview.py:301
 #, python-format
 msgid "A total of %s replacements made."
 msgstr "Se han hecho un total de %s reemplazamientos."
@@ -137,59 +137,59 @@ msgstr "<b>El archivo %s ya existe. ¿Quiere reemplazarlo?</b>"
 msgid ""
 "The file already exists in \"%s\". Replacing it will overwrite its contents."
 msgstr ""
-"El archivo ya existe en «%s». Si lo reemplaza sobreescribirá su contenido."
+"El archivo ya existe en «%s». Si lo reemplaza sobrescribirá su contenido."
 
-#: ../src/ui.py:549
+#: ../src/ui.py:551
 msgid "Open Recent"
 msgstr "Abrir reciente"
 
-#: ../src/ui.py:584 ../ui/main.ui.h:61
+#: ../src/ui.py:586 ../ui/main.ui.h:61
 msgid "Send"
 msgstr "Enviar"
 
-#: ../src/ui.py:585
+#: ../src/ui.py:587
 msgid "Clear"
 msgstr "Limpiar"
 
-#: ../src/ui.py:623
+#: ../src/ui.py:625
 #, python-format
 msgid "%s baud"
 msgstr "%s baudios"
 
-#: ../src/ui.py:636
+#: ../src/ui.py:638
 #, python-format
 msgid "New device found on '%s'."
 msgstr "Encontrado nuevo dispositivo en «%s»."
 
-#: ../src/ui.py:823
+#: ../src/ui.py:825
 msgid "E_xamples"
 msgstr "Eje_mplos"
 
-#: ../src/ui.py:844
+#: ../src/ui.py:846
 msgid "Import Library"
 msgstr "Importar biblioteca"
 
-#: ../src/ui.py:850 ../ui/main.ui.h:57
+#: ../src/ui.py:852 ../ui/main.ui.h:57
 msgid "Upload"
 msgstr "Subir"
 
-#: ../src/ui.py:857
+#: ../src/ui.py:859
 msgid "Upload using programmer"
 msgstr "Subir usando el programador"
 
-#: ../src/ui.py:896 ../src/ui.py:902 ../src/ui.py:908
+#: ../src/ui.py:898 ../src/ui.py:904 ../src/ui.py:910
 msgid "System error"
 msgstr "Error del sistema"
 
-#: ../src/ui.py:911
+#: ../src/ui.py:913
 msgid "Cannot load ui file"
 msgstr "No se puede cargar el archivo ui"
 
-#: ../src/ui.py:995
+#: ../src/ui.py:997
 msgid "--help    Print the command line options"
 msgstr "--help    Mostrar las opciones de la línea de comandos"
 
-#: ../src/ui.py:996
+#: ../src/ui.py:998
 msgid "--version Output version information and exit"
 msgstr "--version    Mostrar información de la versión y salir"
 
@@ -197,36 +197,36 @@ msgstr "--version    Mostrar información de la versión y salir"
 msgid "Burning bootloader..."
 msgstr "Grabando cargador de arranque…"
 
-#: ../src/uploader.py:67 ../src/uploader.py:101 ../src/uploader.py:149
-#: ../src/uploader.py:162
+#: ../src/uploader.py:67 ../src/uploader.py:102 ../src/uploader.py:154
+#: ../src/uploader.py:168
 msgid "Flashing error."
 msgstr "Error al flashear."
 
-#: ../src/uploader.py:92 ../src/uploader.py:123
+#: ../src/uploader.py:93 ../src/uploader.py:124
 msgid "Burn Error"
 msgstr "Error al grabar"
 
-#: ../src/uploader.py:92 ../src/uploader.py:123
+#: ../src/uploader.py:93 ../src/uploader.py:124
 msgid "Burn ERROR."
 msgstr "Error al grabar."
 
-#: ../src/uploader.py:126
+#: ../src/uploader.py:127
 msgid "Burn complete."
 msgstr "Grabación completada."
 
-#: ../src/uploader.py:135
+#: ../src/uploader.py:136
 msgid "Flashing..."
 msgstr "Flasheando…"
 
-#: ../src/uploader.py:181
+#: ../src/uploader.py:187
 msgid "Flashing Error"
 msgstr "Error al flashear"
 
-#: ../src/uploader.py:181
+#: ../src/uploader.py:187
 msgid "Flash ERROR.\n"
 msgstr "Error al flashear.\n"
 
-#: ../src/uploader.py:184
+#: ../src/uploader.py:190
 msgid "Flashing complete."
 msgstr "Flasheado completo."
 
