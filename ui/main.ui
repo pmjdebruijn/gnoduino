@@ -962,25 +962,6 @@ Pascal de Bruijn &lt;pmjdebruijn@pcode.nl&gt;</property>
                         <property name="accel_group">mainaccelgrp</property>
                       </object>
                     </child>
-                    <child>
-                      <object class="GtkMenuItem" id="menu-find-next">
-                        <property name="use_action_appearance">False</property>
-                        <property name="visible">True</property>
-                        <property name="can_focus">False</property>
-                        <property name="label" translatable="yes">Find Next</property>
-                      </object>
-                    </child>
-                    <child>
-                      <object class="GtkImageMenuItem" id="menu-replace">
-                        <property name="label">gtk-find-and-replace</property>
-                        <property name="use_action_appearance">False</property>
-                        <property name="visible">True</property>
-                        <property name="can_focus">False</property>
-                        <property name="use_underline">True</property>
-                        <property name="use_stock">True</property>
-                        <property name="accel_group">mainaccelgrp</property>
-                      </object>
-                    </child>
                   </object>
                 </child>
               </object>
@@ -1039,15 +1020,6 @@ Pascal de Bruijn &lt;pmjdebruijn@pcode.nl&gt;</property>
                   <object class="GtkMenu" id="menu5">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
-                    <child>
-                      <object class="GtkMenuItem" id="menuitem10">
-                        <property name="use_action_appearance">False</property>
-                        <property name="visible">True</property>
-                        <property name="can_focus">False</property>
-                        <property name="label" translatable="yes">Auto Format</property>
-                        <property name="use_underline">True</property>
-                      </object>
-                    </child>
                     <child>
                       <object class="GtkMenuItem" id="ser_monitor">
                         <property name="use_action_appearance">False</property>

@@ -484,7 +484,6 @@ menus = [
 		("menu-save-as", csave_as, (ord('s'), gtk.gdk.CONTROL_MASK|gtk.gdk.SHIFT_MASK)),
 		("menu-quit", quit, (ord('q'), gtk.gdk.CONTROL_MASK)),
 		("menu-find", find, (ord('f'), gtk.gdk.CONTROL_MASK)),
-		("menu-replace", srpl, (ord('h'), gtk.gdk.CONTROL_MASK)),
 		("menu-undo", undo, (ord('z'), gtk.gdk.CONTROL_MASK)),
 		("menu-redo", redo, (ord('z'), gtk.gdk.CONTROL_MASK|gtk.gdk.SHIFT_MASK)),
 		("menu-cut", cut, (ord('x'), gtk.gdk.CONTROL_MASK)),
@@ -505,7 +504,6 @@ def menu(gui):
 	[gui.get_object(i[0]).add_accelerator("activate", \
 		accel, i[2][0], i[2][1], 0) for i in menus if i[2][0] != None]
 	mainwin.add_accel_group(accel)
-	gui.get_object("menu-find-next").set_sensitive(False)
 
 def setupSpinner():
 	if gtk.pygtk_version >= (2,22,00):
