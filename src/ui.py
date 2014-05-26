@@ -545,6 +545,13 @@ def recentMenuActivated(widget):
 	processFile(urlparse.urlparse(widget.get_current_uri()).path)
 
 def createRecentMenu():
+	"""purge nonexistant (NA moved) items"""
+	for i in recentmanager.get_items():
+		if str(i.get_applications()[0]) == 'gnoduino':
+			file = urlparse.urlparse(i.get_uri()).path
+			if os.path.exists(file) is False:
+				recentmanager.remove_item(i.get_uri())
+
 	menuRecent = gtk.RecentChooserMenu(recentmanager)
 	menuRecent.set_limit(10)
 	menuRecent.set_sort_type(gtk.RECENT_SORT_MRU)
