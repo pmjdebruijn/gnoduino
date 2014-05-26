@@ -208,6 +208,9 @@ def compile(tw, id, output, notify):
 		compline.extend(flags)
 		compline.extend(["-I" + os.path.join(i, "utility") for i in preproc.generateLibs(id, buf)])
 		compline.extend(misc.getArduinoIncludes())
+		localDir = os.path.dirname(tw.get_data("file"))
+		compline.extend(["-I"+localDir])
+		compline.extend(["-I"+os.path.abspath(os.path.join(localDir, ".."))])
 		compline.append(pre_file)
 		compline.append("-o"+pre_file+".o")
 		misc.printMessageLn(output, ' '.join(compline)+"\n")
@@ -327,14 +330,16 @@ def getLibraries():
 	#		fl = os.path.join(q, library, d)
 	#		if os.path.exists(fl):
 
-"""checks whether library exists (it has been compiled and tries to compile it otherwise"""
+"""checks whether library exists (if it has been compiled and tries to compile it otherwise"""
 """@returns a list of compiled objects"""
 def validateLib(library, tempobj, flags, output, notify):
 	"""compile library also try to compile every cpp under libdir"""
 	"""also try to compile utility dir if present"""
-	paths = ["", misc.getArduinoLibsPath()]
+	paths = ["", misc.getArduinoLibsPath(), misc.getLocalPath()]
 	if config.user_library != None and config.user_library != -1:
 		paths.extend(i.strip() for i in config.user_library.split(';'))
+	paths.append(os.path.dirname(config.sketchFile))
+	paths.append(os.path.abspath(os.path.join(os.path.dirname(config.sketchFile), "..")))
 	dirs = ["", "utility"]
 	b = board.Board()
 	res = []

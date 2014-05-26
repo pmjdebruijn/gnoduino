@@ -57,6 +57,7 @@ def setupPage(w, page, p):
 	cl.add_accelerator("activate", accel, ord("w"), gtk.gdk.CONTROL_MASK, 0)
 	mainwin.add_accel_group(accel)
 	srcview.updatePos(pg.get_data("buffer"), sb2)
+	config.sketchFile = pg.get_data("file")
 
 def replacePage(page):
 	nb.remove_page(nb.page_num(page))
@@ -279,6 +280,10 @@ def compile(widget, data=file):
 	cserial(None, 0, sctw)
 	page = getCurrentPage()
 	startSpinner()
+	page = getCurrentPage()
+	f = page.get_data("file")
+	page.get_data("view").set_data("file", f)
+	config.sketchFile = f
 	obj = compiler.compile(page.get_data("view"), id, tw, sb) #page.get_data("buffer")
 	stopSpinner()
 	return obj

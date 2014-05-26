@@ -158,6 +158,9 @@ def readGnoduinoConfFile(confFile):
 		c = c + 1
 	return conf
 
+def getLocalPath():
+	return os.getcwd()
+
 def makeWorkdir():
 	return tempfile.mkdtemp("", os.path.join(tempfile.gettempdir(), "build"+str(time.time())))
 
