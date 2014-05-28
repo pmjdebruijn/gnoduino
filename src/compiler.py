@@ -208,9 +208,12 @@ def compile(tw, id, output, notify):
 		compline.extend(flags)
 		compline.extend(["-I" + os.path.join(i, "utility") for i in preproc.generateLibs(id, buf)])
 		compline.extend(misc.getArduinoIncludes())
-		localDir = os.path.dirname(tw.get_data("file"))
-		compline.extend(["-I"+localDir])
-		compline.extend(["-I"+os.path.abspath(os.path.join(localDir, ".."))])
+		compline.extend(["-I"+os.getcwd()])
+		try:
+			localDir = os.path.dirname(tw.get_data("file"))
+			compline.extend(["-I"+localDir])
+			compline.extend(["-I"+os.path.abspath(os.path.join(localDir, ".."))])
+		except: pass
 		compline.append(pre_file)
 		compline.append("-o"+pre_file+".o")
 		misc.printMessageLn(output, ' '.join(compline)+"\n")
