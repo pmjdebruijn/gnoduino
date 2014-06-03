@@ -1,3 +1,17 @@
+Gnoduino 0.5.0
+==============
+
+- update arduino SDK 1.0.5
+- add support for non-serial programmers
+- initial support of auto-detecting plugged devices
+- improve default startup settings
+- fix/improve code preprocessor 
+- add support for new programmers
+- fix import library menu option
+- fix examples parsing
+- shift key to force selected programmer
+
+
 Gnoduino 0.4.0
 ==============
 
