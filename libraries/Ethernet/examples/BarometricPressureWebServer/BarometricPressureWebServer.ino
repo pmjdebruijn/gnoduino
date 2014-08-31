@@ -56,49 +56,55 @@ float temperature = 0.0;
 long pressure = 0;
 long lastReadingTime = 0;
 
-void setup() {
-  // start the SPI library:
-  SPI.begin();
+//Send a write command to SCP1000
+void writeRegister(byte registerName, byte registerValue) {
+  // SCP1000 expects the register name in the upper 6 bits
+  // of the byte:
+  registerName <<= 2;
+  // command (read or write) goes in the lower two bits:
+  registerName |= 0b00000010; //Write command
 
-  // start the Ethernet connection and the server:
-  Ethernet.begin(mac, ip);
-  server.begin();
+  // take the chip select low to select the device:
+  digitalWrite(chipSelectPin, LOW); 
 
-  // initalize the  data ready and chip select pins:
-  pinMode(dataReadyPin, INPUT);
-  pinMode(chipSelectPin, OUTPUT);
+  SPI.transfer(registerName); //Send register location
+  SPI.transfer(registerValue); //Send value to record into register
 
-  Serial.begin(9600);
-
-  //Configure SCP1000 for low noise configuration:
-  writeRegister(0x02, 0x2D);
-  writeRegister(0x01, 0x03);
-  writeRegister(0x03, 0x02);
-
-  // give the sensor and Ethernet shield time to set up:
-  delay(1000);
-
-  //Set the sensor to high resolution mode tp start readings:
-  writeRegister(0x03, 0x0A);
-
+  // take the chip select high to de-select:
+  digitalWrite(chipSelectPin, HIGH); 
 }
 
-void loop() { 
-  // check for a reading no more than once a second.
-  if (millis() - lastReadingTime > 1000){
-    // if there's a reading ready, read it:
-    // don't do anything until the data ready pin is high:
-    if (digitalRead(dataReadyPin) == HIGH) {
-      getData();
-      // timestamp the last time you got a reading:
-      lastReadingTime = millis();
-    }
+//Read register from the SCP1000:
+unsigned int readRegister(byte registerName, int numBytes) {
+  byte inByte = 0;           // incoming from  the SPI read
+  unsigned int result = 0;   // result to return 
+
+  // SCP1000 expects the register name in the upper 6 bits
+  // of the byte:
+  registerName <<=  2;
+  // command (read or write) goes in the lower two bits:
+  registerName &= 0b11111100; //Read command
+
+  // take the chip select low to select the device:
+  digitalWrite(chipSelectPin, LOW); 
+  // send the device the register you want to read:
+  int command = SPI.transfer(registerName); 
+  // send a value of 0 to read the first byte returned:
+  inByte = SPI.transfer(0x00); 
+  
+  result = inByte;
+  // if there's more than one byte returned, 
+  // shift the first byte then get the second byte:
+  if (numBytes > 1){
+    result = inByte << 8;
+    inByte = SPI.transfer(0x00); 
+    result = result |inByte;
   }
-
-  // listen for incoming Ethernet connections:
-  listenForEthernetClients();
+  // take the chip select high to de-select:
+  digitalWrite(chipSelectPin, HIGH); 
+  // return the result:
+  return(result);
 }
-
 
 void getData() {
   Serial.println("Getting reading");
@@ -109,11 +115,11 @@ void getData() {
   temperature = (float)tempData / 20.0;
 
   //Read the pressure data highest 3 bits:
-  byte  pressureDataHigh = readRegister(0x1F, 1);   
+  byte  pressureDataHigh = readRegister(0x1F, 1);
   pressureDataHigh &= 0b00000111; //you only needs bits 2 to 0
 
   //Read the pressure data lower 16 bits:
-  unsigned int pressureDataLow = readRegister(0x20, 2);    
+  unsigned int pressureDataLow = readRegister(0x20, 2);
   //combine the two parts into one 19-bit number:
   pressure = ((pressureDataHigh << 16) | pressureDataLow)/4;
 
@@ -167,56 +173,47 @@ void listenForEthernetClients() {
     // close the connection:
     client.stop();
   }
-} 
-
-
-//Send a write command to SCP1000
-void writeRegister(byte registerName, byte registerValue) {
-  // SCP1000 expects the register name in the upper 6 bits
-  // of the byte:
-  registerName <<= 2;
-  // command (read or write) goes in the lower two bits:
-  registerName |= 0b00000010; //Write command
-
-  // take the chip select low to select the device:
-  digitalWrite(chipSelectPin, LOW); 
-
-  SPI.transfer(registerName); //Send register location
-  SPI.transfer(registerValue); //Send value to record into register
-
-  // take the chip select high to de-select:
-  digitalWrite(chipSelectPin, HIGH); 
 }
 
+void setup() {
+  // start the SPI library:
+  SPI.begin();
 
-//Read register from the SCP1000:
-unsigned int readRegister(byte registerName, int numBytes) {
-  byte inByte = 0;           // incoming from  the SPI read
-  unsigned int result = 0;   // result to return 
+  // start the Ethernet connection and the server:
+  Ethernet.begin(mac, ip);
+  server.begin();
 
-  // SCP1000 expects the register name in the upper 6 bits
-  // of the byte:
-  registerName <<=  2;
-  // command (read or write) goes in the lower two bits:
-  registerName &= 0b11111100; //Read command
+  // initalize the  data ready and chip select pins:
+  pinMode(dataReadyPin, INPUT);
+  pinMode(chipSelectPin, OUTPUT);
 
-  // take the chip select low to select the device:
-  digitalWrite(chipSelectPin, LOW); 
-  // send the device the register you want to read:
-  int command = SPI.transfer(registerName); 
-  // send a value of 0 to read the first byte returned:
-  inByte = SPI.transfer(0x00); 
-  
-  result = inByte;
-  // if there's more than one byte returned, 
-  // shift the first byte then get the second byte:
-  if (numBytes > 1){
-    result = inByte << 8;
-    inByte = SPI.transfer(0x00); 
-    result = result |inByte;
+  Serial.begin(9600);
+
+  //Configure SCP1000 for low noise configuration:
+  writeRegister(0x02, 0x2D);
+  writeRegister(0x01, 0x03);
+  writeRegister(0x03, 0x02);
+
+  // give the sensor and Ethernet shield time to set up:
+  delay(1000);
+
+  //Set the sensor to high resolution mode tp start readings:
+  writeRegister(0x03, 0x0A);
+
+}
+
+void loop() {
+  // check for a reading no more than once a second.
+  if (millis() - lastReadingTime > 1000){
+    // if there's a reading ready, read it:
+    // don't do anything until the data ready pin is high:
+    if (digitalRead(dataReadyPin) == HIGH) {
+      getData();
+      // timestamp the last time you got a reading:
+      lastReadingTime = millis();
+    }
   }
-  // take the chip select high to de-select:
-  digitalWrite(chipSelectPin, HIGH); 
-  // return the result:
-  return(result);
+
+  // listen for incoming Ethernet connections:
+  listenForEthernetClients();
 }
